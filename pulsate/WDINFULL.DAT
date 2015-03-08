@@ -1,0 +1,7 @@
+ White dwarf model for testing full mode  nonradial analysis
+400 7 1 200 0.20 0.0500 4 1 1
+1 0 0 1.e-8 1.e-8 1.e-2 2 1.0 1.0
+1.0e5 1.e8 1.176e31 0.60 12.e3 1.06 1.01
+-1.e-2 3.305e16 1.0 1.0 1.0 1.e6 1.e4
+3 1 1.0 0.0 1.e-6 1.e-4 6
+hlowt    4 3.       henew    4 1.000e-10carb     4 1.000e-02

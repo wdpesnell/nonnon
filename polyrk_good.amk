@@ -1,0 +1,200 @@
+#  Note:fed8570c - This file not intended for hand editing.
+#  Absoft Developer Tools Interface requires use of this makefile.
+#  Use the Generate Makefile command to customize your own makefiles.
+#
+#  Absoft Corporation Compiler Interface Makefile(v4.0.1).
+#
+#
+#  Type 'amake -f "polyrk_good.amk"' in this directory at the Terminal.app prompt
+#  to execute this makefile. Type 'amake -f "polyrk_good.amk" clean' to
+#  remove old *.o, *.out, and any other project related files.
+#
+#
+#  This file was created by Absoft Developer Tools Interface.
+#  File created on: Wed Mar 24 19:53:27 2004
+#
+#
+
+
+
+#
+#  Variables and flags for the compiler(s) and linker.
+#
+F95COMPILER= f95
+F77COMPILER= f77
+C_COMPILER=  acc
+CPPCOMPILER= acc
+LINKER=      c++
+
+F95_FLAGS=   -c -nowdir 
+F77_FLAGS=   
+FF95_FLAG=   -f90
+F_DEFINES=   
+C_FLAGS=     
+CPP_FLAGS=   -c++
+C_DEFINES=   
+C_UNDEFS=    
+
+
+
+DFLT_LNK_FLG=-Wl,-multiply_defined,suppress 
+USER_LNK_FLG=-Xlinker -w 
+LNK_FLAGS=   $(DFLT_LNK_FLG) $(USER_LNK_FLG)
+
+BASENAME=    polyrk_good
+#
+#  Name of the executable.
+#
+TARGET=      polyrk_good.exe
+OUTDIR=      .
+OBJDIR=      ./build
+
+#
+#  Files for this executable.
+#
+F95FILES=    
+MODFILES=    
+FFILES=      "./POLYRK_GOOD.FOR" 
+CFILES=      
+RCFILES=     
+RESFILES=    
+PLISTFILES=  
+HFILES=      
+OBJS=        
+FRAMEWORKS=  
+OTHERFILES=  
+MKFILE=      ./polyrk_good.amk
+
+#
+#  Libraries for this executable.
+#
+USER_LIBS=   
+DFLT_LIBS=   -L"/Applications/Absoft/lib" -lf90math -lfio -lac -lf77math -lm 
+LIBS=        $(USER_LIBS) $(DFLT_LIBS) $(FRAMEWORKS)
+
+
+
+#
+#  Include directories specified for this executable.
+#
+INCS=        
+LPATHS=      
+
+
+
+#
+#  Module flags, files and directories specified for this executable.
+#
+MOD_FLAGS=   
+MOD_INCS=    
+
+
+
+#  The following macro(s) and rule(s) are required for a full build
+#
+#  Rules and dependencies for the executable.
+#
+SRCFILES=    $(FFILES) $(F90FILES) $(CFILES) $(HFILES) $(RCFILES) $(RESFILES) $(OTHERFILES)
+RCRSFILES=   $(RESFILES) 
+
+OBJFILES=    $(OBJS) "$(OBJDIR)/POLYRK_GOOD.o" 
+
+#
+#  Optional macros, rules and dependencies included from prebuild file.
+#
+
+
+#
+#  Default dependency for this makefile
+#
+default: "$(OUTDIR)/$(TARGET)"
+
+all: "$(OUTDIR)/$(TARGET)"
+
+
+"$(OUTDIR)/$(TARGET)": "$(OUTDIR)" "$(OBJDIR)" "$(MKFILE)" $(OBJFILES) $(RCRSFILES)\
+	$(USER_LIBS) $(MODFILES)
+	$(LINKER) $(LPATHS) $(OBJFILES) $(LNK_FLAGS) $(LIBS) \
+		-o "$(OUTDIR)/$(TARGET)"
+#
+#  Optional commands, macros, rules and dependencies from postbuild file.
+#
+#  To append additional commands to the default target dependency 
+#  begin the first line of the postbuild file with a tab.
+#
+
+
+.r.rsrc:
+	$(MKDIR) -p "$(APPDIR)/$(REZDIR)"
+	$(RC) -o "$(APPDIR)/$(REZDIR)/$(BASENAME).rsrc" $(RCFLAGS) $<
+
+
+"$(OBJDIR)" :
+	if [ ! -e "$(OBJDIR)" ]; then $(MKDIR) "$(OBJDIR)" ; fi
+
+
+"$(OUTDIR)" :
+
+
+"$(APPDIR)/$(REZDIR)" :
+	$(MKDIR) -p "$(APPDIR)/$(REZDIR)"
+
+
+qclean: clean_exe clean_misc clean_plugins
+	rm -f "$(OBJDIR)"/*.mod
+	rm -f "$(OBJDIR)"/*.rsrc
+	rm -f "$(OBJDIR)"/*.a
+	rm -f "$(OBJDIR)"/*.o
+
+cleanProjFiles: clean
+
+clean: clean_f95 clean_f77 clean_acc clean_target
+
+clean_misc:
+	rm -f "$(OBJDIR)"/*.amh
+	rm -f "$(OBJDIR)"/*.bif
+	rm -f "$(OBJDIR)"/*.int
+	rm -f "$(OUTDIR)"/*.amh
+	rm -f "$(OUTDIR)"/*.bif
+	rm -f "$(OUTDIR)"/*.int
+
+clean_f95: clean_f95src clean_f95mods
+
+clean_target: clean_misc clean_plugins clean_rsrc clean_exe
+
+clean_exe:
+	rm -f "$(OUTDIR)/$(TARGET)"
+
+clean_rsrc:
+
+clean_f95src:
+	rm -f "$(OBJDIR)/POLYRK_GOOD.o"
+
+clean_f77:
+
+clean_acc:
+
+clean_plugins:
+
+clean_f95mods:
+
+
+POLYRK_GOOD_FOR_11 =  $(INCS) $(F95_FLAGS) $(MOD_FLAGS) $(MOD_INCS) $(MODFILES) 
+"$(OBJDIR)/POLYRK_GOOD.o": "./POLYRK_GOOD.FOR"
+	$(F95COMPILER) -o "$(OBJDIR)/POLYRK_GOOD.o" $(POLYRK_GOOD_FOR_11)  "./POLYRK_GOOD.FOR"
+
+
+
+
+#
+#  Include any scanned dependencies
+#
+include "$(OUTDIR)/mkdep/mkdep_$(BASENAME).amk"
+
+
+#
+#  Define necessary macros for dependency scanning.
+#
+MKDEP=       makedepend
+MKDEP_FLAGS= -quiet "-pre$(OBJDIR)/" -Y -modInfo -errdel 
+

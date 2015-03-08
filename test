@@ -1,0 +1,3689 @@
+
+        Namespace: A-H: (REAL 8) I-N: (INTEGER 4) O-Z: (REAL 8)
+        procedure name = newpol
+        common: /blk4/ p, g1, rho, rzone
+
+        common: /blk8/ g, ac3, acrad, pi, twopi, forpi, pi8, pi43
+
+        common: /const/ zero, one, two, thre, for, ten, ahf, qrt
+
+        common: /corevl/ rz0, p0, rho0
+
+        common: /phypar/ r, theta, dthdr, v, rm, gor, xi, dm1, dm2, bv, vn, un, drhdr, ra
+
+        common: /stnmod/ nmode
+
+        symtree: __convert_r4_r8  Ambig 0
+        symbol __convert_r4_r8 (REAL 8)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN FUNCTION ELEMENTAL PURE)
+
+        symtree: abs  Ambig 0
+        symbol abs (REAL 8)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN FUNCTION IMPLICIT-TYPE)
+        result: abs
+
+        symtree: ac3  Ambig 0
+        symbol ac3 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: acrad  Ambig 0
+        symbol acrad (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: ahf  Ambig 0
+        symbol ahf (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: alfa  Ambig 0
+        symbol alfa (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: asym_g  Ambig 0
+        symbol asym_g (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: asym_p  Ambig 0
+        symbol asym_p (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: bv  Ambig 0
+        symbol bv (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: bvfac  Ambig 0
+        symbol bvfac (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: c2  Ambig 0
+        symbol c2 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: dabs  Ambig 0
+        symbol dabs (REAL 8)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN FUNCTION IMPLICIT-TYPE)
+        result: dabs
+
+        symtree: dat_buf  Ambig 0
+        symbol dat_buf (CHARACTER 9)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN)
+
+        symtree: dlog10  Ambig 0
+        symbol dlog10 (REAL 8)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN FUNCTION IMPLICIT-TYPE)
+        result: dlog10
+
+        symtree: dm1  Ambig 0
+        symbol dm1 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: dm2  Ambig 0
+        symbol dm2 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: drhdr  Ambig 0
+        symbol drhdr (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: dsign  Ambig 0
+        symbol dsign (REAL 8)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN FUNCTION IMPLICIT-TYPE)
+        result: dsign
+
+        symtree: dsqrt  Ambig 0
+        symbol dsqrt (REAL 8)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN FUNCTION IMPLICIT-TYPE)
+        result: dsqrt
+
+        symtree: dthdr  Ambig 0
+        symbol dthdr (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: fnpol  Ambig 0
+        symbol fnpol (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: for  Ambig 0
+        symbol for (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: forpi  Ambig 0
+        symbol forpi (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: g  Ambig 0
+        symbol g (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: g1  Ambig 0
+        symbol g1 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: gor  Ambig 0
+        symbol gor (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: i  Ambig 0
+        symbol i (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: idonpl  Ambig 0
+        symbol idonpl (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: igmax  Ambig 0
+        symbol igmax (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: ihmax  Ambig 0
+        symbol ihmax (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: iomod  Ambig 0
+        symbol iomod (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: iopuls  Ambig 0
+        symbol iopuls (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: lnanon  Ambig 0
+        symbol lnanon (UNKNOWN 0)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN SUBROUTINE)
+
+        symtree: lval  Ambig 0
+        symbol lval (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: newpol  Ambig 0
+        symbol newpol (UNKNOWN 0)(PROGRAM UNKNOWN-INTENT PUBLIC UNKNOWN-PROC UNKNOWN SUBROUTINE)
+
+        symtree: nmax  Ambig 0
+        symbol nmax (INTEGER 4)(PARAMETER UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+        value: 4096
+
+        symtree: nmode  Ambig 0
+        symbol nmode (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: nomega  Ambig 0
+        symbol nomega (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: npts  Ambig 0
+        symbol npts (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: npuls  Ambig 0
+        symbol npuls (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: om02  Ambig 0
+        symbol om02 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: omhigh  Ambig 0
+        symbol omhigh (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: omlow  Ambig 0
+        symbol omlow (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: one  Ambig 0
+        symbol one (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: p  Ambig 0
+        symbol p (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: p0  Ambig 0
+        symbol p0 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: pc  Ambig 0
+        symbol pc (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: pi  Ambig 0
+        symbol pi (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: pi43  Ambig 0
+        symbol pi43 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: pi8  Ambig 0
+        symbol pi8 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: pltdmp  Ambig 0
+        symbol pltdmp (UNKNOWN 0)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN SUBROUTINE)
+
+        symtree: polint  Ambig 0
+        symbol polint (UNKNOWN 0)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN SUBROUTINE)
+
+        symtree: qch  Ambig 0
+        symbol qch (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: qrt  Ambig 0
+        symbol qrt (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: r  Ambig 0
+        symbol r (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: r0  Ambig 0
+        symbol r0 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: ra  Ambig 0
+        symbol ra (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: rai  Ambig 0
+        symbol rai (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: rho  Ambig 0
+        symbol rho (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: rho0  Ambig 0
+        symbol rho0 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: rhobar  Ambig 0
+        symbol rhobar (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: rlam  Ambig 0
+        symbol rlam (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: rm  Ambig 0
+        symbol rm (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: rmch  Ambig 0
+        symbol rmch (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: rz0  Ambig 0
+        symbol rz0 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: rz_i  Ambig 0
+        symbol rz_i (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: rzone  Ambig 0
+        symbol rzone (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: sl2  Ambig 0
+        symbol sl2 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: ten  Ambig 0
+        symbol ten (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: theta  Ambig 0
+        symbol theta (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: thre  Ambig 0
+        symbol thre (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: time_buf  Ambig 0
+        symbol time_buf (CHARACTER 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN)
+
+        symtree: tmas  Ambig 0
+        symbol tmas (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: two  Ambig 0
+        symbol two (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: twopi  Ambig 0
+        symbol twopi (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: un  Ambig 0
+        symbol un (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: v  Ambig 0
+        symbol v (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: vn  Ambig 0
+        symbol vn (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: xi  Ambig 0
+        symbol xi (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: zero  Ambig 0
+        symbol zero (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+
+      OPEN UNIT=1 FILE='sumout.pol' STATUS='unknown'
+      OPEN UNIT=11 FILE='polout.rk' STATUS='unknown'
+      OPEN UNIT=12 FILE='polplt.rk' STATUS='unknown'
+      ASSIGN newpol:idonpl 1
+1     CONTINUE
+      WRITE UNIT=6 FMT=1000
+      DT_END
+      READ UNIT=5 FMT=-1
+        TRANSFER newpol:iomod
+        TRANSFER newpol:npts
+        TRANSFER newpol:fnpol
+        TRANSFER newpol:r0
+      DT_END END=910
+      IF (<= newpol:r0 newpol:zero)
+        ASSIGN newpol:r0 5.0000000000000000_8
+      ENDIF
+      IF (< newpol:fnpol newpol:zero)
+        ASSIGN newpol:fnpol newpol:thre
+      ENDIF
+      IF (> (+ newpol:npts 2) 4096)
+        ASSIGN newpol:npts 4094
+      ENDIF
+      CALL polint ((newpol:iomod) (newpol:npts) (newpol:fnpol) (newpol:r0) (newpol:idonpl))
+      ASSIGN newpol:rhobar (/ 1.0000000000000000_8 newpol:pi43)
+      ASSIGN newpol:rlam (* newpol:rhobar (parens(/ (** newpol:xi(newpol:npts) 3) (parens(* newpol:thre newpol:dthdr(newpol:npts))))))
+      ASSIGN newpol:alfa (/ 1.0000000000000000_8 newpol:xi(newpol:npts))
+      ASSIGN newpol:pc (/ (* (* newpol:forpi newpol:g) (** (parens(* newpol:alfa newpol:rlam)) 2)) (parens(+ newpol:one newpol:fnpol)))
+      ASSIGN newpol:npuls (- newpol:npts 2)
+      ASSIGN newpol:vn(1) newpol:zero
+      ASSIGN newpol:un(1) newpol:thre
+      DO newpol:i=2 (- newpol:npts 1) 1
+        ASSIGN newpol:vn(newpol:i) (/ (* (* (parens(+ newpol:one newpol:fnpol)) newpol:xi(newpol:i)) newpol:dthdr(newpol:i)) newpol:theta(newpol:i))
+        ASSIGN newpol:un(newpol:i) (/ (* (** newpol:xi(newpol:i) 3) (** newpol:theta(newpol:i) newpol:fnpol)) newpol:dthdr(newpol:i))
+2       CONTINUE
+      END DO
+      DO newpol:i=1 newpol:npts 1
+        ASSIGN newpol:theta(newpol:i) (* newpol:ahf (parens(+ newpol:theta(newpol:i) newpol:theta((+ newpol:i 1)))))
+5       CONTINUE
+      END DO
+      ASSIGN newpol:asym_p newpol:zero
+      DO newpol:i=1 newpol:npuls 1
+        ASSIGN newpol:rho(newpol:i) (* newpol:rlam (** newpol:theta((+ newpol:i 1)) newpol:fnpol))
+        ASSIGN newpol:v(newpol:i) (/ newpol:one newpol:rho(newpol:i))
+        ASSIGN newpol:p(newpol:i) (/ (* (* newpol:theta((+ newpol:i 1)) newpol:rho(newpol:i)) newpol:pc) newpol:rlam)
+        ASSIGN newpol:g1(newpol:i) 1.6666666666666667_8
+        ASSIGN newpol:c2(newpol:i) (* (* newpol:p(newpol:i) newpol:v(newpol:i)) newpol:g1(newpol:i))
+        ASSIGN newpol:asym_p (+ newpol:asym_p (/ (parens(- newpol:r((+ newpol:i 1)) newpol:r(newpol:i))) __sqrt_r8[[((newpol:c2(newpol:i)))]]))
+        ASSIGN newpol:c2(newpol:i) __log10_r8[[((newpol:c2(newpol:i)))]]
+10      CONTINUE
+      END DO
+      ASSIGN newpol:asym_p (/ newpol:one newpol:asym_p)
+      DO newpol:i=1 (+ newpol:npuls 1) 1
+        ASSIGN newpol:r(newpol:i) (* newpol:alfa newpol:xi((+ newpol:i 1)))
+        ASSIGN newpol:rm(newpol:i) (* (* (* newpol:forpi (** newpol:alfa 3)) newpol:rlam) newpol:dthdr((+ newpol:i 1)))
+        ASSIGN newpol:gor(newpol:i) (/ (* (* (* (* newpol:g newpol:forpi) newpol:alfa) newpol:rlam) newpol:dthdr((+ newpol:i 1))) (** newpol:xi((+ newpol:i 1)) 2))
+15      CONTINUE
+      END DO
+      ASSIGN newpol:bvfac (- newpol:fnpol (/ (parens(+ newpol:fnpol newpol:one)) newpol:g1(1)))
+      ASSIGN newpol:om02 (* (* newpol:pi newpol:g) newpol:rhobar)
+      ASSIGN newpol:asym_g newpol:zero
+      IF (> __abs_r8[[((newpol:bvfac))]] 9.9999999999999998e-13_8)
+        DO newpol:i=1 newpol:npuls 1
+          ASSIGN newpol:rai (/ (* (parens(/ newpol:bvfac newpol:alfa)) newpol:dthdr((+ newpol:i 1))) (parens(* newpol:theta(newpol:i) newpol:xi((+ newpol:i 1)))))
+          ASSIGN newpol:ra(newpol:i) newpol:rai
+          ASSIGN newpol:bv(newpol:i) (/ (* (parensnewpol:rai) newpol:gor(newpol:i)) newpol:om02)
+          ASSIGN newpol:rz_i (/ (parens(+ newpol:r((+ newpol:i 1)) newpol:r(newpol:i))) 2.0000000000000000_8)
+          ASSIGN newpol:asym_g (+ newpol:asym_g (/ (* (parens(- newpol:r((+ newpol:i 1)) newpol:r(newpol:i))) __sqrt_r8[[((__abs_r8[[((newpol:bv(newpol:i)))]]))]]) newpol:rz_i))
+        END DO
+        ASSIGN newpol:asym_g __sign_r8[[(((/ newpol:one newpol:asym_g)) (newpol:bvfac))]]
+      ENDIF
+      ASSIGN newpol:igmax 0
+      DO newpol:i=1 newpol:npuls 1
+        IF (< newpol:gor((+ newpol:i 1)) newpol:gor(newpol:i))
+          GOTO 17
+        ENDIF
+        ASSIGN newpol:igmax (+ newpol:i 1)
+16      CONTINUE
+      END DO
+17    CONTINUE
+      WRITE UNIT=6 FMT=1700
+        TRANSFER newpol:igmax
+        TRANSFER (/ newpol:r(newpol:igmax) newpol:r((+ newpol:npuls 1)))
+        TRANSFER (/ newpol:rm(newpol:igmax) newpol:rm((+ newpol:npuls 1)))
+      DT_END
+      WRITE UNIT=6 FMT=1099
+        TRANSFER newpol:asym_p
+        TRANSFER newpol:asym_g
+      DT_END
+      CALL pltdmp ((newpol:bv(FULL)) (4096) (newpol:npuls) ('bv  '))
+      CALL pltdmp ((newpol:gor(FULL)) (4096) ((+ newpol:npuls 1)) ('g   '))
+      CALL pltdmp ((newpol:c2(FULL)) (4096) (newpol:npuls) ('c2  '))
+      ASSIGN newpol:rz0 (* newpol:ahf newpol:r(1))
+      ASSIGN newpol:rho0 newpol:rlam
+      ASSIGN newpol:p0 newpol:pc
+      DO newpol:i=1 newpol:npuls 1
+        ASSIGN newpol:rzone(newpol:i) (* newpol:ahf (parens(+ newpol:r(newpol:i) newpol:r((+ newpol:i 1)))))
+        ASSIGN newpol:sl2(newpol:i) (+ __log10_r8[[(((/ 6.0000000000000000_8 (** newpol:rzone(newpol:i) 2))))]] newpol:c2(newpol:i))
+20      CONTINUE
+      END DO
+      CALL pltdmp ((newpol:sl2(FULL)) (4096) (newpol:npuls) ('sl2 '))
+      ASSIGN newpol:r((+ newpol:npuls 1)) (* newpol:alfa newpol:r0)
+      ASSIGN newpol:tmas (* (* newpol:pi43 (** newpol:r(1) 3)) newpol:rlam)
+      DO newpol:i=1 newpol:npuls 1
+        ASSIGN newpol:dm1(newpol:i) (* (* (parens(- (** newpol:r((+ newpol:i 1)) 3) (** newpol:r(newpol:i) 3))) newpol:pi43) newpol:rho(newpol:i))
+        ASSIGN newpol:tmas (+ newpol:tmas newpol:dm1(newpol:i))
+30      CONTINUE
+      END DO
+      ASSIGN newpol:dm2(1) (* newpol:ahf (parens(+ newpol:rm(1) newpol:dm1(1))))
+      DO newpol:i=2 newpol:npuls 1
+        ASSIGN newpol:dm2(newpol:i) (* newpol:ahf (parens(+ newpol:dm1(newpol:i) newpol:dm1((- newpol:i 1)))))
+40      CONTINUE
+      END DO
+      ASSIGN newpol:dm2((+ newpol:npuls 1)) (/ newpol:dm1(newpol:npuls) 2.0000000000000000_8)
+      CALL pltdmp ((newpol:dm2(FULL)) (4096) (newpol:npuls) ('dm2 '))
+      ASSIGN newpol:rmch (/ (parens(- newpol:rm((+ newpol:npuls 1)) newpol:tmas)) newpol:rm((+ newpol:npuls 1)))
+      WRITE UNIT=11 FMT=2003
+        TRANSFER newpol:fnpol
+        TRANSFER newpol:r0
+        TRANSFER newpol:alfa
+        TRANSFER newpol:rlam
+        TRANSFER newpol:rhobar
+        TRANSFER newpol:rm((+ newpol:npuls 1))
+        TRANSFER newpol:tmas
+        TRANSFER newpol:rmch
+      DT_END
+      WRITE UNIT=11 FMT=2006
+        TRANSFER newpol:rz0
+        TRANSFER newpol:p0
+        TRANSFER newpol:rho0
+      DT_END
+      WRITE UNIT=11 FMT=1700
+        TRANSFER newpol:igmax
+        TRANSFER (/ newpol:r(newpol:igmax) newpol:r((+ newpol:npuls 1)))
+        TRANSFER (/ newpol:rm(newpol:igmax) newpol:rm((+ newpol:npuls 1)))
+      DT_END
+      WRITE UNIT=11 FMT=1099
+        TRANSFER newpol:asym_p
+        TRANSFER newpol:asym_g
+      DT_END
+      WRITE UNIT=11 FMT=2004
+      DT_END
+      WRITE UNIT=11 FMT=2005
+        DO newpol:i=1 newpol:npts 1
+          TRANSFER newpol:i
+          TRANSFER newpol:xi(newpol:i)
+          TRANSFER newpol:theta(newpol:i)
+          TRANSFER newpol:dthdr(newpol:i)
+          TRANSFER newpol:r(newpol:i)
+          TRANSFER newpol:p(newpol:i)
+          TRANSFER newpol:rho(newpol:i)
+          TRANSFER newpol:gor(newpol:i)
+          TRANSFER newpol:rm(newpol:i)
+          TRANSFER newpol:dm1(newpol:i)
+          TRANSFER newpol:rzone(newpol:i)
+        END DO
+      DT_END
+      ASSIGN newpol:qch (/ newpol:rlam newpol:rhobar)
+      WRITE UNIT=1 FMT=2007
+        TRANSFER newpol:npuls
+        TRANSFER newpol:time_buf
+        TRANSFER newpol:dat_buf
+        TRANSFER newpol:fnpol
+        TRANSFER newpol:r0
+        TRANSFER newpol:alfa
+        TRANSFER newpol:rlam
+        TRANSFER newpol:rhobar
+        TRANSFER newpol:rm((+ newpol:npuls 1))
+        TRANSFER newpol:tmas
+        TRANSFER newpol:rmch
+      DT_END
+      WRITE UNIT=1 FMT=2008
+        TRANSFER newpol:rz0
+        TRANSFER newpol:p0
+        TRANSFER newpol:rho0
+        TRANSFER newpol:qch
+      DT_END
+      WRITE UNIT=1 FMT=1700
+        TRANSFER newpol:igmax
+        TRANSFER (/ newpol:r(newpol:igmax) newpol:r((+ newpol:npuls 1)))
+        TRANSFER (/ newpol:rm(newpol:igmax) newpol:rm((+ newpol:npuls 1)))
+      DT_END
+      WRITE UNIT=1 FMT=1099
+        TRANSFER newpol:asym_p
+        TRANSFER newpol:asym_g
+      DT_END
+100   CONTINUE
+      WRITE UNIT=6 FMT=1001
+      DT_END
+      READ UNIT=5 FMT=-1
+        TRANSFER newpol:iopuls
+        TRANSFER newpol:lval
+        TRANSFER newpol:nomega
+        TRANSFER newpol:ihmax
+        TRANSFER newpol:omlow
+        TRANSFER newpol:omhigh
+      DT_END END=900
+      IF (< newpol:lval 0)
+        GOTO 910
+      ENDIF
+      ASSIGN newpol:om02 (* (* newpol:pi newpol:g) newpol:rhobar)
+      ASSIGN newpol:omlow (* newpol:omlow newpol:om02)
+      ASSIGN newpol:omhigh (* newpol:omhigh newpol:om02)
+      ASSIGN newpol:nmode 0
+      CALL lnanon ((newpol:npuls) (newpol:iopuls) (newpol:lval) (newpol:nomega) (newpol:ihmax) (newpol:omlow) (newpol:omhigh) (newpol:fnpol))
+      GOTO 100
+900   CONTINUE
+      GOTO 1
+910   CONTINUE
+      STOP -1
+      
+
+
+        Namespace: A-H: (REAL 8) I-N: (INTEGER 4) O-Z: (REAL 8)
+        procedure name = polint
+        common: /const/ zero, one, two, thre, for, ten, ahf, qrt
+
+        common: /phypar/ r, theta, dthdr, v, rm, gor, xi, dm1, dm2, bv, vn, un, drhdr, ra
+
+        symtree: __convert_r4_r8  Ambig 0
+        symbol __convert_r4_r8 (REAL 8)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN FUNCTION ELEMENTAL PURE)
+
+        symtree: accur  Ambig 0
+        symbol accur (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DATA IMPLICIT-TYPE)
+        value: 1.0000000000000001e-9_8
+
+        symtree: ahf  Ambig 0
+        symbol ahf (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: bv  Ambig 0
+        symbol bv (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: dabs  Ambig 0
+        symbol dabs (REAL 8)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN FUNCTION IMPLICIT-TYPE)
+        result: dabs
+
+        symtree: dfloat  Ambig 0
+        symbol dfloat (REAL 8)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN FUNCTION IMPLICIT-TYPE)
+        result: dfloat
+
+        symtree: dm1  Ambig 0
+        symbol dm1 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: dm2  Ambig 0
+        symbol dm2 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: dr  Ambig 0
+        symbol dr (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: dr0  Ambig 0
+        symbol dr0 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: drhdr  Ambig 0
+        symbol drhdr (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: dthdr  Ambig 0
+        symbol dthdr (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: f  Ambig 0
+        symbol f (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 2 )
+
+        symtree: fnpol  Ambig 0
+        symbol fnpol (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DUMMY IMPLICIT-TYPE)
+
+        symtree: for  Ambig 0
+        symbol for (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: gor  Ambig 0
+        symbol gor (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: i  Ambig 0
+        symbol i (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: ic  Ambig 0
+        symbol ic (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: idonpl  Ambig 0
+        symbol idonpl (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DUMMY IMPLICIT-TYPE)
+
+        symtree: iout  Ambig 0
+        symbol iout (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DUMMY IMPLICIT-TYPE)
+
+        symtree: irunge  Ambig 0
+        symbol irunge (INTEGER 4)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS EXTERNAL-PROC UNKNOWN FUNCTION IMPLICIT-TYPE)
+        result: irunge
+
+        symtree: iter  Ambig 0
+        symbol iter (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: itermx  Ambig 0
+        symbol itermx (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: itry  Ambig 0
+        symbol itry (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: kst  Ambig 0
+        symbol kst (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: lout  Ambig 0
+        symbol lout (LOGICAL 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN)
+
+        symtree: m  Ambig 0
+        symbol m (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: n  Ambig 0
+        symbol n (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: nin  Ambig 0
+        symbol nin (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DUMMY IMPLICIT-TYPE)
+
+        symtree: nmax  Ambig 0
+        symbol nmax (INTEGER 4)(PARAMETER UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+        value: 4096
+
+        symtree: np  Ambig 0
+        symbol np (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: one  Ambig 0
+        symbol one (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: pltdmp  Ambig 0
+        symbol pltdmp (UNKNOWN 0)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN SUBROUTINE)
+
+        symtree: pltint  Ambig 0
+        symbol pltint (UNKNOWN 0)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN SUBROUTINE)
+
+        symtree: polint  Ambig 0
+        symbol polint (UNKNOWN 0)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN SUBROUTINE)
+        Formal arglist: iout nin fnpol r0 idonpl
+
+        symtree: qrt  Ambig 0
+        symbol qrt (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: r  Ambig 0
+        symbol r (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: r0  Ambig 0
+        symbol r0 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DUMMY IMPLICIT-TYPE)
+
+        symtree: ra  Ambig 0
+        symbol ra (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: rm  Ambig 0
+        symbol rm (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: ten  Ambig 0
+        symbol ten (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: theta  Ambig 0
+        symbol theta (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: thre  Ambig 0
+        symbol thre (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: two  Ambig 0
+        symbol two (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: un  Ambig 0
+        symbol un (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: v  Ambig 0
+        symbol v (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: vn  Ambig 0
+        symbol vn (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: x  Ambig 0
+        symbol x (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 2 )
+
+        symtree: xi  Ambig 0
+        symbol xi (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: y  Ambig 0
+        symbol y (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 2 )
+
+        symtree: zero  Ambig 0
+        symbol zero (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+
+      ASSIGN polint:n polint:nin
+      ASSIGN polint:lout .false.
+      IF (>= polint:iout 1)
+        ASSIGN polint:lout .true.
+      ENDIF
+      ASSIGN polint:itry -1
+      ASSIGN polint:itermx 2
+      DO polint:iter=1 polint:itermx 1
+        ASSIGN polint:dr (/ polint:r0 __dble_i4[[(((+ polint:n 1)))]])
+        ASSIGN polint:np 0
+        ASSIGN polint:xi(1) polint:zero
+        ASSIGN polint:theta(1) polint:one
+        ASSIGN polint:dthdr(1) polint:zero
+        ASSIGN polint:xi(2) polint:dr
+        ASSIGN polint:theta(2) (- polint:one (/ (* (** polint:dr 2) (parens(- polint:one (* (* (** polint:dr 2) (parens(/ polint:fnpol 2.0000000000000000e1_8))) (parens(- polint:one (/ (* (** polint:dr 2) (parens(- (* 8.0000000000000000_8 polint:fnpol) 5.0000000000000000_8))) 1.2600000000000000e2_8))))))) 6.0000000000000000_8))
+        ASSIGN polint:dthdr(2) (/ (* (** polint:dr 3) (parens(- polint:one (* (** polint:dr 2) (parens(- (/ polint:fnpol 1.0000000000000000e1_8) (/ (* (* (** polint:dr 2) polint:fnpol) (parens(- (* 8.0000000000000000_8 polint:fnpol) 5.0000000000000000_8))) 8.4000000000000000e2_8))))))) 3.0000000000000000_8)
+        ASSIGN polint:x(1) polint:dr
+        ASSIGN polint:y(1) polint:theta(2)
+        ASSIGN polint:y(2) (U- (/ polint:dthdr(2) (** polint:dr 2)))
+        DO polint:ic=2 (+ polint:n 1) 1
+          DO polint:m=1 5 1
+            ASSIGN polint:kst irunge[[((2) (polint:y(FULL)) (polint:f(FULL)) (polint:x(1)) (polint:dr) (polint:m))]]
+            IF (= polint:kst 0)
+              GOTO 31
+            ENDIF
+            IF (< polint:y(1) polint:zero)
+              GOTO 31
+            ENDIF
+            ASSIGN polint:f(1) polint:y(2)
+            ASSIGN polint:f(2) (- (U- (/ (* polint:two polint:y(2)) polint:x(1))) (** polint:y(1) polint:fnpol))
+35          CONTINUE
+          END DO
+31        CONTINUE
+          WRITE UNIT=6 FMT=-1
+            TRANSFER polint:ic
+            TRANSFER polint:fnpol
+            TRANSFER polint:x(1)
+            TRANSFER polint:y(1)
+            TRANSFER polint:y(2)
+          DT_END
+          ASSIGN polint:np (+ polint:ic 1)
+          ASSIGN polint:xi(polint:np) polint:x(1)
+          ASSIGN polint:theta(polint:np) polint:y(1)
+          ASSIGN polint:dthdr(polint:np) (U- (* (* polint:x(1) polint:x(1)) polint:y(2)))
+          IF (< polint:y(1) polint:zero)
+            GOTO 45
+          ENDIF
+30        CONTINUE
+        END DO
+        WRITE UNIT=11 FMT=4500
+          TRANSFER polint:fnpol
+          TRANSFER polint:r0
+        DT_END
+        IF (<= polint:itry 0)
+          GOTO 49
+        ENDIF
+45      CONTINUE
+        IF (<= polint:np 1)
+          GOTO 70
+        ENDIF
+        ASSIGN polint:itry 1
+        ASSIGN polint:dr0 (/ (* (* polint:theta(polint:np) polint:xi(polint:np)) polint:xi(polint:np)) polint:dthdr(polint:np))
+        ASSIGN polint:r0 (+ polint:xi(polint:np) polint:dr0)
+        IF (< __abs_r8[[(((/ polint:dr0 polint:r0)))]] polint:accur)
+          GOTO 50
+        ENDIF
+        WRITE UNIT=6 FMT=4700
+          TRANSFER polint:np
+          TRANSFER polint:fnpol
+          TRANSFER polint:r0
+          TRANSFER polint:dr0
+        DT_END
+        IF polint:lout
+          WRITE UNIT=11 FMT=5501
+            DO polint:i=1 polint:np 1
+              TRANSFER polint:i
+              TRANSFER polint:xi(polint:i)
+              TRANSFER polint:theta(polint:i)
+              TRANSFER polint:dthdr(polint:i)
+            END DO
+          DT_END
+        ENDIF
+        GOTO 40
+49      CONTINUE
+        ASSIGN polint:r0 (* polint:r0 1.2500000000000000_8)
+        WRITE UNIT=6 FMT=4700
+          TRANSFER polint:np
+          TRANSFER polint:fnpol
+          TRANSFER polint:r0
+          TRANSFER polint:r0
+        DT_END
+40      CONTINUE
+      END DO
+      WRITE UNIT=11 FMT=4000
+        TRANSFER polint:itermx
+        TRANSFER polint:fnpol
+        TRANSFER polint:r0
+      DT_END
+      WRITE UNIT=6 FMT=4000
+        TRANSFER polint:itermx
+        TRANSFER polint:fnpol
+        TRANSFER polint:r0
+      DT_END
+      STOP -1
+50    CONTINUE
+      ASSIGN polint:theta(polint:np) polint:zero
+      WRITE UNIT=6 FMT=5500
+        TRANSFER polint:fnpol
+        TRANSFER polint:xi(polint:np)
+      DT_END
+      WRITE UNIT=11 FMT=5500
+        TRANSFER polint:fnpol
+        TRANSFER polint:xi(polint:np)
+      DT_END
+      IF polint:lout
+        WRITE UNIT=11 FMT=5501
+          DO polint:i=1 polint:np 1
+            TRANSFER polint:i
+            TRANSFER polint:xi(polint:i)
+            TRANSFER polint:theta(polint:i)
+            TRANSFER polint:dthdr(polint:i)
+          END DO
+        DT_END
+      ENDIF
+      ASSIGN polint:n polint:np
+      ASSIGN polint:nin polint:np
+      CALL pltint ((4096) (polint:n) (polint:fnpol) (polint:xi(polint:np)) (polint:idonpl))
+      CALL pltdmp ((polint:theta(FULL)) (4096) (polint:n) ('thet'))
+      CALL pltdmp ((polint:dthdr(FULL)) (4096) (polint:n) ('dtdr'))
+      RETURN 
+70    CONTINUE
+      WRITE UNIT=6 FMT=7000
+        TRANSFER polint:iter
+        TRANSFER polint:np
+        TRANSFER polint:x(1)
+        TRANSFER polint:y(1)
+        TRANSFER polint:y(2)
+        TRANSFER polint:f(1)
+        TRANSFER polint:f(2)
+      DT_END
+      STOP -1
+      
+
+
+        Namespace: A-H: (REAL 8) I-N: (INTEGER 4) O-Z: (REAL 8)
+        procedure name = irunge
+        symtree: f  Ambig 0
+        symbol f (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION DUMMY IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 irunge:n )
+
+        symtree: h  Ambig 0
+        symbol h (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DUMMY IMPLICIT-TYPE)
+
+        symtree: irunge  Ambig 0
+        symbol irunge (INTEGER 4)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN FUNCTION IMPLICIT-TYPE)
+        result: irunge
+        Formal arglist: n y f x h m
+
+        symtree: j  Ambig 0
+        symbol j (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: m  Ambig 0
+        symbol m (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DUMMY IMPLICIT-TYPE)
+
+        symtree: n  Ambig 0
+        symbol n (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DUMMY IMPLICIT-TYPE)
+
+        symtree: phi  Ambig 0
+        symbol phi (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 20 )
+
+        symtree: savey  Ambig 0
+        symbol savey (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 20 )
+
+        symtree: x  Ambig 0
+        symbol x (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DUMMY IMPLICIT-TYPE)
+
+        symtree: y  Ambig 0
+        symbol y (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION DUMMY IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 irunge:n )
+
+
+      IF (= irunge:m 1)
+        ASSIGN irunge:irunge 1
+      ELSE IF (= irunge:m 2)
+        DO irunge:j=1 irunge:n 1
+          ASSIGN irunge:savey(irunge:j) irunge:y(irunge:j)
+          ASSIGN irunge:phi(irunge:j) irunge:f(irunge:j)
+          ASSIGN irunge:y(irunge:j) (+ irunge:y(irunge:j) (/ (* irunge:h irunge:f(irunge:j)) 2.0000000000000000_8))
+25        CONTINUE
+        END DO
+        ASSIGN irunge:x (+ irunge:x (/ irunge:h 2.0000000000000000_8))
+        ASSIGN irunge:irunge 1
+      ELSE IF (= irunge:m 3)
+        DO irunge:j=1 irunge:n 1
+          ASSIGN irunge:phi(irunge:j) (+ irunge:phi(irunge:j) (* 2.0000000000000000_8 irunge:f(irunge:j)))
+          ASSIGN irunge:y(irunge:j) (+ irunge:savey(irunge:j) (/ (* irunge:f(irunge:j) irunge:h) 2.0000000000000000_8))
+35        CONTINUE
+        END DO
+        ASSIGN irunge:irunge 1
+      ELSE IF (= irunge:m 4)
+        DO irunge:j=1 irunge:n 1
+          ASSIGN irunge:phi(irunge:j) (+ irunge:phi(irunge:j) (* 2.0000000000000000_8 irunge:f(irunge:j)))
+          ASSIGN irunge:y(irunge:j) (+ irunge:savey(irunge:j) (* irunge:f(irunge:j) irunge:h))
+45        CONTINUE
+        END DO
+        ASSIGN irunge:x (+ irunge:x (/ irunge:h 2.0000000000000000_8))
+        ASSIGN irunge:irunge 1
+      ELSE IF (= irunge:m 5)
+        DO irunge:j=1 irunge:n 1
+          ASSIGN irunge:y(irunge:j) (+ irunge:savey(irunge:j) (/ (* (parens(+ irunge:phi(irunge:j) irunge:f(irunge:j))) irunge:h) 6.0000000000000000_8))
+55        CONTINUE
+        END DO
+        ASSIGN irunge:irunge 0
+      ENDIF
+      RETURN 
+      
+
+
+        Namespace: A-H: (REAL 8) I-N: (INTEGER 4) O-Z: (REAL 8)
+        common: /blk8/ grav, ac3, sigma, pi, pi2, pi4, pi8, pi43
+
+        common: /const/ zero, one, two, thre, for, ten, ahf, qrt
+
+        symtree: ac3  Ambig 0
+        symbol ac3 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DATA IN-COMMON IMPLICIT-TYPE)
+        value: 7.5594999999999997e-5_8
+
+        symtree: ahf  Ambig 0
+        symbol ahf (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DATA IN-COMMON IMPLICIT-TYPE)
+        value: 5.0000000000000000e-1_8
+
+        symtree: for  Ambig 0
+        symbol for (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DATA IN-COMMON IMPLICIT-TYPE)
+        value: 4.0000000000000000_8
+
+        symtree: grav  Ambig 0
+        symbol grav (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DATA IN-COMMON IMPLICIT-TYPE)
+        value: 1.0000000000000000_8
+
+        symtree: one  Ambig 0
+        symbol one (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DATA IN-COMMON IMPLICIT-TYPE)
+        value: 1.0000000000000000_8
+
+        symtree: pi  Ambig 0
+        symbol pi (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DATA IN-COMMON IMPLICIT-TYPE)
+        value: 3.1415926536000001_8
+
+        symtree: pi2  Ambig 0
+        symbol pi2 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DATA IN-COMMON IMPLICIT-TYPE)
+        value: 6.2831853072000001_8
+
+        symtree: pi4  Ambig 0
+        symbol pi4 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DATA IN-COMMON IMPLICIT-TYPE)
+        value: 1.2566370614400000e1_8
+
+        symtree: pi43  Ambig 0
+        symbol pi43 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DATA IN-COMMON IMPLICIT-TYPE)
+        value: 4.1887902048000001_8
+
+        symtree: pi8  Ambig 0
+        symbol pi8 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DATA IN-COMMON IMPLICIT-TYPE)
+        value: 2.5132741228800000e1_8
+
+        symtree: qrt  Ambig 0
+        symbol qrt (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DATA IN-COMMON IMPLICIT-TYPE)
+        value: 2.5000000000000000e-1_8
+
+        symtree: sigma  Ambig 0
+        symbol sigma (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DATA IN-COMMON IMPLICIT-TYPE)
+        value: 5.6696100000000001e-5_8
+
+        symtree: ten  Ambig 0
+        symbol ten (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DATA IN-COMMON IMPLICIT-TYPE)
+        value: 1.0000000000000000e1_8
+
+        symtree: thre  Ambig 0
+        symbol thre (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DATA IN-COMMON IMPLICIT-TYPE)
+        value: 3.0000000000000000_8
+
+        symtree: two  Ambig 0
+        symbol two (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DATA IN-COMMON IMPLICIT-TYPE)
+        value: 2.0000000000000000_8
+
+        symtree: zero  Ambig 0
+        symbol zero (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DATA IN-COMMON IMPLICIT-TYPE)
+        value: 0_8
+
+
+
+
+        Namespace: A-H: (REAL 8) I-N: (INTEGER 4) O-Z: (REAL 8)
+        procedure name = pltint
+        common: /blk4/ p, g1, rho, rzone
+
+        common: /const/ zero, one, two, thre, for, ten, ahf, qrt
+
+        common: /phypar/ r, theta, dthdr, v, rm, gor, xi, dm1, dm2, bv, vn, un, drhdr, ra
+
+        symtree: ahf  Ambig 0
+        symbol ahf (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: bv  Ambig 0
+        symbol bv (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: dm1  Ambig 0
+        symbol dm1 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: dm2  Ambig 0
+        symbol dm2 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: drhdr  Ambig 0
+        symbol drhdr (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: dthdr  Ambig 0
+        symbol dthdr (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: fnpol  Ambig 0
+        symbol fnpol (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DUMMY IMPLICIT-TYPE)
+
+        symtree: for  Ambig 0
+        symbol for (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: g1  Ambig 0
+        symbol g1 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: gor  Ambig 0
+        symbol gor (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: i  Ambig 0
+        symbol i (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: idonpl  Ambig 0
+        symbol idonpl (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DUMMY IMPLICIT-TYPE)
+
+        symtree: n  Ambig 0
+        symbol n (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DUMMY IMPLICIT-TYPE)
+
+        symtree: nmax  Ambig 0
+        symbol nmax (INTEGER 4)(PARAMETER UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+        value: 4096
+
+        symtree: nmaxin  Ambig 0
+        symbol nmaxin (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DUMMY IMPLICIT-TYPE)
+
+        symtree: one  Ambig 0
+        symbol one (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: p  Ambig 0
+        symbol p (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: pltdmp  Ambig 0
+        symbol pltdmp (UNKNOWN 0)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN SUBROUTINE)
+
+        symtree: pltint  Ambig 0
+        symbol pltint (UNKNOWN 0)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN SUBROUTINE)
+        Formal arglist: nmaxin n fnpol r0 idonpl
+
+        symtree: qrt  Ambig 0
+        symbol qrt (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: r  Ambig 0
+        symbol r (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: r0  Ambig 0
+        symbol r0 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DUMMY IMPLICIT-TYPE)
+
+        symtree: ra  Ambig 0
+        symbol ra (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: rho  Ambig 0
+        symbol rho (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: rm  Ambig 0
+        symbol rm (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: rzone  Ambig 0
+        symbol rzone (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: ten  Ambig 0
+        symbol ten (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: theta  Ambig 0
+        symbol theta (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: thre  Ambig 0
+        symbol thre (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: two  Ambig 0
+        symbol two (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: un  Ambig 0
+        symbol un (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: v  Ambig 0
+        symbol v (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: vn  Ambig 0
+        symbol vn (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: xi  Ambig 0
+        symbol xi (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: zero  Ambig 0
+        symbol zero (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+
+      IF (> pltint:idonpl 0)
+        ASSIGN pltint:idonpl -1
+        WRITE UNIT=12 FMT=1000
+          TRANSFER pltint:fnpol
+          TRANSFER pltint:r0
+        DT_END
+      ENDIF
+      CALL pltdmp ((pltint:xi(2)) (pltint:nmaxin) (pltint:n) ('xi  '))
+      DO pltint:i=2 pltint:n 1
+        ASSIGN pltint:r(pltint:i) (/ pltint:xi(pltint:i) pltint:xi(pltint:n))
+20      CONTINUE
+      END DO
+      CALL pltdmp ((pltint:r(2)) (pltint:nmaxin) ((- pltint:n 1)) ('x   '))
+      RETURN 
+      
+
+
+        Namespace: A-H: (REAL 8) I-N: (INTEGER 4) O-Z: (REAL 8)
+        procedure name = pltdmp
+        symtree: i  Ambig 0
+        symbol i (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: ititl  Ambig 0
+        symbol ititl (CHARACTER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DUMMY)
+
+        symtree: n  Ambig 0
+        symbol n (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DUMMY IMPLICIT-TYPE)
+
+        symtree: nmax  Ambig 0
+        symbol nmax (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DUMMY IMPLICIT-TYPE)
+
+        symtree: pltdmp  Ambig 0
+        symbol pltdmp (UNKNOWN 0)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN SUBROUTINE)
+        Formal arglist: vec nmax n ititl
+
+        symtree: vec  Ambig 0
+        symbol vec (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION DUMMY IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 pltdmp:nmax )
+
+
+      WRITE UNIT=12 FMT=1000
+        TRANSFER pltdmp:n
+        TRANSFER pltdmp:ititl
+        DO pltdmp:i=1 pltdmp:n 1
+          TRANSFER pltdmp:vec(pltdmp:i)
+        END DO
+      DT_END
+      RETURN 
+      
+
+
+        Namespace: A-H: (REAL 8) I-N: (INTEGER 4) O-Z: (REAL 8)
+        procedure name = lnanon
+        common: /blk37/ drdm
+
+        common: /blk4/ p, g1, rho, rzone
+
+        common: /blk8/ g, ac3, acrad, pi, twopi, forpi, pi8, pi43
+
+        common: /const/ zero, one, two, thre, for, ten, ahf, qrt
+
+        common: /corevl/ rz0, p0, rho0
+
+        common: /linear/ wtherm, wgrav, wcross, wdiag, dr, dh, gam, strke, z, dp, adrho, weight, xo, yo, stwait, epstwt, spac
+
+        common: /phypar/ r, theta, dthdr, v, rm, gor, xi, dm1, dm2, bv, vn, un, drhdr, ra
+
+        common: /scrtch/ ag1, ag3, ag4, ah1, ah3, ah4, ap1, ap3, ap4
+
+        symtree: __convert_i4_r8  Ambig 0
+        symbol __convert_i4_r8 (REAL 8)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN FUNCTION ELEMENTAL PURE)
+
+        symtree: __convert_r4_r8  Ambig 0
+        symbol __convert_r4_r8 (REAL 8)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN FUNCTION ELEMENTAL PURE)
+
+        symtree: abs  Ambig 0
+        symbol abs (REAL 8)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN FUNCTION IMPLICIT-TYPE)
+        result: abs
+
+        symtree: ac3  Ambig 0
+        symbol ac3 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: accur  Ambig 0
+        symbol accur (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DATA IMPLICIT-TYPE)
+        value: 1.0000000000000000e-10_8
+
+        symtree: acrad  Ambig 0
+        symbol acrad (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: adrho  Ambig 0
+        symbol adrho (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: afac  Ambig 0
+        symbol afac (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: afacp  Ambig 0
+        symbol afacp (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: ag1  Ambig 0
+        symbol ag1 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(2 AS_EXPLICIT 1 4096 1 3 )
+
+        symtree: ag11  Ambig 0
+        symbol ag11 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: ag3  Ambig 0
+        symbol ag3 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(2 AS_EXPLICIT 1 4096 1 2 )
+
+        symtree: ag4  Ambig 0
+        symbol ag4 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(2 AS_EXPLICIT 1 4096 1 2 )
+
+        symtree: ag41  Ambig 0
+        symbol ag41 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: ah1  Ambig 0
+        symbol ah1 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(2 AS_EXPLICIT 1 4096 1 2 )
+
+        symtree: ah3  Ambig 0
+        symbol ah3 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: ah4  Ambig 0
+        symbol ah4 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: ahf  Ambig 0
+        symbol ahf (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: ap1  Ambig 0
+        symbol ap1 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(2 AS_EXPLICIT 1 4096 1 2 )
+
+        symtree: ap3  Ambig 0
+        symbol ap3 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(2 AS_EXPLICIT 1 4096 1 3 )
+
+        symtree: ap311  Ambig 0
+        symbol ap311 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: ap313  Ambig 0
+        symbol ap313 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: ap3i1  Ambig 0
+        symbol ap3i1 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: ap3i3  Ambig 0
+        symbol ap3i3 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: ap3n1  Ambig 0
+        symbol ap3n1 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: ap3n3  Ambig 0
+        symbol ap3n3 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: ap4  Ambig 0
+        symbol ap4 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: bv  Ambig 0
+        symbol bv (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: chwait  Ambig 0
+        symbol chwait (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: ckl  Ambig 0
+        symbol ckl (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: crsum  Ambig 0
+        symbol crsum (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: dabs  Ambig 0
+        symbol dabs (REAL 8)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN FUNCTION IMPLICIT-TYPE)
+        result: dabs
+
+        symtree: ddr11  Ambig 0
+        symbol ddr11 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: ddr12  Ambig 0
+        symbol ddr12 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: ddr13  Ambig 0
+        symbol ddr13 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: dfloat  Ambig 0
+        symbol dfloat (REAL 8)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN FUNCTION IMPLICIT-TYPE)
+        result: dfloat
+
+        symtree: dh  Ambig 0
+        symbol dh (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: dlnr  Ambig 0
+        symbol dlnr (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: dlog  Ambig 0
+        symbol dlog (REAL 8)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN FUNCTION IMPLICIT-TYPE)
+        result: dlog
+
+        symtree: dlrhdr  Ambig 0
+        symbol dlrhdr (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: dm1  Ambig 0
+        symbol dm1 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: dm2  Ambig 0
+        symbol dm2 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: dmin1  Ambig 0
+        symbol dmin1 (REAL 8)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN FUNCTION IMPLICIT-TYPE)
+        result: dmin1
+
+        symtree: dom  Ambig 0
+        symbol dom (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: domsq  Ambig 0
+        symbol domsq (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: dp  Ambig 0
+        symbol dp (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: dp0  Ambig 0
+        symbol dp0 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: dr  Ambig 0
+        symbol dr (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: drdm  Ambig 0
+        symbol drdm (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(2 AS_EXPLICIT 1 4096 1 2 )
+
+        symtree: drdm0  Ambig 0
+        symbol drdm0 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: drdm01  Ambig 0
+        symbol drdm01 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: drdm02  Ambig 0
+        symbol drdm02 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: drhdr  Ambig 0
+        symbol drhdr (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: drho0  Ambig 0
+        symbol drho0 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: drho_eul  Ambig 0
+        symbol drho_eul (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: drint  Ambig 0
+        symbol drint (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: drtst  Ambig 0
+        symbol drtst (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: drz  Ambig 0
+        symbol drz (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: dsign  Ambig 0
+        symbol dsign (REAL 8)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN FUNCTION IMPLICIT-TYPE)
+        result: dsign
+
+        symtree: dsqrt  Ambig 0
+        symbol dsqrt (REAL 8)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN FUNCTION IMPLICIT-TYPE)
+        result: dsqrt
+
+        symtree: dthdr  Ambig 0
+        symbol dthdr (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: ech  Ambig 0
+        symbol ech (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: epstwt  Ambig 0
+        symbol epstwt (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: err  Ambig 0
+        symbol err (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: erra  Ambig 0
+        symbol erra (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: eta0  Ambig 0
+        symbol eta0 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: f  Ambig 0
+        symbol f (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: fdr  Ambig 0
+        symbol fdr (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: fnpol  Ambig 0
+        symbol fnpol (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: fnpoln  Ambig 0
+        symbol fnpoln (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DUMMY IMPLICIT-TYPE)
+
+        symtree: fomeg  Ambig 0
+        symbol fomeg (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: fomi  Ambig 0
+        symbol fomi (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: fomsq  Ambig 0
+        symbol fomsq (REAL 8)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS EXTERNAL-PROC UNKNOWN FUNCTION IMPLICIT-TYPE)
+        result: fomsq
+
+        symtree: for  Ambig 0
+        symbol for (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: forpi  Ambig 0
+        symbol forpi (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: fp3  Ambig 0
+        symbol fp3 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: g  Ambig 0
+        symbol g (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: g1  Ambig 0
+        symbol g1 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: g1p  Ambig 0
+        symbol g1p (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: gam  Ambig 0
+        symbol gam (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: gam0  Ambig 0
+        symbol gam0 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: gor  Ambig 0
+        symbol gor (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: gzone  Ambig 0
+        symbol gzone (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: hbar  Ambig 0
+        symbol hbar (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: hrsum  Ambig 0
+        symbol hrsum (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: hsum  Ambig 0
+        symbol hsum (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: i  Ambig 0
+        symbol i (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: iabs  Ambig 0
+        symbol iabs (INTEGER 4)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN FUNCTION IMPLICIT-TYPE)
+        result: iabs
+
+        symtree: icount  Ambig 0
+        symbol icount (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: ih  Ambig 0
+        symbol ih (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: ihmax  Ambig 0
+        symbol ihmax (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DUMMY IMPLICIT-TYPE)
+
+        symtree: ihmin  Ambig 0
+        symbol ihmin (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: index  Ambig 0
+        symbol index (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: iout  Ambig 0
+        symbol iout (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DUMMY IMPLICIT-TYPE)
+
+        symtree: iprint  Ambig 0
+        symbol iprint (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: iroot  Ambig 0
+        symbol iroot (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: istart  Ambig 0
+        symbol istart (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: iterad  Ambig 0
+        symbol iterad (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: iv  Ambig 0
+        symbol iv (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: j  Ambig 0
+        symbol j (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: k  Ambig 0
+        symbol k (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: knode  Ambig 0
+        symbol knode (INTEGER 4)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS EXTERNAL-PROC UNKNOWN FUNCTION IMPLICIT-TYPE)
+        result: knode
+
+        symtree: lin  Ambig 0
+        symbol lin (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DUMMY IMPLICIT-TYPE)
+
+        symtree: lnanon  Ambig 0
+        symbol lnanon (UNKNOWN 0)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN SUBROUTINE)
+        Formal arglist: nin iout lin nomega ihmax omlow omhigh fnpoln
+
+        symtree: lval  Ambig 0
+        symbol lval (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: n  Ambig 0
+        symbol n (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: ng  Ambig 0
+        symbol ng (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: nin  Ambig 0
+        symbol nin (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DUMMY IMPLICIT-TYPE)
+
+        symtree: nmax  Ambig 0
+        symbol nmax (INTEGER 4)(PARAMETER UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+        value: 4096
+
+        symtree: nmax3  Ambig 0
+        symbol nmax3 (INTEGER 4)(PARAMETER UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+        value: 12288
+
+        symtree: nodes  Ambig 0
+        symbol nodes (INTEGER 4)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS EXTERNAL-PROC UNKNOWN FUNCTION IMPLICIT-TYPE)
+        result: nodes
+
+        symtree: nomega  Ambig 0
+        symbol nomega (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DUMMY IMPLICIT-TYPE)
+
+        symtree: np  Ambig 0
+        symbol np (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: np1  Ambig 0
+        symbol np1 (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: nroot  Ambig 0
+        symbol nroot (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: omhigh  Ambig 0
+        symbol omhigh (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DUMMY IMPLICIT-TYPE)
+
+        symtree: omlow  Ambig 0
+        symbol omlow (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DUMMY IMPLICIT-TYPE)
+
+        symtree: omsq  Ambig 0
+        symbol omsq (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: omsq1  Ambig 0
+        symbol omsq1 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: omsq2  Ambig 0
+        symbol omsq2 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: omsq_comp  Ambig 0
+        symbol omsq_comp (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: omsq_weight  Ambig 0
+        symbol omsq_weight (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: omsqc  Ambig 0
+        symbol omsqc (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: omsql  Ambig 0
+        symbol omsql (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: omsqp  Ambig 0
+        symbol omsqp (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: omsqs  Ambig 0
+        symbol omsqs (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: one  Ambig 0
+        symbol one (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: orthog  Ambig 0
+        symbol orthog (UNKNOWN 0)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN SUBROUTINE)
+
+        symtree: p  Ambig 0
+        symbol p (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: p0  Ambig 0
+        symbol p0 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: pekeris  Ambig 0
+        symbol pekeris (UNKNOWN 0)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN SUBROUTINE)
+
+        symtree: pi  Ambig 0
+        symbol pi (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: pi43  Ambig 0
+        symbol pi43 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: pi4g  Ambig 0
+        symbol pi4g (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: pi8  Ambig 0
+        symbol pi8 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: pltdmp  Ambig 0
+        symbol pltdmp (UNKNOWN 0)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN SUBROUTINE)
+
+        symtree: qch  Ambig 0
+        symbol qch (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: qdr0  Ambig 0
+        symbol qdr0 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: qomsq  Ambig 0
+        symbol qomsq (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: qrt  Ambig 0
+        symbol qrt (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: r  Ambig 0
+        symbol r (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: ra  Ambig 0
+        symbol ra (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: rbar  Ambig 0
+        symbol rbar (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: rho  Ambig 0
+        symbol rho (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: rho0  Ambig 0
+        symbol rho0 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: rhom  Ambig 0
+        symbol rhom (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: rke  Ambig 0
+        symbol rke (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: rkl2  Ambig 0
+        symbol rkl2 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: rkl20  Ambig 0
+        symbol rkl20 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: rl  Ambig 0
+        symbol rl (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: rl1  Ambig 0
+        symbol rl1 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: rm  Ambig 0
+        symbol rm (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: robeig  Ambig 0
+        symbol robeig (UNKNOWN 0)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN SUBROUTINE)
+
+        symtree: rsum  Ambig 0
+        symbol rsum (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: rz0  Ambig 0
+        symbol rz0 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: rzone  Ambig 0
+        symbol rzone (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: spac  Ambig 0
+        symbol spac (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(2 AS_EXPLICIT 1 4096 1 5 )
+
+        symtree: stomeg  Ambig 0
+        symbol stomeg (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 200 )
+
+        symtree: stomsq  Ambig 0
+        symbol stomsq (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IMPLICIT-TYPE)
+        Array spec:(2 AS_EXPLICIT 1 200 1 4 )
+
+        symtree: strke  Ambig 0
+        symbol strke (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: stwait  Ambig 0
+        symbol stwait (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: tcon  Ambig 0
+        symbol tcon (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: ten  Ambig 0
+        symbol ten (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: termq  Ambig 0
+        symbol termq (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: theta  Ambig 0
+        symbol theta (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: thre  Ambig 0
+        symbol thre (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: transt  Ambig 0
+        symbol transt (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: trisol  Ambig 0
+        symbol trisol (UNKNOWN 0)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN SUBROUTINE)
+
+        symtree: two  Ambig 0
+        symbol two (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: twopi  Ambig 0
+        symbol twopi (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: uc  Ambig 0
+        symbol uc (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: un  Ambig 0
+        symbol un (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: v  Ambig 0
+        symbol v (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: vl  Ambig 0
+        symbol vl (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: vn  Ambig 0
+        symbol vn (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: wcross  Ambig 0
+        symbol wcross (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: wdiag  Ambig 0
+        symbol wdiag (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: weight  Ambig 0
+        symbol weight (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: wgrav  Ambig 0
+        symbol wgrav (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: wtherm  Ambig 0
+        symbol wtherm (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: x  Ambig 0
+        symbol x (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 12288 )
+
+        symtree: x0np  Ambig 0
+        symbol x0np (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: xi  Ambig 0
+        symbol xi (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: xnorm  Ambig 0
+        symbol xnorm (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: xo  Ambig 0
+        symbol xo (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: yo  Ambig 0
+        symbol yo (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: z  Ambig 0
+        symbol z (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: zero  Ambig 0
+        symbol zero (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: zomsq  Ambig 0
+        symbol zomsq (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+
+      ASSIGN lnanon:stomsq(FULL) lnanon:zero
+      DO lnanon:i=1 12288 1
+        ASSIGN lnanon:x(lnanon:i) lnanon:zero
+5       CONTINUE
+      END DO
+      ASSIGN lnanon:n lnanon:nin
+      ASSIGN lnanon:np1 (+ lnanon:n 1)
+      ASSIGN lnanon:lval lnanon:lin
+      ASSIGN lnanon:rl __dble_i4[[((lnanon:lval))]]
+      ASSIGN lnanon:rl1 (* lnanon:rl (parens(+ lnanon:rl lnanon:one)))
+      ASSIGN lnanon:fnpol lnanon:fnpoln
+      ASSIGN lnanon:rhom (/ lnanon:rm(lnanon:np1) (parens(* lnanon:pi43 (** lnanon:r(lnanon:np1) 3))))
+      DO lnanon:i=1 lnanon:n 1
+        IF (> lnanon:i 1)
+          ASSIGN lnanon:drz(lnanon:i) (- lnanon:rzone(lnanon:i) lnanon:rzone((- lnanon:i 1)))
+        ENDIF
+        ASSIGN lnanon:drint(lnanon:i) (- lnanon:r((+ lnanon:i 1)) lnanon:r(lnanon:i))
+        ASSIGN lnanon:drdm(lnanon:i , 1) (/ (parens(- (/ lnanon:rzone(lnanon:i) lnanon:drint(lnanon:i)) (* lnanon:ahf (parens(+ lnanon:rl lnanon:one))))) (** lnanon:rzone(lnanon:i) 2))
+        ASSIGN lnanon:drdm(lnanon:i , 2) (U- (/ (parens(+ (/ lnanon:rzone(lnanon:i) lnanon:drint(lnanon:i)) (* lnanon:ahf (parens(+ lnanon:rl lnanon:one))))) (** lnanon:rzone(lnanon:i) 2)))
+10      CONTINUE
+      END DO
+      ASSIGN lnanon:rkl2(1:lnanon:n) (/ lnanon:rl1 (** lnanon:rzone(1:lnanon:n) 2))
+      ASSIGN lnanon:z(1:lnanon:n) (/ lnanon:rzone(1:lnanon:n) lnanon:r(lnanon:np1))
+      CALL pltdmp ((lnanon:rzone(FULL)) (4096) (lnanon:n) ('rz  '))
+      ASSIGN lnanon:drz(1) (- lnanon:rzone(1) lnanon:rz0)
+      ASSIGN lnanon:drdm(lnanon:np1 , 1) lnanon:zero
+      ASSIGN lnanon:drdm(lnanon:np1 , 2) lnanon:zero
+      ASSIGN lnanon:drz(lnanon:np1) (/ (* lnanon:p(lnanon:n) lnanon:v(lnanon:n)) lnanon:gor(lnanon:np1))
+      ASSIGN lnanon:drz(lnanon:np1) lnanon:drz(lnanon:n)
+      ASSIGN lnanon:pi4g (* lnanon:forpi lnanon:g)
+      IF (<= lnanon:lval 0)
+        GOTO 50
+      ENDIF
+      ASSIGN lnanon:afac lnanon:zero
+      ASSIGN lnanon:rkl20 (* lnanon:rl1 (** (parens(/ (/ lnanon:one lnanon:thre) lnanon:rz0)) 2))
+      ASSIGN lnanon:drdm01 (U- (* (* 5.8333333333333337e-1_8 (parens(+ lnanon:rl lnanon:one))) (** (parens(/ (/ lnanon:one lnanon:thre) lnanon:rz0)) 2)))
+      ASSIGN lnanon:drdm02 (U- (* (* 4.1666666666666669e-1_8 (parens(+ lnanon:rl lnanon:one))) (** (parens(/ (/ lnanon:one lnanon:thre) lnanon:rz0)) 2)))
+      ASSIGN lnanon:p0 lnanon:p(1)
+      ASSIGN lnanon:rho0 (/ lnanon:one lnanon:v(1))
+      ASSIGN lnanon:ag11 (* (* (* lnanon:drdm01 lnanon:g1(1)) lnanon:p0) (parens(- (/ (* lnanon:ahf lnanon:rl) lnanon:rho0) lnanon:afac)))
+      ASSIGN lnanon:ag1(1 , 1) lnanon:zero
+      ASSIGN lnanon:ag1(1 , 2) (+ (+ (U- (/ lnanon:gor(1) lnanon:r(1))) (* (* (* lnanon:drdm(1 , 1) lnanon:g1(1)) lnanon:p(1)) (parens(+ (* (* lnanon:ahf lnanon:rl) lnanon:v(1)) lnanon:afac)))) (* (* (* lnanon:drdm01 lnanon:g1(1)) lnanon:p0) (parens(- (/ (* lnanon:ahf lnanon:rl) lnanon:rho0) lnanon:afac))))
+      ASSIGN lnanon:ag1(1 , 3) (* (* (* lnanon:drdm(1 , 2) lnanon:g1(1)) lnanon:p(1)) (parens(+ (* (* lnanon:ahf lnanon:rl) lnanon:v(1)) lnanon:afac)))
+      ASSIGN lnanon:ag1(1 , 3) (+ lnanon:ag1(1 , 3) (* (* (* lnanon:drdm02 lnanon:g1(1)) lnanon:p(1)) (parens(- (* (* lnanon:ahf lnanon:rl) lnanon:v(1)) lnanon:afac))))
+      ASSIGN lnanon:ag3(1 , 1) lnanon:zero
+      ASSIGN lnanon:ag3(1 , 2) lnanon:rl
+      ASSIGN lnanon:ag41 (* lnanon:rkl20 (parens(* (* lnanon:g1(1) lnanon:p0) (parens(- (/ (* lnanon:ahf lnanon:rl) lnanon:rho0) lnanon:afac)))))
+      ASSIGN lnanon:ag4(1 , 1) lnanon:zero
+      ASSIGN lnanon:ag4(1 , 2) (+ (* lnanon:rkl2(1) (parens(* (* lnanon:g1(1) lnanon:p(1)) (parens(+ (* (* lnanon:ahf lnanon:rl) lnanon:v(1)) lnanon:afac))))) (/ (* lnanon:rl1 lnanon:gor(1)) lnanon:r(1)))
+      ASSIGN lnanon:ag4(1 , 2) (+ lnanon:ag4(1 , 2) lnanon:ag41)
+      ASSIGN lnanon:ap1(1 , 1) (U- (* (* (* lnanon:pi4g lnanon:rho(1)) (** lnanon:rzone(1) 2)) lnanon:drdm(1 , 1)))
+      ASSIGN lnanon:ap1(1 , 2) (U- (* (* lnanon:pi4g lnanon:rho(1)) (parens(- (* (** lnanon:rzone(1) 2) lnanon:drdm(1 , 2)) (/ (* lnanon:ahf __log_r8[[(((/ lnanon:rho(2) lnanon:rho(1))))]]) __log_r8[[(((/ lnanon:rzone(2) lnanon:rzone(1))))]])))))
+      ASSIGN lnanon:ap311 (/ (** lnanon:r(1) 2) (parens(* lnanon:drint(1) lnanon:drz(1))))
+      ASSIGN lnanon:ap313 (/ (** lnanon:r(2) 2) (parens(* lnanon:drint(1) lnanon:drz(2))))
+      ASSIGN lnanon:ap3(1 , 1) lnanon:zero
+      ASSIGN lnanon:ap3(1 , 2) (- (U- lnanon:ap313) (* lnanon:ap311 (** (parens(/ lnanon:drz(1) lnanon:drz(2))) 2)))
+      ASSIGN lnanon:ap3(1 , 3) (+ lnanon:ap313 (* lnanon:ap311 (** (parens(/ lnanon:drz(1) lnanon:drz(2))) 2)))
+      ASSIGN lnanon:ap4(1) (U- (* (* lnanon:pi4g lnanon:rl1) lnanon:rho(1)))
+      DO lnanon:i=1 lnanon:n 1
+        ASSIGN lnanon:gzone (/ (* lnanon:ahf (parens(+ lnanon:gor(lnanon:i) lnanon:gor((+ lnanon:i 1))))) lnanon:rzone(lnanon:i))
+        ASSIGN lnanon:ah1(lnanon:i , 1) (+ (* (* (* lnanon:drdm(lnanon:i , 1) lnanon:g1(lnanon:i)) lnanon:p(lnanon:i)) lnanon:v(lnanon:i)) (* lnanon:ahf lnanon:gzone))
+        ASSIGN lnanon:ah1(lnanon:i , 2) (+ (* (* (* lnanon:drdm(lnanon:i , 2) lnanon:g1(lnanon:i)) lnanon:p(lnanon:i)) lnanon:v(lnanon:i)) (* lnanon:ahf lnanon:gzone))
+        ASSIGN lnanon:ah3(lnanon:i) lnanon:one
+        ASSIGN lnanon:ah4(lnanon:i) (* (* (* lnanon:rkl2(lnanon:i) lnanon:g1(lnanon:i)) lnanon:p(lnanon:i)) lnanon:v(lnanon:i))
+        IF (= lnanon:i lnanon:n)
+          GOTO 20
+        ENDIF
+        ASSIGN lnanon:afac (/ (* lnanon:forpi (** lnanon:r((+ lnanon:i 1)) 3)) lnanon:dm2((+ lnanon:i 1)))
+        ASSIGN lnanon:ag1((+ lnanon:i 1) , 1) (* (* (* lnanon:drdm(lnanon:i , 1) lnanon:g1(lnanon:i)) lnanon:p(lnanon:i)) (parens(- (* (* lnanon:ahf lnanon:rl) lnanon:v(lnanon:i)) lnanon:afac)))
+        ASSIGN lnanon:ag1((+ lnanon:i 1) , 2) (+ (+ (+ (U- (/ (* lnanon:for lnanon:gor((+ lnanon:i 1))) lnanon:r((+ lnanon:i 1)))) (* (* lnanon:pi4g lnanon:ahf) (parens(+ lnanon:rho((+ lnanon:i 1)) lnanon:rho(lnanon:i))))) (* (* (* lnanon:drdm((+ lnanon:i 1) , 1) lnanon:g1((+ lnanon:i 1))) lnanon:p((+ lnanon:i 1))) (parens(+ (* (* lnanon:ahf lnanon:rl) lnanon:v((+ lnanon:i 1))) lnanon:afac)))) (* (* (* lnanon:drdm(lnanon:i , 2) lnanon:g1(lnanon:i)) lnanon:p(lnanon:i)) (parens(- (* (* lnanon:ahf lnanon:rl) lnanon:v(lnanon:i)) lnanon:afac))))
+        ASSIGN lnanon:ag1((+ lnanon:i 1) , 3) (* (* (* lnanon:drdm((+ lnanon:i 1) , 2) lnanon:g1((+ lnanon:i 1))) lnanon:p((+ lnanon:i 1))) (parens(+ (* (* lnanon:ahf lnanon:rl) lnanon:v((+ lnanon:i 1))) lnanon:afac)))
+        ASSIGN lnanon:ag3((+ lnanon:i 1) , 1) (- (* lnanon:ahf lnanon:rl) (/ lnanon:r((+ lnanon:i 1)) lnanon:drz((+ lnanon:i 1))))
+        ASSIGN lnanon:ag3((+ lnanon:i 1) , 2) (+ (* lnanon:ahf lnanon:rl) (/ lnanon:r((+ lnanon:i 1)) lnanon:drz((+ lnanon:i 1))))
+        ASSIGN lnanon:ag4((+ lnanon:i 1) , 1) (+ (* lnanon:rkl2(lnanon:i) (parens(* (* lnanon:g1(lnanon:i) lnanon:p(lnanon:i)) (parens(- (* (* lnanon:ahf lnanon:rl) lnanon:v(lnanon:i)) lnanon:afac))))) (/ (* (* lnanon:ahf lnanon:rl1) lnanon:gor((+ lnanon:i 1))) lnanon:r((+ lnanon:i 1))))
+        ASSIGN lnanon:ag4((+ lnanon:i 1) , 2) (+ (* lnanon:rkl2((+ lnanon:i 1)) (parens(* (* lnanon:g1((+ lnanon:i 1)) lnanon:p((+ lnanon:i 1))) (parens(+ (* (* lnanon:ahf lnanon:rl) lnanon:v((+ lnanon:i 1))) lnanon:afac))))) (/ (* (* lnanon:ahf lnanon:rl1) lnanon:gor((+ lnanon:i 1))) lnanon:r((+ lnanon:i 1))))
+        IF (= lnanon:i 1)
+          GOTO 20
+        ENDIF
+        ASSIGN lnanon:ddr11 (U- (/ lnanon:drz((+ lnanon:i 1)) (parens(* lnanon:drz(lnanon:i) (parens(+ lnanon:drz(lnanon:i) lnanon:drz((+ lnanon:i 1))))))))
+        ASSIGN lnanon:ddr12 (/ (parens(- lnanon:drz((+ lnanon:i 1)) lnanon:drz(lnanon:i))) (parens(* lnanon:drz(lnanon:i) lnanon:drz((+ lnanon:i 1)))))
+        ASSIGN lnanon:ddr13 (/ lnanon:drz(lnanon:i) (parens(* lnanon:drz((+ lnanon:i 1)) (parens(+ lnanon:drz(lnanon:i) lnanon:drz((+ lnanon:i 1)))))))
+        ASSIGN lnanon:ap1(lnanon:i , 1) (U- (* (* lnanon:pi4g lnanon:rho(lnanon:i)) (parens(- (* (** lnanon:rzone(lnanon:i) 2) lnanon:drdm(lnanon:i , 1)) (/ (* lnanon:ahf __log_r8[[(((/ lnanon:rho(lnanon:i) lnanon:rho((- lnanon:i 1)))))]]) __log_r8[[(((/ lnanon:rzone(lnanon:i) lnanon:rzone((- lnanon:i 1)))))]])))))
+        ASSIGN lnanon:ap1(lnanon:i , 2) (U- (* (* lnanon:pi4g lnanon:rho(lnanon:i)) (parens(- (* (** lnanon:rzone(lnanon:i) 2) lnanon:drdm(lnanon:i , 2)) (/ (* lnanon:ahf __log_r8[[(((/ lnanon:rho((+ lnanon:i 1)) lnanon:rho(lnanon:i))))]]) __log_r8[[(((/ lnanon:rzone((+ lnanon:i 1)) lnanon:rzone(lnanon:i))))]])))))
+        ASSIGN lnanon:ap3i1 (/ (** lnanon:r(lnanon:i) 2) (parens(* lnanon:drint(lnanon:i) lnanon:drz(lnanon:i))))
+        ASSIGN lnanon:ap3i3 (/ (** lnanon:r((+ lnanon:i 1)) 2) (parens(* lnanon:drint(lnanon:i) lnanon:drz((+ lnanon:i 1)))))
+        ASSIGN lnanon:ap3(lnanon:i , 1) (+ lnanon:ap3i1 (* (* (* lnanon:ddr11 lnanon:two) lnanon:rl) lnanon:rzone(lnanon:i)))
+        ASSIGN lnanon:ap3(lnanon:i , 2) (+ (U- (parens(+ lnanon:ap3i1 lnanon:ap3i3))) (* (* (* lnanon:ddr12 lnanon:two) lnanon:rl) lnanon:rzone(lnanon:i)))
+        ASSIGN lnanon:ap3(lnanon:i , 3) (+ lnanon:ap3i3 (* (* (* lnanon:ddr13 lnanon:two) lnanon:rl) lnanon:rzone(lnanon:i)))
+        ASSIGN lnanon:ap4(lnanon:i) (U- (* (* lnanon:pi4g lnanon:rl1) lnanon:rho(lnanon:i)))
+20      CONTINUE
+      END DO
+      ASSIGN lnanon:dlnr (/ (* (parens(+ lnanon:rl lnanon:ahf)) lnanon:drz(lnanon:np1)) lnanon:r(lnanon:np1))
+      ASSIGN lnanon:f (/ (parens(/ lnanon:drz(lnanon:np1) lnanon:r(lnanon:np1))) (parens(+ lnanon:one lnanon:dlnr)))
+      ASSIGN lnanon:afac (/ (* lnanon:forpi (** lnanon:r(lnanon:np1) 3)) lnanon:dm2(lnanon:np1))
+      ASSIGN lnanon:vl (U- (* (* (* lnanon:two lnanon:g1(lnanon:n)) lnanon:p(lnanon:n)) lnanon:afac))
+      ASSIGN lnanon:ag1(lnanon:np1 , 1) (* lnanon:drdm(lnanon:n , 1) lnanon:vl)
+      ASSIGN lnanon:fdr (/ (parens(+ lnanon:one (* (* lnanon:ahf lnanon:rl) (parens(/ lnanon:drz(lnanon:np1) lnanon:r(lnanon:np1)))))) (parens(+ lnanon:one lnanon:dlnr)))
+      ASSIGN lnanon:ag1(lnanon:np1 , 2) (+ (+ (U- (/ (* lnanon:for lnanon:gor(lnanon:np1)) lnanon:r(lnanon:np1))) (* lnanon:drdm(lnanon:n , 2) lnanon:vl)) (* (* (* lnanon:pi4g lnanon:rho(lnanon:n)) lnanon:ahf) lnanon:fdr))
+      ASSIGN lnanon:afac (/ (* lnanon:r(lnanon:np1) lnanon:v(lnanon:n)) lnanon:drint(lnanon:n))
+      ASSIGN lnanon:vl (/ (* (* lnanon:g1(lnanon:n) lnanon:p(lnanon:n)) (parens(- (* lnanon:rl lnanon:v(lnanon:n)) lnanon:afac))) (parens(+ lnanon:one (/ (* (* lnanon:ahf lnanon:rl) lnanon:drint(lnanon:n)) lnanon:r(lnanon:np1)))))
+      ASSIGN lnanon:vl (U- (* (* lnanon:g1(lnanon:n) lnanon:gor(lnanon:np1)) lnanon:r(lnanon:np1)))
+      ASSIGN lnanon:vl (U- (/ (* (* (* (* lnanon:two lnanon:r(lnanon:np1)) lnanon:g1(lnanon:n)) lnanon:p(lnanon:n)) lnanon:v(lnanon:n)) lnanon:drint(lnanon:n)))
+      ASSIGN lnanon:ag1(lnanon:np1 , 1) (* lnanon:drdm(lnanon:n , 1) lnanon:vl)
+      ASSIGN lnanon:fdr (/ (parens(+ lnanon:one (* (* lnanon:ahf lnanon:rl) (parens(/ lnanon:drz(lnanon:np1) lnanon:r(lnanon:np1)))))) (parens(+ lnanon:one lnanon:dlnr)))
+      ASSIGN lnanon:ag1(lnanon:np1 , 2) (+ (+ (U- (/ (* lnanon:for lnanon:gor(lnanon:np1)) lnanon:r(lnanon:np1))) (* lnanon:vl lnanon:drdm(lnanon:n , 2))) (* (* lnanon:pi4g lnanon:rho(lnanon:n)) lnanon:fdr))
+      ASSIGN lnanon:ag1(lnanon:np1 , 3) lnanon:zero
+      ASSIGN lnanon:ag3(lnanon:np1 , 1) (U- (/ (parens(+ lnanon:rl lnanon:one)) (parens(+ lnanon:one lnanon:dlnr))))
+      ASSIGN lnanon:ag3(lnanon:np1 , 2) lnanon:zero
+      ASSIGN lnanon:ag4(lnanon:np1 , 1) (+ (* lnanon:rkl2(lnanon:n) lnanon:vl) (/ (* lnanon:rl1 lnanon:gor(lnanon:np1)) lnanon:r(lnanon:np1)))
+      ASSIGN lnanon:ag4(lnanon:np1 , 2) lnanon:zero
+      ASSIGN lnanon:ddr11 (U- (/ lnanon:drz(lnanon:np1) (parens(* lnanon:drz(lnanon:n) (parens(+ lnanon:drz(lnanon:n) lnanon:drz(lnanon:np1)))))))
+      ASSIGN lnanon:ddr12 (/ (parens(- lnanon:drz(lnanon:np1) lnanon:drz(lnanon:n))) (parens(* lnanon:drz(lnanon:n) lnanon:drz(lnanon:np1))))
+      ASSIGN lnanon:ddr13 (/ lnanon:drz(lnanon:n) (parens(* lnanon:drz(lnanon:np1) (parens(+ lnanon:drz(lnanon:n) lnanon:drz(lnanon:np1))))))
+      ASSIGN lnanon:ap3n1 (/ (** lnanon:r(lnanon:n) 2) (parens(* lnanon:drint(lnanon:n) lnanon:drz(lnanon:n))))
+      ASSIGN lnanon:ap3n3 (/ (** lnanon:r(lnanon:np1) 2) (parens(* lnanon:drint(lnanon:n) lnanon:drz(lnanon:np1))))
+      ASSIGN lnanon:ap1(lnanon:n , 1) (U- (* (* lnanon:pi4g lnanon:rho(lnanon:n)) (parens(- (* (** lnanon:rzone(lnanon:n) 2) lnanon:drdm(lnanon:n , 1)) (/ (* lnanon:ahf __log_r8[[(((/ lnanon:rho(lnanon:n) lnanon:rho((- lnanon:n 1)))))]]) __log_r8[[(((/ lnanon:rzone(lnanon:n) lnanon:rzone((- lnanon:n 1)))))]])))))
+      ASSIGN lnanon:dlrhdr (U- (/ (* (/ (* lnanon:rho(lnanon:n) lnanon:gor((+ lnanon:n 1))) lnanon:p(lnanon:n)) lnanon:fnpol) (parens(+ lnanon:one lnanon:fnpol))))
+      ASSIGN lnanon:ap1(lnanon:n , 2) (U- (* (* lnanon:pi4g lnanon:rho(lnanon:n)) (parens(- (+ (* (parens(+ (* (* (* lnanon:ddr13 lnanon:two) lnanon:rl) lnanon:rzone(lnanon:n)) lnanon:ap3n3)) lnanon:f) (* (** lnanon:rzone(lnanon:n) 2) lnanon:drdm(lnanon:n , 2))) (* lnanon:ahf lnanon:dlrhdr)))))
+      ASSIGN lnanon:ap3(lnanon:n , 1) (+ lnanon:ap3n1 (* (* (* lnanon:ddr11 lnanon:two) lnanon:rl) lnanon:rzone(lnanon:n)))
+      ASSIGN lnanon:fp3 (- (* (parens(+ lnanon:rl lnanon:ahf)) (parens(/ lnanon:drz(lnanon:np1) lnanon:r(lnanon:np1)))) 1.0000000000000000_8)
+      ASSIGN lnanon:ap3(lnanon:n , 2) (- (+ (U- (parens(+ lnanon:ap3n1 lnanon:ap3n3))) (* (* (* lnanon:ddr12 lnanon:two) lnanon:rl) lnanon:rzone(lnanon:n))) (/ (* (parens(+ (* (* (* lnanon:ddr13 lnanon:two) lnanon:rl) lnanon:rzone(lnanon:n)) lnanon:ap3n3)) lnanon:fp3) (parens(+ lnanon:one lnanon:dlnr))))
+      ASSIGN lnanon:ap3(lnanon:n , 3) lnanon:zero
+      ASSIGN lnanon:ap4(lnanon:n) (U- (* (* lnanon:pi4g lnanon:rl1) lnanon:rho(lnanon:n)))
+      ASSIGN lnanon:ah4(lnanon:np1) lnanon:zero
+      IF (>= lnanon:iout 2)
+        WRITE UNIT=11 FMT=2200
+          TRANSFER lnanon:lval
+        DT_END
+        DO lnanon:i=1 lnanon:np1 1
+          WRITE UNIT=11 FMT=2201
+            TRANSFER lnanon:i
+            TRANSFER lnanon:ag1(lnanon:i , 1)
+            TRANSFER lnanon:ag1(lnanon:i , 2)
+            TRANSFER lnanon:ag1(lnanon:i , 3)
+            TRANSFER lnanon:drdm(lnanon:i , 1)
+            TRANSFER lnanon:drdm(lnanon:i , 2)
+            TRANSFER lnanon:ag3(lnanon:i , 1)
+            TRANSFER lnanon:ag3(lnanon:i , 2)
+            TRANSFER lnanon:ag4(lnanon:i , 1)
+            TRANSFER lnanon:ag4(lnanon:i , 2)
+            TRANSFER lnanon:ah4(lnanon:i)
+          DT_END
+27        CONTINUE
+        END DO
+        WRITE UNIT=11 FMT=2300
+        DT_END
+        DO lnanon:i=1 lnanon:n 1
+          WRITE UNIT=11 FMT=2201
+            TRANSFER lnanon:i
+            TRANSFER lnanon:ah1(lnanon:i , 1)
+            TRANSFER lnanon:ah1(lnanon:i , 2)
+            TRANSFER lnanon:ah3(lnanon:i)
+            TRANSFER lnanon:ap1(lnanon:i , 1)
+            TRANSFER lnanon:ap1(lnanon:i , 2)
+            TRANSFER lnanon:ap3(lnanon:i , 1)
+            TRANSFER lnanon:ap3(lnanon:i , 2)
+            TRANSFER lnanon:ap3(lnanon:i , 3)
+            TRANSFER lnanon:ap4(lnanon:i)
+          DT_END
+28        CONTINUE
+        END DO
+      ENDIF
+      WRITE UNIT=11 FMT=3001
+      DT_END
+      ASSIGN lnanon:xnorm (** lnanon:r(lnanon:np1) 2)
+      ASSIGN lnanon:iroot 0
+      IF (> lnanon:nomega 1)
+        ASSIGN lnanon:dom (/ (parens(- lnanon:omhigh lnanon:omlow)) __dble_i4[[(((- lnanon:nomega 1)))]])
+      ELSE
+        ASSIGN lnanon:dom lnanon:zero
+      ENDIF
+      ASSIGN lnanon:iprint 0
+      DO lnanon:i=1 lnanon:nomega 1
+        ASSIGN lnanon:omsq (+ lnanon:omlow (* __dble_i4[[(((- lnanon:i 1)))]] lnanon:dom))
+        ASSIGN lnanon:fomeg fomsq[[((lnanon:omsq) (lnanon:x(FULL)) (lnanon:xnorm) (lnanon:n))]]
+        IF (= lnanon:i 1)
+          ASSIGN lnanon:fomi lnanon:fomeg
+        ELSE
+          IF (< (* lnanon:fomeg lnanon:fomi) lnanon:zero)
+            ASSIGN lnanon:iroot (+ lnanon:iroot 1)
+            ASSIGN lnanon:stomeg(lnanon:iroot) (- lnanon:omsq (/ (* lnanon:dom lnanon:fomeg) (parens(- lnanon:fomeg lnanon:fomi))))
+          ENDIF
+          ASSIGN lnanon:fomi lnanon:fomeg
+        ENDIF
+        IF (> lnanon:iout 0)
+          WRITE UNIT=11 FMT=4400
+            TRANSFER lnanon:i
+            TRANSFER lnanon:omsq
+            TRANSFER lnanon:fomeg
+          DT_END
+        ENDIF
+30      CONTINUE
+      END DO
+      IF (= lnanon:iroot 0)
+        GOTO 900
+      ENDIF
+      WRITE UNIT=11 FMT=3000
+        TRANSFER lnanon:iroot
+        TRANSFER lnanon:lval
+        DO lnanon:i=1 lnanon:iroot 1
+          TRANSFER lnanon:stomeg(lnanon:i)
+        END DO
+      DT_END
+      WRITE UNIT=1 FMT=3000
+        TRANSFER lnanon:iroot
+        TRANSFER lnanon:lval
+        DO lnanon:i=1 lnanon:iroot 1
+          TRANSFER lnanon:stomeg(lnanon:i)
+        END DO
+      DT_END
+      WRITE UNIT=6 FMT=3000
+        TRANSFER lnanon:iroot
+        TRANSFER lnanon:lval
+        DO lnanon:i=1 lnanon:iroot 1
+          TRANSFER lnanon:stomeg(lnanon:i)
+        END DO
+      DT_END
+      DO lnanon:nroot=1 lnanon:iroot 1
+        ASSIGN lnanon:omsq lnanon:stomeg(lnanon:nroot)
+        ASSIGN lnanon:uc 1.0000000000000001e-1_8
+        DO lnanon:icount=1 30 1
+          ASSIGN lnanon:err fomsq[[((lnanon:omsq) (lnanon:x(FULL)) (lnanon:xnorm) (lnanon:n))]]
+          IF (= lnanon:icount 1)
+            ASSIGN lnanon:omsq1 lnanon:omsq
+            ASSIGN lnanon:erra lnanon:err
+            ASSIGN lnanon:omsq (* lnanon:omsq (parens(+ lnanon:one 9.9999999999999995e-8_8)))
+          ELSE
+            ASSIGN lnanon:afac __abs_r8[[(((/ (parens(- lnanon:omsq lnanon:omsq1)) lnanon:omsq)))]]
+            IF (<= lnanon:afac lnanon:accur)
+              GOTO 47
+            ENDIF
+            ASSIGN lnanon:omsq2 (/ (parens(- (* lnanon:erra lnanon:omsq) (* lnanon:err lnanon:omsq1))) (parens(- lnanon:erra lnanon:err)))
+            ASSIGN lnanon:omsq1 lnanon:omsq
+            ASSIGN lnanon:domsq (- lnanon:omsq2 lnanon:omsq)
+            ASSIGN lnanon:domsq __sign_r8[[((_gfortran_dmin1[[((__abs_r8[[((lnanon:domsq))]]) ((* lnanon:uc __abs_r8[[((lnanon:omsq))]])))]]) (lnanon:domsq))]]
+            ASSIGN lnanon:omsq (+ lnanon:omsq lnanon:domsq)
+            ASSIGN lnanon:erra lnanon:err
+          ENDIF
+          IF (> lnanon:iout 0)
+            WRITE UNIT=11 FMT=4400
+              TRANSFER lnanon:icount
+              TRANSFER lnanon:omsq
+              TRANSFER lnanon:afac
+              TRANSFER lnanon:err
+              TRANSFER lnanon:erra
+            DT_END
+          ENDIF
+45        CONTINUE
+        END DO
+        WRITE UNIT=6 FMT=4500
+          TRANSFER lnanon:nroot
+          TRANSFER lnanon:omsq
+        DT_END
+        WRITE UNIT=1 FMT=4500
+          TRANSFER lnanon:nroot
+          TRANSFER lnanon:omsq
+        DT_END
+        WRITE UNIT=11 FMT=4500
+          TRANSFER lnanon:nroot
+          TRANSFER lnanon:omsq
+        DT_END
+        GOTO 100
+47      CONTINUE
+        ASSIGN lnanon:drtst (/ (parens(+ (+ (* lnanon:ag1((+ lnanon:n 1) , 1) lnanon:x((- (* 3 lnanon:n) 2))) (* lnanon:ag3((+ lnanon:n 1) , 1) lnanon:x((- (* 3 lnanon:n) 1)))) (* lnanon:ag4((+ lnanon:n 1) , 1) lnanon:x((* 3 lnanon:n))))) (parens(- lnanon:omsq lnanon:ag1((+ lnanon:n 1) , 2))))
+        ASSIGN lnanon:x((+ (* 3 lnanon:n) 1)) lnanon:xnorm
+        DO lnanon:i=1 lnanon:n 1
+          ASSIGN lnanon:dr(lnanon:i) (* (** (parens(/ lnanon:r(lnanon:i) lnanon:r(lnanon:np1))) lnanon:lval) (parens(/ lnanon:x((- (* 3 lnanon:i) 2)) (** lnanon:r(lnanon:i) 2))))
+          ASSIGN lnanon:dh(lnanon:i) (* (parens(/ lnanon:x((* 3 lnanon:i)) (** lnanon:rzone(lnanon:i) 2))) (** (parens(/ lnanon:rzone(lnanon:i) lnanon:r(lnanon:np1))) lnanon:lval))
+          ASSIGN lnanon:adrho(lnanon:i) (* (parens(+ (+ (* lnanon:drdm(lnanon:i , 1) lnanon:x((- (* 3 lnanon:i) 2))) (* lnanon:drdm(lnanon:i , 2) lnanon:x((+ (* 3 lnanon:i) 1)))) (* lnanon:rkl2(lnanon:i) lnanon:x((* 3 lnanon:i))))) (** (parens(/ lnanon:rzone(lnanon:i) lnanon:r(lnanon:np1))) lnanon:lval))
+          ASSIGN lnanon:dp(lnanon:i) (* lnanon:g1(lnanon:i) lnanon:adrho(lnanon:i))
+          ASSIGN lnanon:gam(lnanon:i) (* lnanon:x((- (* 3 lnanon:i) 1)) (** (parens(/ lnanon:rzone(lnanon:i) lnanon:r(lnanon:np1))) lnanon:lval))
+40        CONTINUE
+        END DO
+        ASSIGN lnanon:eta0 (/ lnanon:dr(1) lnanon:rl)
+        ASSIGN lnanon:gam0 (* lnanon:x(2) (** (parens(/ lnanon:rz0 lnanon:r(lnanon:np1))) lnanon:lval))
+        ASSIGN lnanon:drho0 (* lnanon:adrho(1) (** (parens(/ lnanon:rz0 lnanon:rzone(1))) lnanon:lval))
+        ASSIGN lnanon:dp0 (* lnanon:drho0 lnanon:g1(1))
+        ASSIGN lnanon:dr((+ lnanon:n 1)) lnanon:one
+        ASSIGN lnanon:dlnr (/ (* (* (parens(+ lnanon:rl lnanon:one)) lnanon:ahf) lnanon:drz(lnanon:np1)) lnanon:r(lnanon:np1))
+        ASSIGN lnanon:fdr (/ (parens(/ lnanon:drz(lnanon:np1) lnanon:r(lnanon:np1))) (parens(+ lnanon:one lnanon:dlnr)))
+        ASSIGN lnanon:gam((+ lnanon:n 1)) (- (/ (* lnanon:gam(lnanon:n) (parens(- lnanon:one lnanon:dlnr))) (parens(+ lnanon:one lnanon:dlnr))) (* (* (* lnanon:pi4g (parens(/ lnanon:rho(lnanon:n) 2.0000000000000000_8))) lnanon:dr(lnanon:np1)) lnanon:fdr))
+        ASSIGN lnanon:dh((+ lnanon:n 1)) (/ (* lnanon:dh(lnanon:n) (parens(- lnanon:one lnanon:dlnr))) (parens(+ lnanon:one lnanon:dlnr)))
+        ASSIGN lnanon:qdr0 (* lnanon:dr(2) (** (parens(/ lnanon:r(1) lnanon:r(2))) (parens(- lnanon:lval 2))))
+        ASSIGN lnanon:wgrav(1) lnanon:zero
+        ASSIGN lnanon:wcross(1) (* (* (* (* (* (* lnanon:two lnanon:rl1) lnanon:gor(1)) lnanon:r(1)) lnanon:dr(1)) lnanon:dh(1)) lnanon:dm2(1))
+        ASSIGN lnanon:wdiag(1) (* (* (parens(- (* lnanon:pi4g lnanon:rho(1)) (/ (* lnanon:gor(1) lnanon:for) lnanon:r(1)))) (** (parens(* lnanon:dr(1) lnanon:r(1))) 2)) lnanon:dm2(1))
+        ASSIGN lnanon:stwait(1) (+ (+ lnanon:wgrav(1) lnanon:wcross(1)) lnanon:wdiag(1))
+        ASSIGN lnanon:rsum (* (** (parens(* lnanon:dr(1) lnanon:r(1))) 2) lnanon:dm2(1))
+        ASSIGN lnanon:hsum lnanon:zero
+        ASSIGN lnanon:strke(1) (* (** (parens(* lnanon:dr(1) lnanon:r(1))) 2) lnanon:dm2(1))
+        ASSIGN lnanon:rbar (* (* lnanon:r(1) (** (parens(* lnanon:dr(1) lnanon:r(1))) 2)) lnanon:dm2(1))
+        ASSIGN lnanon:hbar lnanon:zero
+        ASSIGN lnanon:crsum lnanon:zero
+        ASSIGN lnanon:istart 0
+        DO lnanon:i=1 lnanon:n 1
+          IF (< lnanon:i lnanon:istart)
+            ASSIGN lnanon:wtherm(lnanon:i) lnanon:zero
+            ASSIGN lnanon:strke((+ lnanon:i 1)) lnanon:zero
+            ASSIGN lnanon:wgrav(lnanon:i) lnanon:zero
+            ASSIGN lnanon:wcross((+ lnanon:i 1)) lnanon:zero
+            ASSIGN lnanon:wdiag((+ lnanon:i 1)) lnanon:zero
+          ELSE
+            ASSIGN lnanon:rsum (+ lnanon:rsum (* (** (parens(* lnanon:dr((+ lnanon:i 1)) lnanon:r((+ lnanon:i 1)))) 2) lnanon:dm2((+ lnanon:i 1))))
+            ASSIGN lnanon:hsum (+ lnanon:hsum (* (** (parens(* lnanon:dh(lnanon:i) lnanon:rzone(lnanon:i))) 2) lnanon:dm1(lnanon:i)))
+            ASSIGN lnanon:strke((+ lnanon:i 1)) (+ (* (** (parens(* lnanon:dr((+ lnanon:i 1)) lnanon:r((+ lnanon:i 1)))) 2) lnanon:dm2((+ lnanon:i 1))) (* (** (parens(* lnanon:dh(lnanon:i) lnanon:rzone(lnanon:i))) 2) lnanon:dm1(lnanon:i)))
+            ASSIGN lnanon:rbar (+ lnanon:rbar (* (* lnanon:r((+ lnanon:i 1)) (** (parens(* lnanon:dr((+ lnanon:i 1)) lnanon:r((+ lnanon:i 1)))) 2)) lnanon:dm2((+ lnanon:i 1))))
+            ASSIGN lnanon:hbar (+ lnanon:hbar (* (* lnanon:rzone(lnanon:i) (** (parens(* lnanon:dh(lnanon:i) lnanon:rzone(lnanon:i))) 2)) lnanon:dm1(lnanon:i)))
+            ASSIGN lnanon:crsum (+ lnanon:crsum (* (* (* (* (* lnanon:two lnanon:dr((+ lnanon:i 1))) lnanon:dm2((+ lnanon:i 1))) (** lnanon:r((+ lnanon:i 1)) 2)) lnanon:ahf) (parens(+ lnanon:dh(lnanon:i) lnanon:dh((+ lnanon:i 1))))))
+            ASSIGN lnanon:wtherm(lnanon:i) (* (* (* (* lnanon:g1(lnanon:i) lnanon:p(lnanon:i)) lnanon:v(lnanon:i)) lnanon:dm1(lnanon:i)) (** lnanon:adrho(lnanon:i) 2))
+            IF (= lnanon:i 1)
+              ASSIGN lnanon:drho_eul(lnanon:i) (+ lnanon:adrho(lnanon:i) (/ (* (/ (* lnanon:rho(lnanon:i) lnanon:gor(2)) lnanon:p(1)) lnanon:fnpol) (parens(+ lnanon:one lnanon:fnpol))))
+            ELSE IF (= lnanon:i lnanon:n)
+              ASSIGN lnanon:drho_eul(lnanon:i) (+ lnanon:adrho(lnanon:i) (/ (* (/ (* lnanon:rho(lnanon:n) lnanon:gor((+ lnanon:n 1))) lnanon:p(lnanon:n)) lnanon:fnpol) (parens(+ lnanon:one lnanon:fnpol))))
+            ELSE
+              ASSIGN lnanon:drho_eul(lnanon:i) (- lnanon:adrho(lnanon:i) (* lnanon:ahf (parens(+ (* (/ __log_r8[[(((/ lnanon:rho((+ lnanon:i 1)) lnanon:rho(lnanon:i))))]] __log_r8[[(((/ lnanon:rzone((+ lnanon:i 1)) lnanon:rzone(lnanon:i))))]]) lnanon:dr((+ lnanon:i 1))) (* (/ __log_r8[[(((/ lnanon:rho(lnanon:i) lnanon:rho((- lnanon:i 1)))))]] __log_r8[[(((/ lnanon:rzone(lnanon:i) lnanon:rzone((- lnanon:i 1)))))]]) lnanon:dr(lnanon:i))))))
+            ENDIF
+            ASSIGN lnanon:wgrav(lnanon:i) (* (* lnanon:drho_eul(lnanon:i) lnanon:gam(lnanon:i)) lnanon:dm1(lnanon:i))
+            IF (= lnanon:i lnanon:n)
+              ASSIGN lnanon:wcross((+ lnanon:i 1)) (* (* (* (* (* (* lnanon:gor((+ lnanon:i 1)) lnanon:r((+ lnanon:i 1))) lnanon:dr((+ lnanon:i 1))) lnanon:dm2((+ lnanon:i 1))) 2.0000000000000000_8) lnanon:rl1) lnanon:dh(lnanon:i))
+              ASSIGN lnanon:wdiag((+ lnanon:i 1)) (* (* (parens(- (* (* lnanon:pi4g lnanon:ahf) lnanon:rho(lnanon:i)) (/ (* lnanon:for lnanon:gor((+ lnanon:i 1))) lnanon:r((+ lnanon:i 1))))) (** (parens(* lnanon:dr((+ lnanon:i 1)) lnanon:r((+ lnanon:i 1)))) 2)) lnanon:dm2((+ lnanon:i 1)))
+            ELSE
+              ASSIGN lnanon:wcross((+ lnanon:i 1)) (* (* (* (* (* lnanon:gor((+ lnanon:i 1)) lnanon:r((+ lnanon:i 1))) lnanon:dr((+ lnanon:i 1))) lnanon:dm2((+ lnanon:i 1))) lnanon:rl1) (parens(+ lnanon:dh(lnanon:i) lnanon:dh((+ lnanon:i 1)))))
+              ASSIGN lnanon:wdiag((+ lnanon:i 1)) (* (* (parens(- (* (* lnanon:pi4g lnanon:ahf) (parens(+ lnanon:rho(lnanon:i) lnanon:rho((+ lnanon:i 1))))) (/ (* lnanon:for lnanon:gor((+ lnanon:i 1))) lnanon:r((+ lnanon:i 1))))) (** (parens(* lnanon:dr((+ lnanon:i 1)) lnanon:r((+ lnanon:i 1)))) 2)) lnanon:dm2((+ lnanon:i 1)))
+            ENDIF
+          ENDIF
+          ASSIGN lnanon:weight(lnanon:i) (+ (+ (+ lnanon:wtherm(lnanon:i) lnanon:wgrav(lnanon:i)) lnanon:wcross((+ lnanon:i 1))) lnanon:wdiag((+ lnanon:i 1)))
+          ASSIGN lnanon:stwait((+ lnanon:i 1)) (+ lnanon:stwait(lnanon:i) lnanon:weight(lnanon:i))
+48        CONTINUE
+        END DO
+        ASSIGN lnanon:rke (+ lnanon:rsum (* lnanon:rl1 lnanon:hsum))
+        IF (<= lnanon:rke lnanon:zero)
+          ASSIGN lnanon:rke lnanon:one
+        ENDIF
+        ASSIGN lnanon:rbar (/ (parens(+ lnanon:rbar (* lnanon:rl1 lnanon:hbar))) (parens(* lnanon:rke lnanon:r(lnanon:np1))))
+        ASSIGN lnanon:omsq_weight (/ lnanon:stwait(lnanon:np1) lnanon:rke)
+        ASSIGN lnanon:qch __abs_r8[[(((/ (parens(- lnanon:omsq lnanon:omsq_weight)) lnanon:omsq)))]]
+        ASSIGN lnanon:crsum (/ lnanon:crsum lnanon:rke)
+        ASSIGN lnanon:hrsum (/ lnanon:hsum lnanon:rke)
+        ASSIGN lnanon:ckl (+ lnanon:crsum lnanon:hrsum)
+        ASSIGN lnanon:stomsq(lnanon:nroot , 1) lnanon:omsq
+        ASSIGN lnanon:stomsq(lnanon:nroot , 2) lnanon:omsq_weight
+        ASSIGN lnanon:qomsq (/ lnanon:omsq (parens(* (* lnanon:pi lnanon:g) lnanon:rhom)))
+        ASSIGN lnanon:index knode[[((lnanon:dr(FULL)) (lnanon:dh(FULL)) (4096) (lnanon:n) (lnanon:np) (lnanon:ng))]]
+        WRITE UNIT=6 FMT=5503
+          TRANSFER lnanon:qomsq
+          TRANSFER lnanon:index
+          TRANSFER lnanon:np
+          TRANSFER lnanon:ng
+        DT_END
+        WRITE UNIT=6 FMT=9999
+          TRANSFER lnanon:lval
+          TRANSFER lnanon:x(1)
+          TRANSFER lnanon:x(3)
+        DT_END
+        WRITE UNIT=6 FMT=5507
+          TRANSFER lnanon:omsq
+          TRANSFER lnanon:omsq_weight
+          TRANSFER lnanon:qch
+          TRANSFER lnanon:rbar
+        DT_END
+        WRITE UNIT=1 FMT=5504
+          TRANSFER lnanon:nroot
+          TRANSFER lnanon:lval
+          TRANSFER lnanon:omsq
+          TRANSFER lnanon:omsq_weight
+          TRANSFER lnanon:qch
+        DT_END
+        CALL robeig ((lnanon:index) (lnanon:qomsq) (lnanon:fnpol) (lnanon:lval) (lnanon:omsq_comp))
+        ASSIGN lnanon:stomsq(lnanon:nroot , 4) lnanon:omsq_comp
+        WRITE UNIT=1 FMT=5503
+          TRANSFER lnanon:qomsq
+          TRANSFER lnanon:index
+          TRANSFER lnanon:np
+          TRANSFER lnanon:ng
+        DT_END
+        WRITE UNIT=1 FMT=5506
+          TRANSFER lnanon:ckl
+          TRANSFER lnanon:crsum
+          TRANSFER lnanon:hrsum
+          TRANSFER lnanon:rbar
+        DT_END
+        WRITE UNIT=1 FMT=9999
+          TRANSFER lnanon:lval
+          TRANSFER lnanon:x(1)
+          TRANSFER lnanon:x(3)
+        DT_END
+        WRITE UNIT=11 FMT=5500
+          TRANSFER lnanon:nroot
+          TRANSFER lnanon:lval
+          TRANSFER lnanon:omsq
+          TRANSFER lnanon:omsq_weight
+          TRANSFER lnanon:qch
+        DT_END
+        WRITE UNIT=11 FMT=5503
+          TRANSFER lnanon:qomsq
+          TRANSFER lnanon:index
+          TRANSFER lnanon:np
+          TRANSFER lnanon:ng
+        DT_END
+        WRITE UNIT=11 FMT=5506
+          TRANSFER lnanon:ckl
+          TRANSFER lnanon:crsum
+          TRANSFER lnanon:hrsum
+          TRANSFER lnanon:rbar
+        DT_END
+        DO lnanon:i=1 lnanon:np1 1
+          ASSIGN lnanon:stwait(lnanon:i) (/ lnanon:stwait(lnanon:i) __abs_r8[[(((* lnanon:omsq lnanon:rke)))]])
+          ASSIGN lnanon:weight(lnanon:i) (/ lnanon:weight(lnanon:i) __abs_r8[[(((* lnanon:omsq lnanon:rke)))]])
+          ASSIGN lnanon:wtherm(lnanon:i) (/ lnanon:wtherm(lnanon:i) __abs_r8[[(((* lnanon:omsq lnanon:rke)))]])
+          ASSIGN lnanon:wdiag(lnanon:i) (/ lnanon:wdiag(lnanon:i) __abs_r8[[(((* lnanon:omsq lnanon:rke)))]])
+          ASSIGN lnanon:wgrav(lnanon:i) (/ lnanon:wgrav(lnanon:i) __abs_r8[[(((* lnanon:omsq lnanon:rke)))]])
+          ASSIGN lnanon:wcross(lnanon:i) (/ lnanon:wcross(lnanon:i) __abs_r8[[(((* lnanon:omsq lnanon:rke)))]])
+          ASSIGN lnanon:strke(lnanon:i) (/ lnanon:strke(lnanon:i) lnanon:rke)
+        END DO
+        IF (> lnanon:iout 0)
+          WRITE UNIT=11 FMT=5502
+          DT_END
+          WRITE UNIT=11 FMT=5501
+            TRANSFER lnanon:index
+            TRANSFER lnanon:dr(1)
+            TRANSFER lnanon:eta0
+            TRANSFER lnanon:drho0
+            TRANSFER lnanon:gam0
+            TRANSFER lnanon:dp0
+          DT_END
+          WRITE UNIT=11 FMT=5501
+            DO lnanon:i=1 lnanon:n 1
+              TRANSFER lnanon:i
+              TRANSFER lnanon:dr((+ lnanon:i 1))
+              TRANSFER lnanon:dh(lnanon:i)
+              TRANSFER lnanon:adrho(lnanon:i)
+              TRANSFER lnanon:gam(lnanon:i)
+              TRANSFER lnanon:dp(lnanon:i)
+              TRANSFER lnanon:weight(lnanon:i)
+              TRANSFER lnanon:stwait(lnanon:i)
+            END DO
+          DT_END
+        ENDIF
+        CALL orthog ((lnanon:dr(FULL)) (lnanon:dh(FULL)) (lnanon:n) (lnanon:omsq) (lnanon:index) (4096) (1) (lnanon:lval))
+        CALL pltdmp ((lnanon:dr(FULL)) (4096) (lnanon:np1) ('dr/r'))
+        CALL pltdmp ((lnanon:dh(FULL)) (4096) (lnanon:n) ('dh/h'))
+        CALL pltdmp ((lnanon:adrho(FULL)) (4096) (lnanon:n) ('drho'))
+        CALL pltdmp ((lnanon:drho_eul(FULL)) (4096) (lnanon:n) ('Erho'))
+        CALL pltdmp ((lnanon:dp(FULL)) (4096) (lnanon:n) ('dp  '))
+        CALL pltdmp ((lnanon:gam(FULL)) (4096) (lnanon:n) ('gam '))
+        CALL pltdmp ((lnanon:weight(FULL)) (4096) (lnanon:n) ('wait'))
+        CALL pltdmp ((lnanon:strke(FULL)) (4096) (lnanon:np1) ('rke '))
+        CALL pltdmp ((lnanon:stwait(FULL)) (4096) (lnanon:np1) ('wint'))
+        CALL pltdmp ((lnanon:wtherm(FULL)) (4096) (lnanon:n) ('wthr'))
+        CALL pltdmp ((lnanon:wgrav(FULL)) (4096) (lnanon:np1) ('wgrv'))
+        CALL pltdmp ((lnanon:wdiag(FULL)) (4096) (lnanon:np1) ('wdia'))
+        CALL pltdmp ((lnanon:wcross(FULL)) (4096) (lnanon:np1) ('wcrs'))
+        IF (= lnanon:fnpol 0_8)
+          ASSIGN lnanon:k __abs_i4[[((lnanon:index))]]
+          CALL pekeris ((lnanon:k) (lnanon:lval) (lnanon:r(FULL)) (lnanon:wcross(FULL)) (lnanon:n))
+        ENDIF
+100     CONTINUE
+      END DO
+      CALL pltdmp ((lnanon:stomsq(1 , 1)) (200) (lnanon:iroot) ('omsq'))
+      CALL pltdmp ((lnanon:stomsq(1 , 2)) (200) (lnanon:iroot) ('wpes'))
+      CALL pltdmp ((lnanon:stomsq(1 , 3)) (200) (lnanon:iroot) ('wsch'))
+      DO lnanon:i=1 lnanon:iroot 1
+        WRITE UNIT=6 FMT=5600
+          DO lnanon:j=1 4 1
+            TRANSFER lnanon:stomsq(lnanon:i , lnanon:j)
+          END DO
+        DT_END
+      END DO
+      CALL orthog ((lnanon:dr(FULL)) (lnanon:dh(FULL)) (lnanon:n) (lnanon:omsq) (lnanon:index) (4096) (-1) (lnanon:lval))
+      RETURN 
+50    CONTINUE
+      ASSIGN lnanon:ihmin lnanon:nomega
+      ASSIGN lnanon:drdm0 (U- (/ lnanon:thre (parens(* lnanon:r(1) __sqrt_r8[[((lnanon:dm2(1)))]]))))
+      ASSIGN lnanon:afacp (/ (* lnanon:forpi (** lnanon:r(1) 2)) __sqrt_r8[[((lnanon:dm2(1)))]])
+      ASSIGN lnanon:afac (/ (* lnanon:forpi (** lnanon:r(2) 2)) __sqrt_r8[[((lnanon:dm2(2)))]])
+      ASSIGN lnanon:drdm(1 , 1) (/ lnanon:afacp (parens(* lnanon:v(1) lnanon:dm1(1))))
+      ASSIGN lnanon:drdm(1 , 2) (U- (/ lnanon:afac (parens(* lnanon:v(1) lnanon:dm1(1)))))
+      ASSIGN lnanon:ag1(1 , 1) lnanon:zero
+      ASSIGN lnanon:ag1(1 , 2) (+ (U- (/ (* lnanon:for lnanon:gor(1)) lnanon:r(1))) (* (* lnanon:afacp lnanon:g1(1)) (parens(- (* lnanon:p(1) lnanon:drdm(1 , 1)) (* lnanon:drdm0 lnanon:p0)))))
+      ASSIGN lnanon:ag1(1 , 3) (* (* (* lnanon:afacp lnanon:g1(1)) lnanon:p(1)) lnanon:drdm(1 , 2))
+      DO lnanon:i=2 lnanon:n 1
+        ASSIGN lnanon:afacp lnanon:afac
+        ASSIGN lnanon:afac (/ (* lnanon:forpi (** lnanon:r((+ lnanon:i 1)) 2)) __sqrt_r8[[((lnanon:dm2((+ lnanon:i 1))))]])
+        ASSIGN lnanon:drdm(lnanon:i , 1) (/ lnanon:afacp (parens(* lnanon:v(lnanon:i) lnanon:dm1(lnanon:i))))
+        ASSIGN lnanon:drdm(lnanon:i , 2) (U- (/ lnanon:afac (parens(* lnanon:v(lnanon:i) lnanon:dm1(lnanon:i)))))
+        ASSIGN lnanon:ag1(lnanon:i , 1) (U- (* (* (* lnanon:afacp lnanon:g1((- lnanon:i 1))) lnanon:p((- lnanon:i 1))) lnanon:drdm((- lnanon:i 1) , 1)))
+        ASSIGN lnanon:ag1(lnanon:i , 2) (+ (U- (/ (* lnanon:for lnanon:gor(lnanon:i)) lnanon:r(lnanon:i))) (* lnanon:afacp (parens(- (* (* lnanon:g1(lnanon:i) lnanon:p(lnanon:i)) lnanon:drdm(lnanon:i , 1)) (* (* lnanon:g1((- lnanon:i 1)) lnanon:p((- lnanon:i 1))) lnanon:drdm((- lnanon:i 1) , 2))))))
+        ASSIGN lnanon:ag1(lnanon:i , 3) (* (* (* lnanon:afacp lnanon:g1(lnanon:i)) lnanon:p(lnanon:i)) lnanon:drdm(lnanon:i , 2))
+60      CONTINUE
+      END DO
+      ASSIGN lnanon:g1p (* lnanon:g1(lnanon:n) lnanon:p(lnanon:n))
+      ASSIGN lnanon:afacp (/ (* (* 2.0000000000000000_8 lnanon:forpi) (** lnanon:r(lnanon:np1) 2)) __sqrt_r8[[((lnanon:dm2(lnanon:np1)))]])
+      ASSIGN lnanon:ag1(lnanon:np1 , 1) (U- (* (* lnanon:afacp lnanon:g1p) lnanon:drdm(lnanon:n , 1)))
+      ASSIGN lnanon:ag1(lnanon:np1 , 2) (- (U- (/ (* lnanon:for lnanon:gor(lnanon:np1)) lnanon:r(lnanon:np1))) (* (* lnanon:afacp lnanon:g1p) lnanon:drdm(lnanon:n , 2)))
+      ASSIGN lnanon:ag1(lnanon:np1 , 3) lnanon:zero
+      IF (>= lnanon:iout 1)
+        WRITE UNIT=11 FMT=7000
+        DT_END
+        DO lnanon:i=1 lnanon:np1 1
+          WRITE UNIT=11 FMT=7001
+            TRANSFER lnanon:i
+            TRANSFER lnanon:ag1(lnanon:i , 1)
+            TRANSFER lnanon:ag1(lnanon:i , 2)
+            TRANSFER lnanon:ag1(lnanon:i , 3)
+            TRANSFER lnanon:drdm(lnanon:i , 1)
+            TRANSFER lnanon:drdm(lnanon:i , 2)
+          DT_END
+75        CONTINUE
+        END DO
+      ENDIF
+      ASSIGN lnanon:transt lnanon:zero
+      DO lnanon:i=1 lnanon:n 1
+        ASSIGN lnanon:transt (+ lnanon:transt (/ (parens(- lnanon:r((+ lnanon:i 1)) lnanon:r(lnanon:i))) __sqrt_r8[[(((* (* lnanon:p(lnanon:i) lnanon:v(lnanon:i)) lnanon:g1(lnanon:i))))]]))
+77      CONTINUE
+      END DO
+      ASSIGN lnanon:termq __sqrt_r8[[(((/ lnanon:rhom 1.4099999999999999_8)))]]
+      ASSIGN lnanon:tcon (** (parens(/ lnanon:pi lnanon:transt)) 2)
+      ASSIGN lnanon:x0np (* lnanon:r(lnanon:np1) __sqrt_r8[[((lnanon:dm2(lnanon:np1)))]])
+      ASSIGN lnanon:omsqp lnanon:zero
+      ASSIGN lnanon:omsqc (* __dble_i4[[((lnanon:ihmin))]] lnanon:tcon)
+      ASSIGN lnanon:iv 0
+      DO lnanon:ih=lnanon:ihmin lnanon:ihmax 1
+        WRITE UNIT=11 FMT=7900
+          TRANSFER lnanon:ih
+        DT_END
+78      CONTINUE
+        ASSIGN lnanon:omsqc (* lnanon:omsqc lnanon:two)
+        DO lnanon:iterad=1 20 1
+          IF (>= lnanon:iout 1)
+            WRITE UNIT=11 FMT=7800
+              TRANSFER lnanon:iterad
+              TRANSFER lnanon:iv
+              TRANSFER lnanon:ih
+              TRANSFER lnanon:omsq
+              TRANSFER lnanon:omsqc
+              TRANSFER lnanon:omsqp
+            DT_END
+          ENDIF
+          ASSIGN lnanon:omsq (* lnanon:ahf (parens(+ lnanon:omsqc lnanon:omsqp)))
+          IF (= lnanon:iterad 1)
+            ASSIGN lnanon:omsq lnanon:omsqc
+          ENDIF
+          ASSIGN lnanon:omsqs lnanon:omsq
+          DO lnanon:icount=1 30 1
+            DO lnanon:i=1 lnanon:np1 1
+              ASSIGN lnanon:xo(lnanon:i) lnanon:zero
+              ASSIGN lnanon:yo(lnanon:i) lnanon:zero
+82            CONTINUE
+            END DO
+            ASSIGN lnanon:yo(lnanon:n) (U- (* lnanon:ag1(lnanon:n , 3) lnanon:x0np))
+            CALL trisol ((lnanon:ag1(FULL)) (1) (lnanon:n) (lnanon:omsq) (lnanon:yo(FULL)) (lnanon:xo(FULL)) (4096))
+            IF (= lnanon:icount 1)
+              ASSIGN lnanon:erra (+ (* lnanon:ag1(lnanon:np1 , 1) lnanon:xo(lnanon:n)) (* (parens(- lnanon:ag1(lnanon:np1 , 2) lnanon:omsq)) lnanon:x0np))
+              ASSIGN lnanon:erra (/ lnanon:erra lnanon:xo(2))
+              ASSIGN lnanon:omsql lnanon:omsq
+              ASSIGN lnanon:omsq (* lnanon:omsq (parens(+ lnanon:one 9.9999999999999995e-8_8)))
+            ELSE
+              ASSIGN lnanon:err (+ (* lnanon:ag1(lnanon:np1 , 1) lnanon:xo(lnanon:n)) (* (parens(- lnanon:ag1(lnanon:np1 , 2) lnanon:omsq)) lnanon:x0np))
+              ASSIGN lnanon:afacp __abs_r8[[(((/ (parens(- lnanon:omsq lnanon:omsql)) lnanon:omsql)))]]
+              ASSIGN lnanon:err (/ lnanon:err lnanon:xo(2))
+              IF (>= lnanon:iout 1)
+                WRITE UNIT=11 FMT=4400
+                  TRANSFER lnanon:icount
+                  TRANSFER lnanon:omsq
+                  TRANSFER lnanon:omsql
+                  TRANSFER lnanon:afacp
+                DT_END
+              ENDIF
+              IF (< lnanon:afacp 9.9999999999999998e-13_8)
+                GOTO 86
+              ENDIF
+              ASSIGN lnanon:omsq2 (/ (parens(- (* lnanon:erra lnanon:omsq) (* lnanon:err lnanon:omsql))) (parens(- lnanon:erra lnanon:err)))
+              ASSIGN lnanon:omsql lnanon:omsq
+              ASSIGN lnanon:domsq (- lnanon:omsq2 lnanon:omsq)
+              ASSIGN lnanon:domsq __sign_r8[[((_gfortran_dmin1[[((__abs_r8[[((lnanon:domsq))]]) ((* lnanon:qrt __abs_r8[[((lnanon:omsq))]])))]]) (lnanon:domsq))]]
+              ASSIGN lnanon:omsq (+ lnanon:omsq lnanon:domsq)
+              ASSIGN lnanon:erra lnanon:err
+            ENDIF
+81          CONTINUE
+          END DO
+          WRITE UNIT=6 FMT=8100
+            TRANSFER lnanon:omsq
+            TRANSFER lnanon:iterad
+            TRANSFER lnanon:iv
+            TRANSFER lnanon:ih
+          DT_END
+          ASSIGN lnanon:omsqp lnanon:zero
+          ASSIGN lnanon:omsqc (* lnanon:tcon __dble_i4[[(((+ lnanon:ih 1)))]])
+          GOTO 79
+86        CONTINUE
+          IF (> lnanon:omsq lnanon:zero)
+            GOTO 265
+          ENDIF
+          WRITE UNIT=6 FMT=8600
+            TRANSFER lnanon:omsq
+            TRANSFER lnanon:iv
+            TRANSFER lnanon:ih
+          DT_END
+          ASSIGN lnanon:omsqp lnanon:zero
+          ASSIGN lnanon:omsqc (* lnanon:tcon __dble_i4[[(((+ lnanon:ih 1)))]])
+          GOTO 79
+265       CONTINUE
+          DO lnanon:i=1 lnanon:n 1
+            ASSIGN lnanon:yo(lnanon:i) lnanon:zero
+90          CONTINUE
+          END DO
+          ASSIGN lnanon:xo(lnanon:np1) lnanon:x0np
+          ASSIGN lnanon:yo(lnanon:n) (U- (* lnanon:ag1(lnanon:n , 3) lnanon:x0np))
+          CALL trisol ((lnanon:ag1(FULL)) (1) (lnanon:n) (lnanon:omsq) (lnanon:yo(FULL)) (lnanon:xo(FULL)) (4096))
+          ASSIGN lnanon:iv nodes[[((lnanon:xo(FULL)) (lnanon:np1) (lnanon:iout))]]
+          IF (= lnanon:iv (- lnanon:ih 1))
+            GOTO 103
+          ENDIF
+          IF (AND (= lnanon:omsqs lnanon:omsqc) (< lnanon:iv (- lnanon:ih 1)))
+            GOTO 78
+          ENDIF
+          IF (< lnanon:iv (- lnanon:ih 1))
+            ASSIGN lnanon:omsqp lnanon:omsqs
+          ENDIF
+          IF (> lnanon:iv (- lnanon:ih 1))
+            ASSIGN lnanon:omsqc lnanon:omsqs
+          ENDIF
+80        CONTINUE
+        END DO
+        ASSIGN lnanon:qomsq (/ lnanon:omsq (parens(* (* lnanon:pi43 lnanon:g) lnanon:rhom)))
+        WRITE UNIT=11 FMT=8000
+          TRANSFER lnanon:iv
+          TRANSFER lnanon:ih
+          TRANSFER lnanon:qomsq
+        DT_END
+        ASSIGN lnanon:omsqp lnanon:zero
+        ASSIGN lnanon:omsqc (* lnanon:tcon __dble_i4[[((lnanon:ih))]])
+        GOTO 79
+103     CONTINUE
+        ASSIGN lnanon:xo((+ lnanon:n 2)) lnanon:zero
+        ASSIGN lnanon:strke(1) lnanon:zero
+        ASSIGN lnanon:stwait(1) lnanon:zero
+        ASSIGN lnanon:rke lnanon:zero
+        DO lnanon:i=1 lnanon:n 1
+          ASSIGN lnanon:dr(lnanon:i) (/ lnanon:xo(lnanon:i) (parens(* lnanon:r(lnanon:i) __sqrt_r8[[((lnanon:dm2(lnanon:i)))]])))
+          ASSIGN lnanon:adrho(lnanon:i) (+ (* lnanon:drdm(lnanon:i , 1) lnanon:xo(lnanon:i)) (* lnanon:drdm(lnanon:i , 2) lnanon:xo((+ lnanon:i 1))))
+          ASSIGN lnanon:dp(lnanon:i) (* lnanon:g1(lnanon:i) lnanon:adrho(lnanon:i))
+          ASSIGN lnanon:weight(lnanon:i) (+ (U- (/ (* (* lnanon:for lnanon:gor((+ lnanon:i 1))) (** lnanon:xo((+ lnanon:i 1)) 2)) lnanon:r((+ lnanon:i 1)))) (* (* (* (* lnanon:p(lnanon:i) lnanon:v(lnanon:i)) lnanon:g1(lnanon:i)) (** lnanon:adrho(lnanon:i) 2)) lnanon:dm1(lnanon:i)))
+          ASSIGN lnanon:stwait((+ lnanon:i 1)) (+ lnanon:stwait(lnanon:i) lnanon:weight(lnanon:i))
+          ASSIGN lnanon:strke((+ lnanon:i 1)) (* lnanon:xo((+ lnanon:i 1)) lnanon:xo((+ lnanon:i 1)))
+          ASSIGN lnanon:rke (+ lnanon:rke (* lnanon:xo((+ lnanon:i 1)) lnanon:xo((+ lnanon:i 1))))
+200       CONTINUE
+        END DO
+        ASSIGN lnanon:dr(lnanon:np1) lnanon:one
+        ASSIGN lnanon:epstwt(1) (* (/ (* (* (* (parens(- (* lnanon:thre lnanon:g1(1)) lnanon:for)) lnanon:g) lnanon:rm(2)) lnanon:dm2(2)) lnanon:r(2)) (** lnanon:dr(1) 2))
+        ASSIGN lnanon:chwait lnanon:epstwt(1)
+        DO lnanon:i=2 lnanon:n 1
+          ASSIGN lnanon:epstwt(lnanon:i) (+ (* (/ (* (* (* (parens(- (* lnanon:thre lnanon:g1(lnanon:i)) lnanon:for)) lnanon:g) lnanon:rm((+ lnanon:i 1))) lnanon:dm2((+ lnanon:i 1))) lnanon:r((+ lnanon:i 1))) (** lnanon:dr((+ lnanon:i 1)) 2)) (* (* (* (* lnanon:p(lnanon:i) lnanon:v(lnanon:i)) lnanon:g1(lnanon:i)) (** (parens(/ (parens(- lnanon:dr((+ lnanon:i 1)) lnanon:dr(lnanon:i))) __log_r8[[(((/ lnanon:r((+ lnanon:i 1)) lnanon:r(lnanon:i))))]])) 2)) lnanon:dm1(lnanon:i)))
+          ASSIGN lnanon:chwait (+ lnanon:chwait lnanon:epstwt(lnanon:i))
+104       CONTINUE
+        END DO
+        ASSIGN lnanon:chwait (/ lnanon:chwait lnanon:rke)
+        ASSIGN lnanon:ech __abs_r8[[(((/ (parens(- lnanon:omsq lnanon:chwait)) lnanon:omsq)))]]
+        ASSIGN lnanon:qomsq (/ lnanon:omsq (parens(* (* lnanon:pi43 lnanon:g) lnanon:rhom)))
+        ASSIGN lnanon:zomsq (/ lnanon:omsq lnanon:tcon)
+        ASSIGN lnanon:stwait(lnanon:np1) (/ lnanon:stwait(lnanon:np1) lnanon:rke)
+        ASSIGN lnanon:stomsq(lnanon:ih , 1) lnanon:omsq
+        ASSIGN lnanon:stomsq(lnanon:ih , 2) lnanon:stwait(lnanon:np1)
+        ASSIGN lnanon:stomsq(lnanon:ih , 3) lnanon:chwait
+        ASSIGN lnanon:qch __abs_r8[[(((/ (parens(- lnanon:stwait(lnanon:np1) lnanon:omsq)) lnanon:omsq)))]]
+        WRITE UNIT=6 FMT=1001
+          TRANSFER lnanon:omsq
+          TRANSFER lnanon:qomsq
+          TRANSFER lnanon:iv
+          TRANSFER lnanon:ih
+          TRANSFER lnanon:stwait(lnanon:np1)
+          TRANSFER lnanon:qch
+          TRANSFER lnanon:chwait
+          TRANSFER lnanon:ech
+        DT_END
+        WRITE UNIT=1 FMT=1001
+          TRANSFER lnanon:omsq
+          TRANSFER lnanon:qomsq
+          TRANSFER lnanon:iv
+          TRANSFER lnanon:ih
+          TRANSFER lnanon:stwait(lnanon:np1)
+          TRANSFER lnanon:qch
+          TRANSFER lnanon:chwait
+          TRANSFER lnanon:ech
+        DT_END
+        WRITE UNIT=1 FMT=1002
+          TRANSFER lnanon:dr(1)
+          TRANSFER lnanon:zomsq
+        DT_END
+        WRITE UNIT=11 FMT=1001
+          TRANSFER lnanon:omsq
+          TRANSFER lnanon:qomsq
+          TRANSFER lnanon:iv
+          TRANSFER lnanon:ih
+          TRANSFER lnanon:stwait(lnanon:np1)
+          TRANSFER lnanon:qch
+          TRANSFER lnanon:chwait
+          TRANSFER lnanon:ech
+        DT_END
+        ASSIGN lnanon:iv nodes[[((lnanon:dr(FULL)) (lnanon:np1) (1))]]
+        CALL robeig ((lnanon:ih) (lnanon:qomsq) (lnanon:fnpol) (lnanon:lval) (lnanon:omsq_comp))
+        DO lnanon:i=1 lnanon:n 1
+          ASSIGN lnanon:strke((+ lnanon:i 1)) (/ lnanon:strke((+ lnanon:i 1)) lnanon:rke)
+          ASSIGN lnanon:weight(lnanon:i) (/ lnanon:weight(lnanon:i) (parens(* lnanon:omsq lnanon:rke)))
+          ASSIGN lnanon:stwait(lnanon:i) (/ lnanon:stwait(lnanon:i) (parens(* lnanon:omsq lnanon:rke)))
+          ASSIGN lnanon:epstwt(lnanon:i) (/ lnanon:epstwt(lnanon:i) (parens(* lnanon:omsq lnanon:rke)))
+105       CONTINUE
+        END DO
+        ASSIGN lnanon:stwait(lnanon:np1) (/ lnanon:stwait(lnanon:np1) lnanon:omsq)
+        IF (>= lnanon:iout 2)
+          WRITE UNIT=11 FMT=1000
+            TRANSFER lnanon:omsq
+            TRANSFER lnanon:qomsq
+            DO lnanon:i=1 lnanon:n 1
+              TRANSFER lnanon:i
+              TRANSFER lnanon:dr((+ lnanon:i 1))
+              TRANSFER lnanon:adrho(lnanon:i)
+              TRANSFER lnanon:dp(lnanon:i)
+              TRANSFER lnanon:weight(lnanon:i)
+              TRANSFER lnanon:stwait(lnanon:i)
+            END DO
+          DT_END
+        ENDIF
+        CALL orthog ((lnanon:dr(FULL)) (lnanon:dh(FULL)) (lnanon:n) (lnanon:omsq) (lnanon:iv) (4096) (1) (0))
+        CALL pltdmp ((lnanon:dr(FULL)) (4096) (lnanon:np1) ('dr/r'))
+        CALL pltdmp ((lnanon:adrho(FULL)) (4096) (lnanon:n) ('drho'))
+        CALL pltdmp ((lnanon:dp(FULL)) (4096) (lnanon:n) ('dp  '))
+        CALL pltdmp ((lnanon:weight(FULL)) (4096) (lnanon:n) ('wait'))
+        CALL pltdmp ((lnanon:epstwt(FULL)) (4096) (lnanon:n) ('epwt'))
+        CALL pltdmp ((lnanon:strke(FULL)) (4096) (lnanon:np1) ('rke '))
+        CALL pltdmp ((lnanon:stwait(FULL)) (4096) (lnanon:np1) ('wint'))
+        ASSIGN lnanon:omsqp lnanon:omsq
+        ASSIGN lnanon:omsqc lnanon:omsq
+79      CONTINUE
+      END DO
+      ASSIGN lnanon:iroot (+ (- lnanon:ihmax lnanon:ihmin) 1)
+      CALL pltdmp ((lnanon:stomsq(1 , 1)) (200) (lnanon:iroot) ('omsq'))
+      CALL pltdmp ((lnanon:stomsq(1 , 2)) (200) (lnanon:iroot) ('wpes'))
+      CALL pltdmp ((lnanon:stomsq(1 , 3)) (200) (lnanon:iroot) ('wsch'))
+      CALL orthog ((lnanon:dr(FULL)) (lnanon:dh(FULL)) (lnanon:n) (lnanon:omsq) (lnanon:iv) (4096) (-1) (0))
+      RETURN 
+900   CONTINUE
+      WRITE UNIT=1 FMT=9000
+        TRANSFER lnanon:lval
+        TRANSFER lnanon:omlow
+        TRANSFER lnanon:omhigh
+      DT_END
+      WRITE UNIT=11 FMT=9000
+        TRANSFER lnanon:lval
+        TRANSFER lnanon:omlow
+        TRANSFER lnanon:omhigh
+      DT_END
+      RETURN 
+      
+
+
+        Namespace: A-H: (REAL 8) I-N: (INTEGER 4) O-Z: (REAL 8)
+        procedure name = knode
+        common: /const/ zero, one, two, thre, for, ten, ahf, qrt
+
+        symtree: ahf  Ambig 0
+        symbol ahf (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: for  Ambig 0
+        symbol for (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: i  Ambig 0
+        symbol i (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: knode  Ambig 0
+        symbol knode (INTEGER 4)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN FUNCTION IMPLICIT-TYPE)
+        result: knode
+        Formal arglist: x y nmax n nps ngs
+
+        symtree: n  Ambig 0
+        symbol n (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DUMMY IMPLICIT-TYPE)
+
+        symtree: ng  Ambig 0
+        symbol ng (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: ngs  Ambig 0
+        symbol ngs (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DUMMY IMPLICIT-TYPE)
+
+        symtree: nm1  Ambig 0
+        symbol nm1 (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: nmax  Ambig 0
+        symbol nmax (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DUMMY IMPLICIT-TYPE)
+
+        symtree: np  Ambig 0
+        symbol np (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: nps  Ambig 0
+        symbol nps (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DUMMY IMPLICIT-TYPE)
+
+        symtree: one  Ambig 0
+        symbol one (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: qrt  Ambig 0
+        symbol qrt (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: ten  Ambig 0
+        symbol ten (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: thre  Ambig 0
+        symbol thre (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: two  Ambig 0
+        symbol two (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: x  Ambig 0
+        symbol x (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION DUMMY IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 knode:nmax )
+
+        symtree: y  Ambig 0
+        symbol y (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION DUMMY IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 knode:nmax )
+
+        symtree: zero  Ambig 0
+        symbol zero (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+
+      ASSIGN knode:np 0
+      ASSIGN knode:ng 0
+      ASSIGN knode:knode 0
+      IF (= knode:n 1)
+        RETURN 
+      ENDIF
+      ASSIGN knode:nm1 (- knode:n 1)
+      DO knode:i=2 knode:nm1 1
+        IF (< (* knode:x(knode:i) knode:x((+ knode:i 1))) knode:zero)
+          IF (< (* knode:y(knode:i) knode:y((+ knode:i 1))) knode:zero)
+            WRITE UNIT=11 FMT=1000
+            DT_END
+          ENDIF
+          IF (< knode:x((+ knode:i 1)) knode:x(knode:i))
+            IF (>= knode:y((+ knode:i 1)) knode:zero)
+              ASSIGN knode:np (+ knode:np 1)
+            ENDIF
+            IF (< knode:y((+ knode:i 1)) knode:zero)
+              ASSIGN knode:ng (+ knode:ng 1)
+            ENDIF
+          ELSE
+            IF (>= knode:y(knode:i) knode:zero)
+              ASSIGN knode:ng (+ knode:ng 1)
+            ENDIF
+            IF (< knode:y(knode:i) knode:zero)
+              ASSIGN knode:np (+ knode:np 1)
+            ENDIF
+          ENDIF
+        ENDIF
+10      CONTINUE
+      END DO
+      IF (< (* knode:x((- knode:n 1)) knode:x(knode:n)) knode:zero)
+        WRITE UNIT=11 FMT=1001
+        DT_END
+      ENDIF
+      ASSIGN knode:knode (- knode:np knode:ng)
+      ASSIGN knode:nps knode:np
+      ASSIGN knode:ngs knode:ng
+      RETURN 
+      
+
+
+        Namespace: A-H: (REAL 8) I-N: (INTEGER 4) O-Z: (REAL 8)
+        procedure name = fomsq
+        common: /const/ zero, one, two, thre, for, ten, ahf, qrt
+
+        common: /linear/ atrix
+
+        common: /scrtch/ ag1, ag3, ag4, ah1, ah3, ah4, ap1, ap3, ap4
+
+        symtree: ag1  Ambig 0
+        symbol ag1 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(2 AS_EXPLICIT 1 4096 1 3 )
+
+        symtree: ag3  Ambig 0
+        symbol ag3 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(2 AS_EXPLICIT 1 4096 1 2 )
+
+        symtree: ag4  Ambig 0
+        symbol ag4 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(2 AS_EXPLICIT 1 4096 1 2 )
+
+        symtree: ah1  Ambig 0
+        symbol ah1 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(2 AS_EXPLICIT 1 4096 1 2 )
+
+        symtree: ah3  Ambig 0
+        symbol ah3 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: ah4  Ambig 0
+        symbol ah4 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: ahf  Ambig 0
+        symbol ahf (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: ap1  Ambig 0
+        symbol ap1 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(2 AS_EXPLICIT 1 4096 1 2 )
+
+        symtree: ap3  Ambig 0
+        symbol ap3 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(2 AS_EXPLICIT 1 4096 1 3 )
+
+        symtree: ap4  Ambig 0
+        symbol ap4 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: atrix  Ambig 0
+        symbol atrix (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(2 AS_EXPLICIT 1 12288 1 7 )
+
+        symtree: err  Ambig 0
+        symbol err (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: fomsq  Ambig 0
+        symbol fomsq (REAL 8)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN FUNCTION IMPLICIT-TYPE)
+        result: fomsq
+        Formal arglist: omsq x xnorm n
+
+        symtree: for  Ambig 0
+        symbol for (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: i  Ambig 0
+        symbol i (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: idh  Ambig 0
+        symbol idh (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: igam  Ambig 0
+        symbol igam (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: ix  Ambig 0
+        symbol ix (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: n  Ambig 0
+        symbol n (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DUMMY IMPLICIT-TYPE)
+
+        symtree: nmax  Ambig 0
+        symbol nmax (INTEGER 4)(PARAMETER UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+        value: 4096
+
+        symtree: nmax3  Ambig 0
+        symbol nmax3 (INTEGER 4)(PARAMETER UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+        value: 12288
+
+        symtree: omsq  Ambig 0
+        symbol omsq (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DUMMY IMPLICIT-TYPE)
+
+        symtree: one  Ambig 0
+        symbol one (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: qrt  Ambig 0
+        symbol qrt (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: rbmles  Ambig 0
+        symbol rbmles (UNKNOWN 0)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN SUBROUTINE)
+
+        symtree: ten  Ambig 0
+        symbol ten (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: thre  Ambig 0
+        symbol thre (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: two  Ambig 0
+        symbol two (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: x  Ambig 0
+        symbol x (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION DUMMY IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 12288 )
+
+        symtree: xnorm  Ambig 0
+        symbol xnorm (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DUMMY IMPLICIT-TYPE)
+
+        symtree: zero  Ambig 0
+        symbol zero (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+
+      DO fomsq:i=1 fomsq:n 1
+        ASSIGN fomsq:ix (- (* 3 fomsq:i) 2)
+        ASSIGN fomsq:igam (+ fomsq:ix 1)
+        ASSIGN fomsq:idh (+ fomsq:ix 2)
+        ASSIGN fomsq:x(fomsq:ix) fomsq:zero
+        ASSIGN fomsq:atrix(fomsq:ix , 1) fomsq:ag1(fomsq:i , 1)
+        ASSIGN fomsq:atrix(fomsq:ix , 2) fomsq:ag3(fomsq:i , 1)
+        ASSIGN fomsq:atrix(fomsq:ix , 3) fomsq:ag4(fomsq:i , 1)
+        ASSIGN fomsq:atrix(fomsq:ix , 4) (- fomsq:ag1(fomsq:i , 2) fomsq:omsq)
+        ASSIGN fomsq:atrix(fomsq:ix , 5) fomsq:ag3(fomsq:i , 2)
+        ASSIGN fomsq:atrix(fomsq:ix , 6) fomsq:ag4(fomsq:i , 2)
+        ASSIGN fomsq:atrix(fomsq:ix , 7) fomsq:ag1(fomsq:i , 3)
+        ASSIGN fomsq:x(fomsq:igam) fomsq:zero
+        ASSIGN fomsq:atrix(fomsq:igam , 1) fomsq:ap3(fomsq:i , 1)
+        ASSIGN fomsq:atrix(fomsq:igam , 2) fomsq:zero
+        ASSIGN fomsq:atrix(fomsq:igam , 3) fomsq:ap1(fomsq:i , 1)
+        ASSIGN fomsq:atrix(fomsq:igam , 4) fomsq:ap3(fomsq:i , 2)
+        ASSIGN fomsq:atrix(fomsq:igam , 5) fomsq:ap4(fomsq:i)
+        ASSIGN fomsq:atrix(fomsq:igam , 6) fomsq:ap1(fomsq:i , 2)
+        ASSIGN fomsq:atrix(fomsq:igam , 7) fomsq:ap3(fomsq:i , 3)
+        ASSIGN fomsq:x(fomsq:idh) fomsq:zero
+        ASSIGN fomsq:atrix(fomsq:idh , 1) fomsq:zero
+        ASSIGN fomsq:atrix(fomsq:idh , 2) fomsq:ah1(fomsq:i , 1)
+        ASSIGN fomsq:atrix(fomsq:idh , 3) fomsq:ah3(fomsq:i)
+        ASSIGN fomsq:atrix(fomsq:idh , 4) (- fomsq:ah4(fomsq:i) fomsq:omsq)
+        ASSIGN fomsq:atrix(fomsq:idh , 5) fomsq:ah1(fomsq:i , 2)
+        ASSIGN fomsq:atrix(fomsq:idh , 6) fomsq:zero
+        ASSIGN fomsq:atrix(fomsq:idh , 7) fomsq:zero
+200     CONTINUE
+      END DO
+      ASSIGN fomsq:x((- (* 3 fomsq:n) 2)) (U- (* fomsq:ag1(fomsq:n , 3) fomsq:xnorm))
+      ASSIGN fomsq:x((- (* 3 fomsq:n) 1)) (U- (* fomsq:ap1(fomsq:n , 2) fomsq:xnorm))
+      ASSIGN fomsq:x((* 3 fomsq:n)) (U- (* fomsq:ah1(fomsq:n , 2) fomsq:xnorm))
+      CALL rbmles ((fomsq:atrix(FULL)) (12288) (1) ((* 3 fomsq:n)) (7) (fomsq:x(FULL)))
+      ASSIGN fomsq:err (+ (+ (+ (* fomsq:ag1((+ fomsq:n 1) , 1) fomsq:x((- (* 3 fomsq:n) 2))) (* (parens(- fomsq:ag1((+ fomsq:n 1) , 2) fomsq:omsq)) fomsq:xnorm)) (* fomsq:ag3((+ fomsq:n 1) , 1) fomsq:x((- (* 3 fomsq:n) 1)))) (* fomsq:ag4((+ fomsq:n 1) , 1) fomsq:x((* 3 fomsq:n))))
+      ASSIGN fomsq:fomsq (/ fomsq:err fomsq:x(4))
+      RETURN 
+      
+
+
+        Namespace: A-H: (REAL 8) I-N: (INTEGER 4) O-Z: (REAL 8)
+        procedure name = rbmles
+        symtree: a  Ambig 0
+        symbol a (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION DUMMY IMPLICIT-TYPE)
+        Array spec:(2 AS_EXPLICIT 1 rbmles:nmax 1 rbmles:m )
+
+        symtree: den  Ambig 0
+        symbol den (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: i  Ambig 0
+        symbol i (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: id  Ambig 0
+        symbol id (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: idm  Ambig 0
+        symbol idm (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: ii  Ambig 0
+        symbol ii (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: ik  Ambig 0
+        symbol ik (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: imax  Ambig 0
+        symbol imax (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DUMMY IMPLICIT-TYPE)
+
+        symtree: imin  Ambig 0
+        symbol imin (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DUMMY IMPLICIT-TYPE)
+
+        symtree: imp  Ambig 0
+        symbol imp (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: j  Ambig 0
+        symbol j (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: jk  Ambig 0
+        symbol jk (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: k  Ambig 0
+        symbol k (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: kk  Ambig 0
+        symbol kk (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: kmax  Ambig 0
+        symbol kmax (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: m  Ambig 0
+        symbol m (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DUMMY IMPLICIT-TYPE)
+
+        symtree: min0  Ambig 0
+        symbol min0 (INTEGER 4)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN FUNCTION IMPLICIT-TYPE)
+        result: min0
+
+        symtree: mmid  Ambig 0
+        symbol mmid (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: mmm  Ambig 0
+        symbol mmm (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: nmax  Ambig 0
+        symbol nmax (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DUMMY IMPLICIT-TYPE)
+
+        symtree: rbmles  Ambig 0
+        symbol rbmles (UNKNOWN 0)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN SUBROUTINE)
+        Formal arglist: a nmax imin imax m y
+
+        symtree: y  Ambig 0
+        symbol y (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION DUMMY IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 rbmles:nmax )
+
+
+      ASSIGN rbmles:id (+ (- rbmles:imax rbmles:imin) 1)
+      ASSIGN rbmles:idm (- rbmles:id 1)
+      ASSIGN rbmles:mmid (/ (parens(+ rbmles:m 1)) 2)
+      ASSIGN rbmles:mmm (- rbmles:mmid 1)
+      DO rbmles:ii=1 rbmles:idm 1
+        ASSIGN rbmles:i (- (+ rbmles:imax 1) rbmles:ii)
+        ASSIGN rbmles:den (/ 1.0000000000000000_8 rbmles:a(rbmles:i , rbmles:mmid))
+        ASSIGN rbmles:y(rbmles:i) (* rbmles:y(rbmles:i) rbmles:den)
+        ASSIGN rbmles:kmax _gfortran_min0[[(((- rbmles:i rbmles:imin)) (rbmles:mmm))]]
+        DO rbmles:j=1 rbmles:mmm 1
+          ASSIGN rbmles:a(rbmles:i , rbmles:j) (* rbmles:a(rbmles:i , rbmles:j) rbmles:den)
+          DO rbmles:kk=1 rbmles:kmax 1
+            ASSIGN rbmles:jk (+ rbmles:j rbmles:kk)
+            ASSIGN rbmles:k (+ rbmles:mmid rbmles:kk)
+            ASSIGN rbmles:ik (- rbmles:i rbmles:kk)
+            ASSIGN rbmles:a(rbmles:ik , rbmles:jk) (- rbmles:a(rbmles:ik , rbmles:jk) (* rbmles:a(rbmles:i , rbmles:j) rbmles:a(rbmles:ik , rbmles:k)))
+10          CONTINUE
+          END DO
+        END DO
+        DO rbmles:kk=1 rbmles:kmax 1
+          ASSIGN rbmles:ik (- rbmles:i rbmles:kk)
+          ASSIGN rbmles:k (+ rbmles:mmid rbmles:kk)
+          ASSIGN rbmles:y(rbmles:ik) (- rbmles:y(rbmles:ik) (* rbmles:y(rbmles:i) rbmles:a(rbmles:ik , rbmles:k)))
+20        CONTINUE
+        END DO
+      END DO
+      ASSIGN rbmles:y(rbmles:imin) (/ rbmles:y(rbmles:imin) rbmles:a(rbmles:imin , rbmles:mmid))
+      ASSIGN rbmles:imp (+ rbmles:imin 1)
+      DO rbmles:i=rbmles:imp rbmles:imax 1
+        ASSIGN rbmles:kmax _gfortran_min0[[(((- rbmles:i rbmles:imin)) (rbmles:mmm))]]
+        DO rbmles:kk=1 rbmles:kmax 1
+          ASSIGN rbmles:ik (- rbmles:i rbmles:kk)
+          ASSIGN rbmles:k (- rbmles:mmid rbmles:kk)
+          ASSIGN rbmles:y(rbmles:i) (- rbmles:y(rbmles:i) (* rbmles:a(rbmles:i , rbmles:k) rbmles:y(rbmles:ik)))
+        END DO
+30      CONTINUE
+      END DO
+      RETURN 
+      
+
+
+        Namespace: A-H: (REAL 8) I-N: (INTEGER 4) O-Z: (REAL 8)
+        procedure name = trisol
+        symtree: a  Ambig 0
+        symbol a (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION DUMMY IMPLICIT-TYPE)
+        Array spec:(2 AS_EXPLICIT 1 trisol:nmaxin 1 3 )
+
+        symtree: den  Ambig 0
+        symbol den (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: e  Ambig 0
+        symbol e (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: f  Ambig 0
+        symbol f (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: i  Ambig 0
+        symbol i (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: id  Ambig 0
+        symbol id (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: ii  Ambig 0
+        symbol ii (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: imax  Ambig 0
+        symbol imax (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DUMMY IMPLICIT-TYPE)
+
+        symtree: imin  Ambig 0
+        symbol imin (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DUMMY IMPLICIT-TYPE)
+
+        symtree: imp  Ambig 0
+        symbol imp (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: nmax  Ambig 0
+        symbol nmax (INTEGER 4)(PARAMETER UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+        value: 4096
+
+        symtree: nmaxin  Ambig 0
+        symbol nmaxin (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DUMMY IMPLICIT-TYPE)
+
+        symtree: trisol  Ambig 0
+        symbol trisol (UNKNOWN 0)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN SUBROUTINE)
+        Formal arglist: a imin imax x y z nmaxin
+
+        symtree: x  Ambig 0
+        symbol x (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DUMMY IMPLICIT-TYPE)
+
+        symtree: y  Ambig 0
+        symbol y (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION DUMMY IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 trisol:nmaxin )
+
+        symtree: z  Ambig 0
+        symbol z (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION DUMMY IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 trisol:nmaxin )
+
+
+      ASSIGN trisol:id (- (+ trisol:imax 1) trisol:imin)
+      ASSIGN trisol:e(trisol:imax) (U- (/ trisol:a(trisol:imax , 1) (parens(- trisol:a(trisol:imax , 2) trisol:x))))
+      ASSIGN trisol:f(trisol:imax) (/ trisol:y(trisol:imax) (parens(- trisol:a(trisol:imax , 2) trisol:x)))
+      DO trisol:ii=2 trisol:id 1
+        ASSIGN trisol:i (- (+ trisol:imax 1) trisol:ii)
+        ASSIGN trisol:den (+ (parens(- trisol:a(trisol:i , 2) trisol:x)) (* trisol:a(trisol:i , 3) trisol:e((+ trisol:i 1))))
+        IF (/= trisol:ii trisol:id)
+          ASSIGN trisol:e(trisol:i) (U- (/ trisol:a(trisol:i , 1) trisol:den))
+        ENDIF
+        ASSIGN trisol:f(trisol:i) (/ (parens(- trisol:y(trisol:i) (* trisol:a(trisol:i , 3) trisol:f((+ trisol:i 1))))) trisol:den)
+10      CONTINUE
+      END DO
+      ASSIGN trisol:imp (+ trisol:imin 1)
+      ASSIGN trisol:z(trisol:imin) trisol:f(trisol:imin)
+      DO trisol:i=trisol:imp trisol:imax 1
+        ASSIGN trisol:z(trisol:i) (+ (* trisol:e(trisol:i) trisol:z((- trisol:i 1))) trisol:f(trisol:i))
+20      CONTINUE
+      END DO
+      RETURN 
+      
+
+
+        Namespace: A-H: (REAL 8) I-N: (INTEGER 4) O-Z: (REAL 8)
+        procedure name = nodes
+        common: /const/ zero, one, two, thre, for, ten, ahf, qrt
+
+        symtree: ahf  Ambig 0
+        symbol ahf (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: for  Ambig 0
+        symbol for (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: i  Ambig 0
+        symbol i (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: inode  Ambig 0
+        symbol inode (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 200 )
+
+        symtree: lout  Ambig 0
+        symbol lout (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DUMMY IMPLICIT-TYPE)
+
+        symtree: nodcnt  Ambig 0
+        symbol nodcnt (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: nodes  Ambig 0
+        symbol nodes (INTEGER 4)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN FUNCTION IMPLICIT-TYPE)
+        result: nodes
+        Formal arglist: w nz lout
+
+        symtree: nz  Ambig 0
+        symbol nz (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DUMMY IMPLICIT-TYPE)
+
+        symtree: nz1  Ambig 0
+        symbol nz1 (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: one  Ambig 0
+        symbol one (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: qrt  Ambig 0
+        symbol qrt (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: ten  Ambig 0
+        symbol ten (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: thre  Ambig 0
+        symbol thre (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: two  Ambig 0
+        symbol two (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: w  Ambig 0
+        symbol w (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION DUMMY IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 nodes:nz )
+
+        symtree: zero  Ambig 0
+        symbol zero (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+
+      ASSIGN nodes:nodes 0
+      ASSIGN nodes:nodcnt 0
+      ASSIGN nodes:nz1 (- nodes:nz 1)
+      DO nodes:i=3 nodes:nz1 1
+        IF (< (* nodes:w((- nodes:i 1)) nodes:w(nodes:i)) nodes:zero)
+          IF (>= (* nodes:w((- nodes:i 2)) nodes:w((- nodes:i 1))) nodes:zero)
+            IF (>= (* nodes:w(nodes:i) nodes:w((+ nodes:i 1))) nodes:zero)
+              ASSIGN nodes:nodcnt (+ nodes:nodcnt 1)
+              ASSIGN nodes:inode(nodes:nodcnt) (- nodes:i 1)
+            ENDIF
+          ENDIF
+        ENDIF
+10      CONTINUE
+      END DO
+      ASSIGN nodes:inode((+ nodes:nodcnt 1)) nodes:nz
+      ASSIGN nodes:nodes nodes:nodcnt
+      IF (> nodes:lout 0)
+        WRITE UNIT=11 FMT=1000
+          TRANSFER nodes:nodcnt
+        DT_END
+        IF (> nodes:nodcnt 0)
+          WRITE UNIT=11 FMT=1001
+            DO nodes:i=1 nodes:nodcnt 1
+              TRANSFER nodes:inode(nodes:i)
+            END DO
+          DT_END
+        ENDIF
+      ENDIF
+      RETURN 
+      
+
+
+        Namespace: A-H: (REAL 8) I-N: (INTEGER 4) O-Z: (REAL 8)
+        procedure name = orthog
+        common: /blk4/ p, g1, rho, rzone
+
+        common: /const/ zero, one, two, thre, for, ten, ahf, qrt
+
+        common: /eigstr/ sdr, sdh, stome, iomeg
+
+        common: /phypar/ r, theta, dthdr, v, rm, gor, xi, dm1, dm2, bv, vn, un, drhdr, ra
+
+        common: /stnmod/ nmode
+
+        symtree: ahf  Ambig 0
+        symbol ahf (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: bv  Ambig 0
+        symbol bv (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: cross  Ambig 0
+        symbol cross (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IMPLICIT-TYPE)
+        Array spec:(2 AS_EXPLICIT 1 4 1 4 )
+
+        symtree: dfloat  Ambig 0
+        symbol dfloat (REAL 8)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN FUNCTION IMPLICIT-TYPE)
+        result: dfloat
+
+        symtree: dh  Ambig 0
+        symbol dh (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION DUMMY IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 orthog:nmax1 )
+
+        symtree: dm1  Ambig 0
+        symbol dm1 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: dm2  Ambig 0
+        symbol dm2 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: dr  Ambig 0
+        symbol dr (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION DUMMY IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 orthog:nmax1 )
+
+        symtree: drhdr  Ambig 0
+        symbol drhdr (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: dsqrt  Ambig 0
+        symbol dsqrt (REAL 8)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN FUNCTION IMPLICIT-TYPE)
+        result: dsqrt
+
+        symtree: dthdr  Ambig 0
+        symbol dthdr (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: for  Ambig 0
+        symbol for (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: g1  Ambig 0
+        symbol g1 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: gor  Ambig 0
+        symbol gor (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: i  Ambig 0
+        symbol i (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: imode  Ambig 0
+        symbol imode (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DUMMY IMPLICIT-TYPE)
+
+        symtree: index  Ambig 0
+        symbol index (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DUMMY IMPLICIT-TYPE)
+
+        symtree: iomeg  Ambig 0
+        symbol iomeg (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4 )
+
+        symtree: j1  Ambig 0
+        symbol j1 (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: j2  Ambig 0
+        symbol j2 (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: lval  Ambig 0
+        symbol lval (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DUMMY IMPLICIT-TYPE)
+
+        symtree: n  Ambig 0
+        symbol n (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DUMMY IMPLICIT-TYPE)
+
+        symtree: nmax  Ambig 0
+        symbol nmax (INTEGER 4)(PARAMETER UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+        value: 4096
+
+        symtree: nmax1  Ambig 0
+        symbol nmax1 (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DUMMY IMPLICIT-TYPE)
+
+        symtree: nmode  Ambig 0
+        symbol nmode (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: omsq  Ambig 0
+        symbol omsq (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DUMMY IMPLICIT-TYPE)
+
+        symtree: one  Ambig 0
+        symbol one (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: orthog  Ambig 0
+        symbol orthog (UNKNOWN 0)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN SUBROUTINE)
+        Formal arglist: dr dh n omsq index nmax1 imode lval
+
+        symtree: p  Ambig 0
+        symbol p (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: qrt  Ambig 0
+        symbol qrt (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: r  Ambig 0
+        symbol r (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: ra  Ambig 0
+        symbol ra (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: rho  Ambig 0
+        symbol rho (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: rke  Ambig 0
+        symbol rke (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4 )
+
+        symtree: rl1  Ambig 0
+        symbol rl1 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: rm  Ambig 0
+        symbol rm (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: rzone  Ambig 0
+        symbol rzone (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: sdh  Ambig 0
+        symbol sdh (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(2 AS_EXPLICIT 1 4096 1 4 )
+
+        symtree: sdr  Ambig 0
+        symbol sdr (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(2 AS_EXPLICIT 1 4096 1 4 )
+
+        symtree: stome  Ambig 0
+        symbol stome (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4 )
+
+        symtree: ten  Ambig 0
+        symbol ten (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: theta  Ambig 0
+        symbol theta (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: thre  Ambig 0
+        symbol thre (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: two  Ambig 0
+        symbol two (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+        symtree: un  Ambig 0
+        symbol un (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: v  Ambig 0
+        symbol v (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: vn  Ambig 0
+        symbol vn (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: xi  Ambig 0
+        symbol xi (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION IN-COMMON IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 4096 )
+
+        symtree: zero  Ambig 0
+        symbol zero (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IN-COMMON IMPLICIT-TYPE)
+
+
+      IF (<= orthog:lval 0)
+        IF (> orthog:nmode 4)
+          RETURN 
+        ENDIF
+        IF (<= orthog:imode 0)
+          IF (<= orthog:nmode 1)
+            RETURN 
+          ENDIF
+          DO orthog:j1=1 orthog:nmode 1
+            DO orthog:j2=1 orthog:nmode 1
+              ASSIGN orthog:cross(orthog:j2 , orthog:j1) (+ orthog:cross(orthog:j2 , orthog:j1) (* (* (* orthog:sdr(1 , orthog:j2) orthog:sdr(1 , orthog:j1)) orthog:dm2(1)) (** orthog:r(1) 2)))
+160           CONTINUE
+            END DO
+          END DO
+          DO orthog:j1=1 orthog:nmode 1
+            DO orthog:j2=1 orthog:nmode 1
+              DO orthog:i=1 (+ orthog:n 1) 1
+                ASSIGN orthog:cross(orthog:j2 , orthog:j1) (+ orthog:cross(orthog:j2 , orthog:j1) (* (* (* orthog:sdr((+ orthog:i 1) , orthog:j2) orthog:sdr((+ orthog:i 1) , orthog:j1)) orthog:dm2((+ orthog:i 1))) (** orthog:r((+ orthog:i 1)) 2)))
+170             CONTINUE
+              END DO
+            END DO
+          END DO
+          DO orthog:j1=1 orthog:nmode 1
+            ASSIGN orthog:rke(orthog:j1) __sqrt_r8[[((orthog:cross(orthog:j1 , orthog:j1)))]]
+175         CONTINUE
+          END DO
+          DO orthog:j1=1 orthog:nmode 1
+            DO orthog:j2=1 orthog:nmode 1
+              ASSIGN orthog:cross(orthog:j2 , orthog:j1) (/ orthog:cross(orthog:j2 , orthog:j1) (parens(* orthog:rke(orthog:j1) orthog:rke(orthog:j2))))
+180           CONTINUE
+            END DO
+          END DO
+          WRITE UNIT=1 FMT=1800
+          DT_END
+          DO orthog:j1=1 orthog:nmode 1
+            DO orthog:j2=1 orthog:nmode 1
+              WRITE UNIT=1 FMT=8001
+                TRANSFER orthog:iomeg(orthog:j1)
+                TRANSFER orthog:iomeg(orthog:j2)
+                TRANSFER orthog:cross(orthog:j1 , orthog:j2)
+              DT_END
+185           CONTINUE
+            END DO
+          END DO
+        ELSE
+          ASSIGN orthog:nmode (+ orthog:nmode 1)
+          DO orthog:i=1 orthog:n 1
+            ASSIGN orthog:sdr(orthog:i , orthog:nmode) orthog:dr(orthog:i)
+110         CONTINUE
+          END DO
+          ASSIGN orthog:sdr((+ orthog:n 1) , orthog:nmode) orthog:dr((+ orthog:n 1))
+          ASSIGN orthog:stome(orthog:nmode) orthog:omsq
+          ASSIGN orthog:iomeg(orthog:nmode) orthog:index
+        ENDIF
+      ELSE
+        IF (<= orthog:imode 0)
+          IF (<= orthog:nmode 1)
+            RETURN 
+          ENDIF
+          ASSIGN orthog:rl1 (* __dble_i4[[((orthog:lval))]] __dble_i4[[(((+ orthog:lval 1)))]])
+          DO orthog:j1=1 orthog:nmode 1
+            ASSIGN orthog:rke(orthog:j1) orthog:zero
+            DO orthog:j2=1 orthog:nmode 1
+              ASSIGN orthog:cross(orthog:j2 , orthog:j1) (* (* (* orthog:sdr(1 , orthog:j2) orthog:sdr(1 , orthog:j1)) orthog:dm2(1)) (** orthog:r(1) 2))
+60            CONTINUE
+            END DO
+          END DO
+          DO orthog:j1=1 orthog:nmode 1
+            DO orthog:j2=1 orthog:nmode 1
+              DO orthog:i=1 orthog:n 1
+                ASSIGN orthog:cross(orthog:j2 , orthog:j1) (+ (+ orthog:cross(orthog:j2 , orthog:j1) (* (* (* (* orthog:rl1 orthog:sdh(orthog:i , orthog:j2)) orthog:sdh(orthog:i , orthog:j1)) orthog:dm1(orthog:i)) (** orthog:rzone(orthog:i) 2))) (* (* (* orthog:sdr((+ orthog:i 1) , orthog:j2) orthog:sdr((+ orthog:i 1) , orthog:j1)) orthog:dm2((+ orthog:i 1))) (** orthog:r((+ orthog:i 1)) 2)))
+70              CONTINUE
+              END DO
+            END DO
+          END DO
+          DO orthog:j1=1 orthog:nmode 1
+            ASSIGN orthog:rke(orthog:j1) __sqrt_r8[[((orthog:cross(orthog:j1 , orthog:j1)))]]
+75          CONTINUE
+          END DO
+          DO orthog:j1=1 orthog:nmode 1
+            DO orthog:j2=1 orthog:nmode 1
+              ASSIGN orthog:cross(orthog:j2 , orthog:j1) (/ orthog:cross(orthog:j2 , orthog:j1) (parens(* orthog:rke(orthog:j1) orthog:rke(orthog:j2))))
+80            CONTINUE
+            END DO
+          END DO
+          WRITE UNIT=1 FMT=8000
+            TRANSFER orthog:lval
+          DT_END
+          DO orthog:j1=1 orthog:nmode 1
+            DO orthog:j2=1 orthog:nmode 1
+              WRITE UNIT=1 FMT=8001
+                TRANSFER orthog:iomeg(orthog:j1)
+                TRANSFER orthog:iomeg(orthog:j2)
+                TRANSFER orthog:cross(orthog:j1 , orthog:j2)
+              DT_END
+85            CONTINUE
+            END DO
+          END DO
+        ELSE
+          IF (>= orthog:nmode 4)
+            RETURN 
+          ENDIF
+          ASSIGN orthog:nmode (+ orthog:nmode 1)
+          DO orthog:i=1 orthog:n 1
+            ASSIGN orthog:sdr(orthog:i , orthog:nmode) orthog:dr(orthog:i)
+            ASSIGN orthog:sdh(orthog:i , orthog:nmode) orthog:dh(orthog:i)
+10          CONTINUE
+          END DO
+          ASSIGN orthog:sdr((+ orthog:n 1) , orthog:nmode) orthog:dr((+ orthog:n 1))
+          ASSIGN orthog:stome(orthog:nmode) orthog:omsq
+          ASSIGN orthog:iomeg(orthog:nmode) orthog:index
+        ENDIF
+      ENDIF
+      RETURN 
+      
+
+
+        Namespace: A-H: (REAL 8) I-N: (INTEGER 4) O-Z: (REAL 8)
+        procedure name = robeig
+        symtree: __convert_r4_r8  Ambig 0
+        symbol __convert_r4_r8 (REAL 8)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN FUNCTION ELEMENTAL PURE)
+
+        symtree: dabs  Ambig 0
+        symbol dabs (REAL 8)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN FUNCTION IMPLICIT-TYPE)
+        result: dabs
+
+        symtree: dfloat  Ambig 0
+        symbol dfloat (REAL 8)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN FUNCTION IMPLICIT-TYPE)
+        result: dfloat
+
+        symtree: dn  Ambig 0
+        symbol dn (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: dsqrt  Ambig 0
+        symbol dsqrt (REAL 8)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN FUNCTION IMPLICIT-TYPE)
+        result: dsqrt
+
+        symtree: fnpol  Ambig 0
+        symbol fnpol (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DUMMY IMPLICIT-TYPE)
+
+        symtree: i  Ambig 0
+        symbol i (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: iabs  Ambig 0
+        symbol iabs (INTEGER 4)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN FUNCTION IMPLICIT-TYPE)
+        result: iabs
+
+        symtree: ifix  Ambig 0
+        symbol ifix (INTEGER 4)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN FUNCTION IMPLICIT-TYPE)
+        result: ifix
+
+        symtree: index  Ambig 0
+        symbol index (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DUMMY IMPLICIT-TYPE)
+
+        symtree: k  Ambig 0
+        symbol k (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: lin  Ambig 0
+        symbol lin (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DUMMY IMPLICIT-TYPE)
+
+        symtree: lval  Ambig 0
+        symbol lval (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: n_hrw  Ambig 0
+        symbol n_hrw (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION DATA IMPLICIT-TYPE)
+        value: (/ 100 , 150 , 200 , 300 , 325 , 350 , 400 /)
+        Array spec:(1 AS_EXPLICIT 1 7 )
+
+        symtree: npol  Ambig 0
+        symbol npol (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: om2_hrw  Ambig 0
+        symbol om2_hrw (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION DATA IMPLICIT-TYPE)
+        value: (/ 1.8919999599456787_8 , 1.2090000152587891e1_8 , 2.7079999923706055e1_8 , 2.7060000896453857_8 , 1.2539999961853027e1_8 , 2.6579999923706055e1_8 , 4.0009999275207520_8 , 1.3340000152587891e1_8 , 2.6579999923706055e1_8 , 9.2550001144409180_8 , 1.6979999542236328e1_8 , 2.8479999542236328e1_8 , 1.1029999732971191e1_8 , 1.8889999389648438e1_8 , 2.9870000839233398e1_8 , 1.2640000343322754e1_8 , 2.1209999084472656e1_8 , 3.2080001831054688e1_8 , 1.5149999618530273e1_8 , 2.4940000534057617e1_8 , 3.7069999694824219e1_8 /)
+        Array spec:(2 AS_EXPLICIT 1 3 1 7 )
+
+        symtree: omsq  Ambig 0
+        symbol omsq (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DUMMY IMPLICIT-TYPE)
+
+        symtree: omsq1  Ambig 0
+        symbol omsq1 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION DATA IMPLICIT-TYPE)
+        value: (/ -1.5830000000000000e-2_8 , -1.8980000000000000e-2_8 , -2.3189999999999999e-2_8 , -2.8989999999999998e-2_8 , -3.7310000000000003e-2_8 , -4.9889999999999997e-2_8 , -7.0290000000000005e-2_8 , -1.0700000000000000e-1_8 , -1.8440000000000001e-1_8 , -4.0389999999999998e-1_8 , 1.9970000000000001_8 , 1.2410000000000000e1_8 , 3.1320000000000000e1_8 , 5.7109999999999999e1_8 , 8.9439999999999998e1_8 , 1.2819999999999999e2_8 , 1.7319999999999999e2_8 , 2.2450000000000000e2_8 , 2.8219999999999999e2_8 , 3.4600000000000000e2_8 , 4.1600000000000000e2_8 /)
+        Array spec:(1 AS_EXPLICIT 1 21 )
+
+        symtree: omsq2  Ambig 0
+        symbol omsq2 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION DATA IMPLICIT-TYPE)
+        value: (/ 4.0610000000000000e-2_8 , 4.8399999999999999e-2_8 , 5.8680000000000003e-2_8 , 7.2650000000000006e-2_8 , 9.2380000000000004e-2_8 , 1.2150000000000000e-1_8 , 1.6719999999999999e-1_8 , 2.4520000000000000e-1_8 , 3.9570000000000000e-1_8 , 7.5100000000000000e-1_8 , 4.1509999999999998_8 , 1.5410000000000000e1_8 , 3.2100000000000001e1_8 , 5.4170000000000002e1_8 , 8.1510000000000005e1_8 , 1.1400000000000000e2_8 , 1.5159999999999999e2_8 , 1.9430000000000001e2_8 , 2.4200000000000000e2_8 , 2.9500000000000000e2_8 , 3.5300000000000000e2_8 /)
+        Array spec:(1 AS_EXPLICIT 1 21 )
+
+        symtree: omsq3  Ambig 0
+        symbol omsq3 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION DATA IMPLICIT-TYPE)
+        value: (/ 4.2899999999999999e-1_8 , 5.1000000000000001e-1_8 , 6.1599999999999999e-1_8 , 7.5880000000000003e-1_8 , 9.5840000000000003e-1_8 , 1.2480000000000000_8 , 1.6940000000000000_8 , 2.4300000000000002_8 , 3.7709999999999999_8 , 6.5529999999999999_8 , 1.0900000000000000e1_8 , 2.0350000000000001e1_8 , 3.5630000000000003e1_8 , 5.5289999999999999e1_8 , 7.9230000000000004e1_8 , 1.0740000000000001e2_8 , 1.3980000000000001e2_8 , 1.7650000000000000e2_8 , 2.1700000000000000e2_8 , 2.6200000000000000e2_8 , 3.1200000000000000e2_8 /)
+        Array spec:(1 AS_EXPLICIT 1 21 )
+
+        symtree: omsq35  Ambig 0
+        symbol omsq35 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION DATA IMPLICIT-TYPE)
+        value: (/ 1.3999999999999999_8 , 1.6599999999999999_8 , 2.0000000000000000_8 , 2.4640000000000000_8 , 3.0990000000000002_8 , 4.0229999999999997_8 , 5.4169999999999998_8 , 7.6550000000000002_8 , 1.1390000000000001e1_8 , 1.6129999999999999e1_8 , 2.1550000000000001e1_8 , 2.7910000000000000e1_8 , 3.9680000000000000e1_8 , 5.7880000000000003e1_8 , 8.0390000000000001e1_8 , 1.0680000000000000e2_8 , 1.3719999999999999e2_8 , 1.7100000000000000e2_8 , 2.1000000000000000e2_8 , 2.5200000000000000e2_8 , 2.9700000000000000e2_8 /)
+        Array spec:(1 AS_EXPLICIT 1 21 )
+
+        symtree: omsq4  Ambig 0
+        symbol omsq4 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION DATA IMPLICIT-TYPE)
+        value: (/ 6.2000000000000002_8 , 7.3399999999999999_8 , 8.8200000000000003_8 , 1.0779999999999999e1_8 , 1.3440000000000000e1_8 , 1.7020000000000000e1_8 , 2.0480000000000000e1_8 , 2.3989999999999998e1_8 , 3.0670000000000002e1_8 , 3.6789999999999999e1_8 , 4.5770000000000003e1_8 , 5.6180000000000000e1_8 , 6.7750000000000000e1_8 , 8.3819999999999993e1_8 , 1.0220000000000000e2_8 , 1.1659999999999999e2_8 , 1.4030000000000001e2_8 , 1.7100000000000000e2_8 , 2.0600000000000000e2_8 , 2.4500000000000000e2_8 , 2.8800000000000000e2_8 /)
+        Array spec:(1 AS_EXPLICIT 1 21 )
+
+        symtree: omsq_comp  Ambig 0
+        symbol omsq_comp (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DUMMY IMPLICIT-TYPE)
+
+        symtree: qch  Ambig 0
+        symbol qch (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: rl  Ambig 0
+        symbol rl (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: rl1  Ambig 0
+        symbol rl1 (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: robcmp  Ambig 0
+        symbol robcmp (REAL 8)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS EXTERNAL-PROC UNKNOWN FUNCTION IMPLICIT-TYPE)
+        result: robcmp
+
+        symtree: robeig  Ambig 0
+        symbol robeig (UNKNOWN 0)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN SUBROUTINE)
+        Formal arglist: index omsq fnpol lin omsq_comp
+
+        symtree: sngl  Ambig 0
+        symbol sngl (REAL 8)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN FUNCTION IMPLICIT-TYPE)
+        result: sngl
+
+        symtree: zomsq  Ambig 0
+        symbol zomsq (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+
+      ASSIGN robeig:lval robeig:lin
+      ASSIGN robeig:npol _gfortran_ifix[[((_gfortran_sngl[[(((* 1.0000000000000000e1_8 robeig:fnpol)))]]))]]
+      IF (= robeig:npol 0)
+        IF (= robeig:lval 0)
+          ASSIGN robeig:k __abs_i4[[((robeig:index))]]
+          ASSIGN robeig:dn (+ -2.0000000000000000_8 (* (* __dble_i4[[((robeig:k))]] (parens(+ 5.0000000000000000e-1_8 __dble_i4[[((robeig:k))]]))) 1.6666666666666667_8))
+          ASSIGN robeig:zomsq (+ robeig:dn __sqrt_r8[[(((+ (** robeig:dn 2) robeig:rl1)))]])
+        ELSE
+          ASSIGN robeig:rl __dble_i4[[((robeig:lval))]]
+          ASSIGN robeig:rl1 (* robeig:rl (parens(+ robeig:rl 1.0000000000000000_8)))
+          ASSIGN robeig:k __abs_i4[[((robeig:index))]]
+          IF (AND (= robeig:index 0) (> robeig:omsq 0_8))
+            ASSIGN robeig:zomsq (/ (* (* 2.0000000000000000_8 robeig:rl) (parens(- robeig:rl 1.0000000000000000_8))) (parens(+ (* 2.0000000000000000_8 robeig:rl) 1.0000000000000000_8)))
+          ELSE IF (AND (<= robeig:index 0) (< robeig:omsq 0_8))
+            ASSIGN robeig:k (+ robeig:k 1)
+            ASSIGN robeig:dn (+ -2.0000000000000000_8 (* (* __dble_i4[[((robeig:k))]] (parens(+ (+ robeig:rl 5.0000000000000000e-1_8) __dble_i4[[((robeig:k))]]))) 1.6666666666666667_8))
+            ASSIGN robeig:zomsq (- robeig:dn __sqrt_r8[[(((+ (** robeig:dn 2) robeig:rl1)))]])
+          ELSE
+            ASSIGN robeig:dn (+ -2.0000000000000000_8 (* (* __dble_i4[[((robeig:k))]] (parens(+ (+ robeig:rl 5.0000000000000000e-1_8) __dble_i4[[((robeig:k))]]))) 1.6666666666666667_8))
+            ASSIGN robeig:zomsq (+ robeig:dn __sqrt_r8[[(((+ (** robeig:dn 2) robeig:rl1)))]])
+          ENDIF
+          ASSIGN robeig:omsq_comp robeig:zomsq
+          ASSIGN robeig:zomsq (* robeig:zomsq 1.3333333333333333_8)
+          ASSIGN robeig:qch __abs_r8[[(((/ (parens(- robeig:omsq robeig:zomsq)) robeig:omsq)))]]
+          WRITE UNIT=6 FMT=1001
+            TRANSFER robeig:index
+            TRANSFER robeig:omsq
+            TRANSFER robeig:zomsq
+            TRANSFER robeig:qch
+          DT_END
+          WRITE UNIT=1 FMT=1001
+            TRANSFER robeig:index
+            TRANSFER robeig:omsq
+            TRANSFER robeig:zomsq
+            TRANSFER robeig:qch
+          DT_END
+        ENDIF
+      ELSE IF (= robeig:lval 0)
+        ASSIGN robeig:npol _gfortran_ifix[[((_gfortran_sngl[[(((* 1.0000000000000000e2_8 robeig:fnpol)))]]))]]
+        ASSIGN robeig:k robeig:index
+        IF (<= robeig:k 3)
+          DO robeig:i=1 7 1
+            IF (= robeig:n_hrw(robeig:i) robeig:npol)
+              ASSIGN robeig:zomsq robeig:om2_hrw(robeig:k , robeig:i)
+              GOTO 10
+            ENDIF
+          END DO
+        ENDIF
+        RETURN 
+10      CONTINUE
+        ASSIGN robeig:omsq_comp robeig:zomsq
+        ASSIGN robeig:qch __abs_r8[[(((/ (parens(- robeig:omsq robeig:zomsq)) robeig:omsq)))]]
+        WRITE UNIT=6 FMT=1001
+          TRANSFER robeig:index
+          TRANSFER robeig:omsq
+          TRANSFER robeig:zomsq
+          TRANSFER robeig:qch
+        DT_END
+        WRITE UNIT=1 FMT=1001
+          TRANSFER robeig:index
+          TRANSFER robeig:omsq
+          TRANSFER robeig:zomsq
+          TRANSFER robeig:qch
+        DT_END
+      ELSE IF (= robeig:lval 2)
+        IF (= robeig:npol 10)
+          ASSIGN robeig:omsq_comp robcmp[[((robeig:index) (robeig:omsq) (robeig:omsq1(FULL)))]]
+        ELSE IF (= robeig:npol 20)
+          ASSIGN robeig:omsq_comp robcmp[[((robeig:index) (robeig:omsq) (robeig:omsq2(FULL)))]]
+        ELSE IF (= robeig:npol 30)
+          ASSIGN robeig:omsq_comp robcmp[[((robeig:index) (robeig:omsq) (robeig:omsq3(FULL)))]]
+        ELSE IF (= robeig:npol 35)
+          ASSIGN robeig:omsq_comp robcmp[[((robeig:index) (robeig:omsq) (robeig:omsq35(FULL)))]]
+        ELSE IF (= robeig:npol 40)
+          ASSIGN robeig:omsq_comp robcmp[[((robeig:index) (robeig:omsq) (robeig:omsq4(FULL)))]]
+        ELSE
+          WRITE UNIT=6 FMT=1000
+            TRANSFER robeig:fnpol
+          DT_END
+          ASSIGN robeig:omsq_comp 0_8
+        ENDIF
+      ELSE
+        WRITE UNIT=6 FMT=1010
+          TRANSFER robeig:fnpol
+          TRANSFER robeig:lval
+        DT_END
+        ASSIGN robeig:omsq_comp 0_8
+      ENDIF
+      RETURN 
+      
+
+
+        Namespace: A-H: (REAL 8) I-N: (INTEGER 4) O-Z: (REAL 8)
+        procedure name = robcmp
+        symtree: __convert_r4_r8  Ambig 0
+        symbol __convert_r4_r8 (REAL 8)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN FUNCTION ELEMENTAL PURE)
+
+        symtree: dabs  Ambig 0
+        symbol dabs (REAL 8)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN FUNCTION IMPLICIT-TYPE)
+        result: dabs
+
+        symtree: iabs  Ambig 0
+        symbol iabs (INTEGER 4)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN FUNCTION IMPLICIT-TYPE)
+        result: iabs
+
+        symtree: index  Ambig 0
+        symbol index (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DUMMY IMPLICIT-TYPE)
+
+        symtree: k  Ambig 0
+        symbol k (INTEGER 4)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: omsq  Ambig 0
+        symbol omsq (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DUMMY IMPLICIT-TYPE)
+
+        symtree: omsqar  Ambig 0
+        symbol omsqar (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN DIMENSION DUMMY IMPLICIT-TYPE)
+        Array spec:(1 AS_EXPLICIT 1 21 )
+
+        symtree: qch  Ambig 0
+        symbol qch (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+        symtree: robcmp  Ambig 0
+        symbol robcmp (REAL 8)(PROCEDURE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN FUNCTION IMPLICIT-TYPE)
+        result: robcmp
+        Formal arglist: index omsq omsqar
+
+        symtree: zomsq  Ambig 0
+        symbol zomsq (REAL 8)(VARIABLE UNKNOWN-INTENT UNKNOWN-ACCESS UNKNOWN-PROC UNKNOWN IMPLICIT-TYPE)
+
+
+      IF (<= robcmp:omsq 0_8)
+        ASSIGN robcmp:index (- robcmp:index 1)
+      ENDIF
+      IF (> __abs_i4[[((robcmp:index))]] 10)
+        ASSIGN robcmp:robcmp 0_8
+      ELSE
+        ASSIGN robcmp:k (+ robcmp:index 11)
+        ASSIGN robcmp:zomsq robcmp:omsqar(robcmp:k)
+        ASSIGN robcmp:qch __abs_r8[[(((/ (parens(- robcmp:omsq robcmp:zomsq)) robcmp:omsq)))]]
+        WRITE UNIT=6 FMT=1001
+          TRANSFER robcmp:index
+          TRANSFER robcmp:omsq
+          TRANSFER robcmp:zomsq
+          TRANSFER robcmp:qch
+        DT_END
+        WRITE UNIT=1 FMT=1001
+          TRANSFER robcmp:index
+          TRANSFER robcmp:omsq
+          TRANSFER robcmp:zomsq
+          TRANSFER robcmp:qch
+        DT_END
+        ASSIGN robcmp:robcmp (* robcmp:zomsq 7.5000000000000000e-1_8)
+      ENDIF
+      RETURN 
+      
+

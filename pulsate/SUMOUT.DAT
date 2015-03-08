@@ -1,0 +1,10 @@
+1
+ output from polyrk  296 zones
+ fnpol=  3.00 guess for surface radius= 5.604E+00 alpha= 1.784E-01
+   lambda= 1.565E-02 rhobar= 2.387E-01
+ totmas= 1.000E+00 int. mass= 1.206E+00 diff.=-2.065E-01
+  rz0= 1.684E-03 p0= 2.450E-05 rho0= 1.565E-02
+  central/average densities =  6.556E-02
+ max. g in zone  273 radius = 9.192E-01 mass =  9.516E-01
+ Asymptotic frequency for p modes is  0.0000E+00
+   Eotvos parameters are   1.000E+00  1.000

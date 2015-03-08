@@ -1,0 +1,528 @@
+1
+ output from polywd  599 zone model
+ y02= 5.00000E-01 guess for surface radius= 3.533E+00 alpha= 5.454E+08
+   lambda= 9.810E+05 rhobar= 1.335E+05 rmue = 1.000E+00
+ totmas= 2.897E-06 int. mass= 2.010E+00 (solar masses) diff.=-6.936E+05
+  rz0= 1.606E+06 p0= 7.383E+22 rho0= 9.810E+05
+  central/average densities = 7.3501E+00
+ the value of the adiabatic index (g1) is consistent.
+ max. g in zone  281 radius = 4.683E-01 mass = 3.064E+05
+1 initial model in hydrostatic and thermal balance
+
+ Solar Model for Time-Dependent Convection NRN 96-1                                 256 zones
+
+     total luminosity= 3.8260E+33 total mass= 1.9910E+33 effective temp.= 5.7700E+03
+       photospheric radius= 6.9605E+10 core radius= 2.4205E+10 core lum.= 3.8205E+33
+ irad= 1 noburn= 0 onemq0= 1.000E+00 onemq1= 1.000E+00 rlums= 3.826E+33 rlumc= 3.826E+27
+  roots for analysis: l=  2
+      4.343425E-05   5.590316E-05   7.108034E-05   8.832094E-05   1.074774E-04
+      1.285611E-04   1.515930E-04   1.764959E-04   2.031213E-04   2.314556E-04
+      2.616779E-04   2.939339E-04   3.281926E-04   3.643781E-04   4.025267E-04
+      4.427270E-04   4.849920E-04   5.292920E-04   5.756307E-04   6.239934E-04
+
+     root    1
+ omega = 6.590322E-03 period = 9.533957E+02 (secs)   1.103467E-02 (days)
+  eigenvalue from matrix solution =  4.3432E-05
+  eigenvalue from weight function =  4.2336E-05 error = 2.525E-02
+  radial quantum number =   5 number of nodes, p-type =   5 g-type =   0
+  transition zone = 240
+  effective radius of mode =  6.5820E-01
+  rotational splitting, total = -2.7496E-01 a = -3.0111E-01 b =  2.6142E-02
+  eigenvalue from matrix solution=   4.343E-05
+  eigenvalue from weight function=   3.175E-05 error=   2.690E-01
+ kinetic energy amp. =  4.2813E+45
+
+ quasi-adiabatic eigenvalue:  6.590E-03  4.299E-08 growth=-8.1975E-05
+ domsq=-6.9946E-11 5.6665E-10 rke= 1.9715E+50
+ rcont=-1.3802E+40 1.1180E+41 hcont= 2.0063E+36-1.4196E+37 rsum= 1.6623E+50 hsum= 5.1539E+48
+
+ frequency (sec**-1)=   6.590331E-03   imag. part=   1.087175E-09
+          predicted growth rate = -2.073012E-06
+ growth rate from work integral = -1.911425E-06 error=  7.795E-02
+
+ periods: 9.533945E+02 (secs) 1.103466E-02 (days), q = 1.1026E-02
+
+ work integral results:
+ kinetic energies:   6.263840E+50 (radial)   1.942135E+49 (horiz.)   1.613325E+46 (total), all in ergs.
+  work integral contributions: -1.9114E-06 -4.9393E-08  1.1292E-08
+   error in poisson solution =  9.6055E-03
+
+     root    2
+ omega = 7.476784E-03 period = 8.403593E+02 (secs)   9.726381E-03 (days)
+  eigenvalue from matrix solution =  5.5902E-05
+  eigenvalue from weight function =  5.4263E-05 error = 2.932E-02
+  radial quantum number =   6 number of nodes, p-type =   6 g-type =   0
+  transition zone = 240
+  effective radius of mode =  7.3040E-01
+  rotational splitting, total = -5.3916E-02 a = -6.5127E-02 b =  1.1210E-02
+  eigenvalue from matrix solution=   5.590E-05
+  eigenvalue from weight function=   4.828E-05 error=   1.364E-01
+ kinetic energy amp. =  1.9778E+45
+
+ quasi-adiabatic eigenvalue:  7.477E-03  1.194E-07 growth=-2.0069E-04
+ domsq=-2.2727E-10 1.7856E-09 rke= 7.0759E+49
+ rcont=-1.6090E+40 1.2640E+41 hcont= 1.3807E+36-9.6781E+36 rsum= 6.5999E+49 hsum= 7.9323E+47
+
+ frequency (sec**-1)=   7.476809E-03   imag. part=   4.246981E-09
+          predicted growth rate = -7.137956E-06
+ growth rate from work integral = -6.841429E-06 error=  4.154E-02
+
+ periods: 8.403566E+02 (secs) 9.726349E-03 (days), q = 9.7190E-03
+
+ work integral results:
+ kinetic energies:   2.184480E+50 (radial)   2.625477E+48 (horiz.)   6.546226E+45 (total), all in ergs.
+  work integral contributions: -6.8414E-06 -6.1776E-08  1.2332E-08
+   error in poisson solution =  1.7859E-03
+
+     root    3
+ omega = 8.430849E-03 period = 7.452613E+02 (secs)   8.625709E-03 (days)
+  eigenvalue from matrix solution =  7.1079E-05
+  eigenvalue from weight function =  6.9481E-05 error = 2.248E-02
+  radial quantum number =   7 number of nodes, p-type =   7 g-type =   0
+  transition zone = 241
+  effective radius of mode =  7.6296E-01
+  rotational splitting, total =  1.6392E-02 a =  1.0370E-02 b =  6.0220E-03
+  eigenvalue from matrix solution=   7.108E-05
+  eigenvalue from weight function=   6.533E-05 error=   8.090E-02
+ kinetic energy amp. =  9.7084E+44
+
+ quasi-adiabatic eigenvalue:  8.431E-03  3.087E-07 growth=-4.6012E-04
+ domsq=-6.8388E-10 5.2051E-09 rke= 2.7317E+49
+ rcont=-1.8688E+40 1.4223E+41 hcont= 9.7016E+35-6.6972E+36 rsum= 2.6330E+49 hsum= 1.6450E+47
+
+ frequency (sec**-1)=   8.430917E-03   imag. part=   1.473753E-08
+          predicted growth rate = -2.196644E-05
+ growth rate from work integral = -2.143088E-05 error=  2.438E-02
+
+ periods: 7.452552E+02 (secs) 8.625639E-03 (days), q = 8.6191E-03
+
+ work integral results:
+ kinetic energies:   7.673008E+49 (radial)   4.794040E+47 (horiz.)   2.829230E+45 (total), all in ergs.
+  work integral contributions: -2.1431E-05 -9.4247E-08  1.2677E-08
+   error in poisson solution =  8.4854E-04
+
+     root    4
+ omega = 9.397867E-03 period = 6.685757E+02 (secs)   7.738144E-03 (days)
+  eigenvalue from matrix solution =  8.8320E-05
+  eigenvalue from weight function =  8.6873E-05 error = 1.638E-02
+  radial quantum number =   8 number of nodes, p-type =   8 g-type =   0
+  transition zone = 241
+  effective radius of mode =  7.8189E-01
+  rotational splitting, total =  3.3459E-02 a =  2.9578E-02 b =  3.8801E-03
+  eigenvalue from matrix solution=   8.832E-05
+  eigenvalue from weight function=   8.329E-05 error=   5.692E-02
+ kinetic energy amp. =  4.9411E+44
+
+ quasi-adiabatic eigenvalue:  9.398E-03  7.526E-07 growth=-1.0064E-03
+ domsq=-1.9188E-09 1.4146E-08 rke= 1.1189E+49
+ rcont=-2.1474E+40 1.5831E+41 hcont= 7.0680E+35-4.7826E+36 rsum= 1.0929E+49 hsum= 4.3415E+46
+
+ frequency (sec**-1)=   9.398045E-03   imag. part=   4.582537E-08
+          predicted growth rate = -6.127430E-05
+ growth rate from work integral = -6.029069E-05 error=  1.605E-02
+
+ periods: 6.685630E+02 (secs) 7.737998E-03 (days), q = 7.7322E-03
+
+ work integral results:
+ kinetic energies:   2.833032E+49 (radial)   1.125550E+47 (horiz.)   1.280936E+45 (total), all in ergs.
+  work integral contributions: -6.0291E-05 -1.9111E-07  1.3507E-08
+   error in poisson solution =  1.8257E-03
+
+     root    5
+ omega = 1.036710E-02 period = 6.060697E+02 (secs)   7.014695E-03 (days)
+  eigenvalue from matrix solution =  1.0748E-04
+  eigenvalue from weight function =  1.0616E-04 error = 1.230E-02
+  radial quantum number =   9 number of nodes, p-type =   9 g-type =   0
+  transition zone = 241
+  effective radius of mode =  7.9252E-01
+  rotational splitting, total =  3.5299E-02 a =  3.2490E-02 b =  2.8090E-03
+  eigenvalue from matrix solution=   1.075E-04
+  eigenvalue from weight function=   1.027E-04 error=   4.469E-02
+ kinetic energy amp. =  2.7328E+44
+
+ quasi-adiabatic eigenvalue:  1.037E-02  1.654E-06 growth=-2.0051E-03
+ domsq=-4.8042E-09 3.4297E-08 rke= 5.0853E+48
+ rcont=-2.4434E+40 1.7443E+41 hcont= 5.3185E+35-3.5139E+36 rsum= 4.9996E+48 hsum= 1.4285E+46
+
+ frequency (sec**-1)=   1.036752E-02   imag. part=   1.232975E-07
+          predicted growth rate = -1.494477E-04
+ growth rate from work integral = -1.477074E-04 error=  1.164E-02
+
+ periods: 6.060454E+02 (secs) 7.014415E-03 (days), q = 7.0091E-03
+
+ work integral results:
+ kinetic energies:   1.165876E+49 (radial)   3.331812E+46 (horiz.)   6.373167E+44 (total), all in ergs.
+  work integral contributions: -1.4771E-04 -4.3731E-07  1.4337E-08
+   error in poisson solution =  2.3783E-03
+
+     root    6
+ omega = 1.133845E-02 period = 5.541484E+02 (secs)   6.413754E-03 (days)
+  eigenvalue from matrix solution =  1.2856E-04
+  eigenvalue from weight function =  1.2731E-04 error = 9.732E-03
+  radial quantum number =  10 number of nodes, p-type =  10 g-type =   0
+  transition zone = 241
+  effective radius of mode =  7.9645E-01
+  rotational splitting, total =  3.3441E-02 a =  3.1230E-02 b =  2.2113E-03
+  eigenvalue from matrix solution=   1.286E-04
+  eigenvalue from weight function=   1.237E-04 error=   3.811E-02
+ kinetic energy amp. =  1.6658E+44
+
+ quasi-adiabatic eigenvalue:  1.134E-02  3.242E-06 growth=-3.5934E-03
+ domsq=-1.0641E-08 7.3521E-08 rke= 2.5914E+48
+ rcont=-2.7578E+40 1.9054E+41 hcont= 4.1088E+35-2.6420E+36 rsum= 2.5570E+48 hsum= 5.7305E+45
+
+ frequency (sec**-1)=   1.133931E-02   imag. part=   2.865933E-07
+          predicted growth rate = -3.176064E-04
+ growth rate from work integral = -3.146839E-04 error=  9.202E-03
+
+ periods: 5.541066E+02 (secs) 6.413270E-03 (days), q = 6.4084E-03
+
+ work integral results:
+ kinetic energies:   5.422151E+48 (radial)   1.215597E+46 (horiz.)   3.532789E+44 (total), all in ergs.
+  work integral contributions: -3.1468E-04 -9.3916E-07  1.4759E-08
+   error in poisson solution =  2.7030E-03
+
+     root    7
+ omega = 1.231230E-02 period = 5.103179E+02 (secs)   5.906457E-03 (days)
+  eigenvalue from matrix solution =  1.5159E-04
+  eigenvalue from weight function =  1.5040E-04 error = 7.875E-03
+  radial quantum number =  11 number of nodes, p-type =  11 g-type =   0
+  transition zone = 242
+  effective radius of mode =  7.9941E-01
+  rotational splitting, total =  3.0406E-02 a =  2.8604E-02 b =  1.8022E-03
+  eigenvalue from matrix solution=   1.516E-04
+  eigenvalue from weight function=   1.462E-04 error=   3.547E-02
+ kinetic energy amp. =  1.0669E+44
+
+ quasi-adiabatic eigenvalue:  1.231E-02  5.961E-06 growth=-6.0841E-03
+ domsq=-2.1963E-08 1.4678E-07 rke= 1.4076E+48
+ rcont=-3.0918E+40 2.0662E+41 hcont= 3.2434E+35-2.0241E+36 rsum= 1.3924E+48 hsum= 2.5369E+45
+
+ frequency (sec**-1)=   1.231394E-02   imag. part=   6.088371E-07
+          predicted growth rate = -6.213179E-04
+ growth rate from work integral = -6.166406E-04 error=  7.528E-03
+
+ periods: 5.102497E+02 (secs) 5.905668E-03 (days), q = 5.9012E-03
+
+ work integral results:
+ kinetic energies:   2.712806E+48 (radial)   4.945923E+45 (horiz.)   2.079256E+44 (total), all in ergs.
+  work integral contributions: -6.1664E-04 -1.8996E-06  1.4768E-08
+   error in poisson solution =  2.9369E-03
+
+     root    8
+ omega = 1.328516E-02 period = 4.729475E+02 (secs)   5.473930E-03 (days)
+  eigenvalue from matrix solution =  1.7650E-04
+  eigenvalue from weight function =  1.7536E-04 error = 6.416E-03
+  radial quantum number =  12 number of nodes, p-type =  12 g-type =   0
+  transition zone = 242
+  effective radius of mode =  8.0372E-01
+  rotational splitting, total =  2.6973E-02 a =  2.5487E-02 b =  1.4865E-03
+  eigenvalue from matrix solution=   1.765E-04
+  eigenvalue from weight function=   1.703E-04 error=   3.495E-02
+ kinetic energy amp. =  6.9950E+43
+
+ quasi-adiabatic eigenvalue:  1.328E-02  1.057E-05 growth=-9.9980E-03
+ domsq=-4.3457E-08 2.8081E-07 rke= 7.9266E+47
+ rcont=-3.4449E+40 2.2260E+41 hcont= 2.6085E+35-1.5765E+36 rsum= 7.8559E+47 hsum= 1.1783E+45
+
+ frequency (sec**-1)=   1.328819E-02   imag. part=   1.220756E-06
+          predicted growth rate = -1.154444E-03
+ growth rate from work integral = -1.147259E-03 error=  6.224E-03
+
+ periods: 4.728397E+02 (secs) 5.472682E-03 (days), q = 5.4686E-03
+
+ work integral results:
+ kinetic energies:   1.420026E+48 (radial)   2.132293E+45 (horiz.)   1.265008E+44 (total), all in ergs.
+  work integral contributions: -1.1473E-03 -3.5939E-06  1.4396E-08
+   error in poisson solution =  3.0573E-03
+
+     root    9
+ omega = 1.425206E-02 period = 4.408615E+02 (secs)   5.102564E-03 (days)
+  eigenvalue from matrix solution =  2.0312E-04
+  eigenvalue from weight function =  2.0203E-04 error = 5.349E-03
+  radial quantum number =  13 number of nodes, p-type =  13 g-type =   0
+  transition zone = 242
+  effective radius of mode =  8.0704E-01
+  rotational splitting, total =  2.3935E-02 a =  2.2680E-02 b =  1.2542E-03
+  eigenvalue from matrix solution=   2.031E-04
+  eigenvalue from weight function=   1.962E-04 error=   3.398E-02
+ kinetic energy amp. =  4.8297E+43
+
+ quasi-adiabatic eigenvalue:  1.425E-02  1.759E-05 growth=-1.5508E-02
+ domsq=-8.0231E-08 5.0123E-07 rke= 4.7555E+47
+ rcont=-3.8155E+40 2.3837E+41 hcont= 2.1329E+35-1.2463E+36 rsum= 4.7197E+47 hsum= 5.9641E+44
+
+ frequency (sec**-1)=   1.425727E-02   imag. part=   2.258118E-06
+          predicted growth rate = -1.990308E-03
+ growth rate from work integral = -1.979794E-03 error=  5.283E-03
+
+ periods: 4.407005E+02 (secs) 5.100700E-03 (days), q = 5.0969E-03
+
+ work integral results:
+ kinetic energies:   7.979383E+47 (radial)   1.010027E+45 (horiz.)   8.171426E+43 (total), all in ergs.
+  work integral contributions: -1.9798E-03 -6.3105E-06  1.3403E-08
+   error in poisson solution =  3.1468E-03
+
+     root   10
+ omega = 1.521366E-02 period = 4.129963E+02 (secs)   4.780049E-03 (days)
+  eigenvalue from matrix solution =  2.3146E-04
+  eigenvalue from weight function =  2.3039E-04 error = 4.590E-03
+  radial quantum number =  14 number of nodes, p-type =  14 g-type =   0
+  transition zone = 242
+  effective radius of mode =  8.0803E-01
+  rotational splitting, total =  2.1452E-02 a =  2.0364E-02 b =  1.0873E-03
+  eigenvalue from matrix solution=   2.315E-04
+  eigenvalue from weight function=   2.240E-04 error=   3.206E-02
+ kinetic energy amp. =  3.6196E+43
+
+ quasi-adiabatic eigenvalue:  1.521E-02  2.669E-05 growth=-2.2045E-02
+ domsq=-1.3441E-07 8.1185E-07 rke= 3.1277E+47
+ rcont=-4.2039E+40 2.5393E+41 hcont= 1.7682E+35-9.9762E+35 rsum= 3.1073E+47 hsum= 3.4006E+44
+
+ frequency (sec**-1)=   1.522179E-02   imag. part=   3.762028E-06
+          predicted growth rate = -3.105747E-03
+ growth rate from work integral = -3.091376E-03 error=  4.627E-03
+
+ periods: 4.127756E+02 (secs) 4.777496E-03 (days), q = 4.7739E-03
+
+ work integral results:
+ kinetic energies:   4.941482E+47 (radial)   5.418299E+44 (horiz.)   5.762445E+43 (total), all in ergs.
+  work integral contributions: -3.0914E-03 -1.0189E-05  1.1565E-08
+   error in poisson solution =  3.2734E-03
+
+     root   11
+ omega = 1.617646E-02 period = 3.884153E+02 (secs)   4.495548E-03 (days)
+  eigenvalue from matrix solution =  2.6168E-04
+  eigenvalue from weight function =  2.6063E-04 error = 3.995E-03
+  radial quantum number =  13 number of nodes, p-type =  14 g-type =   1
+  transition zone = 242
+  effective radius of mode =  8.0815E-01
+  rotational splitting, total =  1.9259E-02 a =  1.8304E-02 b =  9.5547E-04
+  eigenvalue from matrix solution=   2.617E-04
+  eigenvalue from weight function=   2.535E-04 error=   3.123E-02
+ kinetic energy amp. =  2.9201E+43
+
+ quasi-adiabatic eigenvalue:  1.617E-02  3.732E-05 growth=-2.8992E-02
+ domsq=-2.0669E-07 1.2070E-06 rke= 2.2318E+47
+ rcont=-4.6130E+40 2.6938E+41 hcont= 1.4812E+35-8.0582E+35 rsum= 2.2190E+47 hsum= 2.1325E+44
+
+ frequency (sec**-1)=   1.618813E-02   imag. part=   5.722606E-06
+          predicted growth rate = -4.442291E-03
+ growth rate from work integral = -4.424022E-03 error=  4.112E-03
+
+ periods: 3.881353E+02 (secs) 4.492307E-03 (days), q = 4.4889E-03
+
+ work integral results:
+ kinetic energies:   3.332647E+47 (radial)   3.208401E+44 (horiz.)   4.391918E+43 (total), all in ergs.
+  work integral contributions: -4.4240E-03 -1.4996E-05  9.0456E-09
+   error in poisson solution =  3.3774E-03
+
+     root   12
+ omega = 1.714450E-02 period = 3.664841E+02 (secs)   4.241714E-03 (days)
+  eigenvalue from matrix solution =  2.9393E-04
+  eigenvalue from weight function =  2.9291E-04 error = 3.499E-03
+  radial quantum number =  16 number of nodes, p-type =  16 g-type =   0
+  transition zone = 242
+  effective radius of mode =  8.0846E-01
+  rotational splitting, total =  1.7275E-02 a =  1.6430E-02 b =  8.4440E-04
+  eigenvalue from matrix solution=   2.939E-04
+  eigenvalue from weight function=   2.844E-04 error=   3.254E-02
+ kinetic energy amp. =  2.4727E+43
+
+ quasi-adiabatic eigenvalue:  1.714E-02  4.938E-05 growth=-3.6198E-02
+ domsq=-2.9982E-07 1.6925E-06 rke= 1.6825E+47
+ rcont=-5.0446E+40 2.8477E+41 hcont= 1.2508E+35-6.5531E+35 rsum= 1.6740E+47 hsum= 1.4207E+44
+
+ frequency (sec**-1)=   1.716031E-02   imag. part=   8.178430E-06
+          predicted growth rate = -5.989004E-03
+ growth rate from work integral = -5.966986E-03 error=  3.676E-03
+
+ periods: 3.661463E+02 (secs) 4.237805E-03 (days), q = 4.2346E-03
+
+ work integral results:
+ kinetic energies:   2.381632E+47 (radial)   2.024654E+44 (horiz.)   3.524558E+43 (total), all in ergs.
+  work integral contributions: -5.9670E-03 -2.0722E-05  6.3382E-09
+   error in poisson solution =  3.4663E-03
+
+     root   13
+ omega = 1.811609E-02 period = 3.468291E+02 (secs)   4.014226E-03 (days)
+  eigenvalue from matrix solution =  3.2819E-04
+  eigenvalue from weight function =  3.2717E-04 error = 3.101E-03
+  radial quantum number =  15 number of nodes, p-type =  16 g-type =   1
+  transition zone = 242
+  effective radius of mode =  8.0850E-01
+  rotational splitting, total =  1.5583E-02 a =  1.4830E-02 b =  7.5335E-04
+  eigenvalue from matrix solution=   3.282E-04
+  eigenvalue from weight function=   3.168E-04 error=   3.458E-02
+ kinetic energy amp. =  2.1700E+43
+
+ quasi-adiabatic eigenvalue:  1.810E-02  6.266E-05 growth=-4.3467E-02
+ domsq=-4.1579E-07 2.2690E-06 rke= 1.3224E+47
+ rcont=-5.4984E+40 3.0006E+41 hcont= 1.0637E+35-5.3607E+35 rsum= 1.3164E+47 hsum= 9.9624E+43
+
+ frequency (sec**-1)=   1.813660E-02   imag. part=   1.114835E-05
+          predicted growth rate = -7.724396E-03
+ growth rate from work integral = -7.698720E-03 error=  3.324E-03
+
+ periods: 3.464367E+02 (secs) 4.009684E-03 (days), q = 4.0067E-03
+
+ work integral results:
+ kinetic energies:   1.777812E+47 (radial)   1.347200E+44 (horiz.)   2.937229E+43 (total), all in ergs.
+  work integral contributions: -7.6987E-03 -2.7330E-05  3.8245E-09
+   error in poisson solution =  3.5470E-03
+
+     root   14
+ omega = 1.908869E-02 period = 3.291575E+02 (secs)   3.809693E-03 (days)
+  eigenvalue from matrix solution =  3.6438E-04
+  eigenvalue from weight function =  3.6337E-04 error = 2.779E-03
+  radial quantum number =  18 number of nodes, p-type =  18 g-type =   0
+  transition zone = 243
+  effective radius of mode =  8.0817E-01
+  rotational splitting, total =  1.4143E-02 a =  1.3464E-02 b =  6.7836E-04
+  eigenvalue from matrix solution=   3.644E-04
+  eigenvalue from weight function=   3.513E-04 error=   3.580E-02
+ kinetic energy amp. =  1.9680E+43
+
+ quasi-adiabatic eigenvalue:  1.907E-02  7.649E-05 growth=-5.0355E-02
+ domsq=-5.5298E-07 2.9180E-06 rke= 1.0802E+47
+ rcont=-5.9733E+40 3.1520E+41 hcont= 9.1032E+34-4.4086E+35 rsum= 1.0758E+47 hsum= 7.3276E+43
+
+ frequency (sec**-1)=   1.911428E-02   imag. part=   1.456784E-05
+          predicted growth rate = -9.577388E-03
+ growth rate from work integral = -9.548307E-03 error=  3.036E-03
+
+ periods: 3.287168E+02 (secs) 3.804593E-03 (days), q = 3.8017E-03
+
+ work integral results:
+ kinetic energies:   1.380064E+47 (radial)   9.404249E+43 (horiz.)   2.531379E+43 (total), all in ergs.
+  work integral contributions: -9.5483E-03 -3.4564E-05  1.6110E-09
+   error in poisson solution =  3.6189E-03
+
+     root   15
+ omega = 2.006307E-02 period = 3.131717E+02 (secs)   3.624672E-03 (days)
+  eigenvalue from matrix solution =  4.0253E-04
+  eigenvalue from weight function =  4.0152E-04 error = 2.502E-03
+  radial quantum number =  17 number of nodes, p-type =  18 g-type =   1
+  transition zone = 243
+  effective radius of mode =  8.0796E-01
+  rotational splitting, total =  1.2846E-02 a =  1.2232E-02 b =  6.1331E-04
+  eigenvalue from matrix solution=   4.025E-04
+  eigenvalue from weight function=   3.879E-04 error=   3.633E-02
+ kinetic energy amp. =  1.8386E+43
+
+ quasi-adiabatic eigenvalue:  2.005E-02  9.016E-05 growth=-5.6468E-02
+ domsq=-7.0819E-07 3.6144E-06 rke= 9.1354E+46
+ rcont=-6.4696E+40 3.3019E+41 hcont= 7.8297E+34-3.6406E+35 rsum= 9.1018E+46 hsum= 5.6028E+43
+
+ frequency (sec**-1)=   2.009386E-02   imag. part=   1.833419E-05
+          predicted growth rate = -1.146590E-02
+ growth rate from work integral = -1.143398E-02 error=  2.784E-03
+
+ periods: 3.126918E+02 (secs) 3.619118E-03 (days), q = 3.6164E-03
+
+ work integral results:
+ kinetic energies:   1.109428E+47 (radial)   6.822437E+43 (horiz.)   2.247996E+43 (total), all in ergs.
+  work integral contributions: -1.1434E-02 -4.2031E-05 -2.4637E-10
+   error in poisson solution =  3.6761E-03
+
+     root   16
+ omega = 2.104108E-02 period = 2.986152E+02 (secs)   3.456194E-03 (days)
+  eigenvalue from matrix solution =  4.4273E-04
+  eigenvalue from weight function =  4.4172E-04 error = 2.265E-03
+  radial quantum number =  20 number of nodes, p-type =  20 g-type =   0
+  transition zone = 243
+  effective radius of mode =  8.0769E-01
+  rotational splitting, total =  1.1690E-02 a =  1.1133E-02 b =  5.5700E-04
+  eigenvalue from matrix solution=   4.427E-04
+  eigenvalue from weight function=   4.263E-04 error=   3.720E-02
+ kinetic energy amp. =  1.7627E+43
+
+ quasi-adiabatic eigenvalue:  2.102E-02  1.031E-04 growth=-6.1559E-02
+ domsq=-8.7761E-07 4.3333E-06 rke= 7.9629E+46
+ rcont=-6.9883E+40 3.4506E+41 hcont= 6.7601E+34-3.0147E+35 rsum= 7.9363E+46 hsum= 4.4353E+43
+
+ frequency (sec**-1)=   2.107700E-02   imag. part=   2.232103E-05
+          predicted growth rate = -1.330808E-02
+ growth rate from work integral = -1.327394E-02 error=  2.565E-03
+
+ periods: 2.981063E+02 (secs) 3.450304E-03 (days), q = 3.4477E-03
+
+ work integral results:
+ kinetic energies:   9.199371E+46 (radial)   5.127659E+43 (horiz.)   2.050197E+43 (total), all in ergs.
+  work integral contributions: -1.3274E-02 -4.9335E-05 -1.6990E-09
+   error in poisson solution =  3.7174E-03
+
+     root   17
+ omega = 2.202253E-02 period = 2.853071E+02 (secs)   3.302165E-03 (days)
+  eigenvalue from matrix solution =  4.8499E-04
+  eigenvalue from weight function =  4.8399E-04 error = 2.069E-03
+  radial quantum number =  19 number of nodes, p-type =  20 g-type =   1
+  transition zone = 243
+  effective radius of mode =  8.0697E-01
+  rotational splitting, total =  1.0701E-02 a =  1.0192E-02 b =  5.0976E-04
+  eigenvalue from matrix solution=   4.850E-04
+  eigenvalue from weight function=   4.662E-04 error=   3.876E-02
+ kinetic energy amp. =  1.7250E+43
+
+ quasi-adiabatic eigenvalue:  2.200E-02  1.150E-04 growth=-6.5593E-02
+ domsq=-1.0584E-06 5.0576E-06 rke= 7.1136E+46
+ rcont=-7.5293E+40 3.5978E+41 hcont= 5.8540E+34-2.5012E+35 rsum= 7.0918E+46 hsum= 3.6263E+43
+
+ frequency (sec**-1)=   2.206336E-02   imag. part=   2.641901E-05
+          predicted growth rate = -1.504717E-02
+ growth rate from work integral = -1.501129E-02 error=  2.385E-03
+
+ periods: 2.847791E+02 (secs) 3.296055E-03 (days), q = 3.2936E-03
+
+ work integral results:
+ kinetic energies:   7.831473E+46 (radial)   3.986847E+43 (horiz.)   1.911971E+43 (total), all in ergs.
+  work integral contributions: -1.5011E-02 -5.6593E-05 -2.7956E-09
+   error in poisson solution =  3.7712E-03
+
+     root   18
+ omega = 2.300635E-02 period = 2.731066E+02 (secs)   3.160956E-03 (days)
+  eigenvalue from matrix solution =  5.2929E-04
+  eigenvalue from weight function =  5.2829E-04 error = 1.901E-03
+  radial quantum number =  22 number of nodes, p-type =  22 g-type =   0
+  transition zone = 243
+  effective radius of mode =  8.0618E-01
+  rotational splitting, total =  9.8309E-03 a =  9.3622E-03 b =  4.6874E-04
+  eigenvalue from matrix solution=   5.293E-04
+  eigenvalue from weight function=   5.079E-04 error=   4.042E-02
+ kinetic energy amp. =  1.7081E+43
+
+ quasi-adiabatic eigenvalue:  2.298E-02  1.262E-04 growth=-6.8927E-02
+ domsq=-1.2537E-06 5.7996E-06 rke= 6.4544E+46
+ rcont=-8.0919E+40 3.7433E+41 hcont= 5.0812E+34-2.0776E+35 rsum= 6.4363E+46 hsum= 3.0255E+43
+
+ frequency (sec**-1)=   2.305198E-02   imag. part=   3.066054E-05
+          predicted growth rate = -1.671404E-02
+ growth rate from work integral = -1.667680E-02 error=  2.228E-03
+
+ periods: 2.725660E+02 (secs) 3.154699E-03 (days), q = 3.1523E-03
+
+ work integral results:
+ kinetic energies:   6.788198E+46 (radial)   3.170442E+43 (horiz.)   1.808657E+43 (total), all in ergs.
+  work integral contributions: -1.6677E-02 -6.3704E-05 -3.5647E-09
+   error in poisson solution =  3.8212E-03
+
+     root   19
+ omega = 2.399231E-02 period = 2.618834E+02 (secs)   3.031057E-03 (days)
+  eigenvalue from matrix solution =  5.7563E-04
+  eigenvalue from weight function =  5.7462E-04 error = 1.749E-03
+  radial quantum number =  21 number of nodes, p-type =  22 g-type =   1
+  transition zone = 243
+  effective radius of mode =  8.0585E-01
+  rotational splitting, total =  9.0270E-03 a =  8.5958E-03 b =  4.3122E-04
+  eigenvalue from matrix solution=   5.756E-04
+  eigenvalue from weight function=   5.518E-04 error=   4.143E-02
+ kinetic energy amp. =  1.6975E+43
+
+ quasi-adiabatic eigenvalue:  2.396E-02  1.375E-04 growth=-7.2026E-02
+ domsq=-1.4710E-06 6.5903E-06 rke= 5.8980E+46
+ rcont=-8.6758E+40 3.8870E+41 hcont= 4.4174E+34-1.7262E+35 rsum= 5.8828E+46 hsum= 2.5434E+43
+
+ frequency (sec**-1)=   2.404289E-02   imag. part=   3.519103E-05
+          predicted growth rate = -1.839311E-02
+ growth rate from work integral = -1.835482E-02 error=  2.082E-03
+

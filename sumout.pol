@@ -1,0 +1,9 @@
+1
+ output from polyrk 2481 zones
+ fnpol=  1.00 guess for surface radius= 0.000E+00 alpha= 9.993E-01
+   lambda= +Infinity rhobar= 2.387E-01
+ totmas= 1.989E+33 int. Mass= 1.989E+33 diff.= 0.000E+00
+  rz0= 0.000E+00 p0=       NaN rho0= +Infinity
+  central/average densities =  +Infinity
+ max. g in zone  483 radius = +Infinity mass =  2.342E-01
+ asymptotic frequency for p modes is -1.4381E-08

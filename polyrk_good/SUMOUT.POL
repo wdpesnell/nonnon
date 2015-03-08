@@ -1,0 +1,42 @@
+1
+ output from polyrk  200 zones
+ fnpol=  3.00 guess for surface radius= 6.897E+00 alpha= 1.450E-01
+   lambda= 1.294E+01 rhobar= 2.387E-01
+ totmas= 1.000E+00 int. Mass= 1.000E+00 diff.=-9.601E-05
+  rz0= 2.488E-03 p0= 1.105E+01 rho0= 1.294E+01
+  central/average densities =  5.418E+01
+ max. g in zone   44 radius = 2.189E-01 mass =  3.161E-01
+ asymptotic frequency for p modes is  4.0521E-01
+    1 roots for analysis: l =   2
+      8.184185E+00
+
+
+     root    1 l=   2           omsq =  8.18419928E+00
+ eigenfrequency from weight function =    8.181E+00 error=   3.346E-04
+  k =  0 omsq =  1.091E+01  real omsq =  1.090E+01   error=   1.124E-03
+  Norm. eigenvalue =  1.09123E+01
+  radial quantum number=    0 number of nodes, p-type=    0 g-type=    0
+  rotational splitting, total =  2.5256E-01 a =  2.3341E-01 b =  1.9147E-02
+  effective radius of mode =  4.9367E-01
+ dr(1) =  2.292E-01 scaled dr(1) =  2.294E-01
+1
+ output from polyrk 1000 zones
+ fnpol=  3.00 guess for surface radius= 6.897E+00 alpha= 1.450E-01
+   lambda= 1.294E+01 rhobar= 2.387E-01
+ totmas= 1.000E+00 int. Mass= 1.000E+00 diff.=-3.869E-06
+  rz0= 4.995E-04 p0= 1.105E+01 rho0= 1.294E+01
+  central/average densities =  5.418E+01
+ max. g in zone  217 radius = 2.168E-01 mass =  3.100E-01
+ asymptotic frequency for p modes is  3.9940E-01
+    1 roots for analysis: l =   2
+      8.175890E+00
+
+
+     root    1 l=   2           omsq =  8.17593767E+00
+ eigenfrequency from weight function =    8.176E+00 error=   1.342E-05
+  k =  0 omsq =  1.090E+01  real omsq =  1.090E+01   error=   1.157E-04
+  Norm. eigenvalue =  1.09013E+01
+  radial quantum number=    0 number of nodes, p-type=    0 g-type=    0
+  rotational splitting, total =  2.5330E-01 a =  2.3409E-01 b =  1.9214E-02
+  effective radius of mode =  4.9348E-01
+ dr(1) =  2.642E-01 scaled dr(1) =  2.643E-01
